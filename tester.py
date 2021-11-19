@@ -60,3 +60,11 @@ if(st.button('Calculate BMI')):
         st.warning("Overweight")
     elif(bmi >= 30):
         st.error("Extremely Overweight")
+      
+     chart = alt.Chart(bmi).mark_bar().encode(
+    alt.X("IMDB_Rating:Q", bin=True),
+    y='count()',
+).interactive()
+st.altair_chart(chart) 
+      
+      
