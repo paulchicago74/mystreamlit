@@ -31,7 +31,7 @@ Time = st.slider('Enter the Time', 0, 130, 25)
    # Zref = st.number_input('Enter the reference Zvalue')
      
  # try:
-        bmi = Time
+#        bmi = Time
 #   else:
 #       st.text("Enter some value of height")
          
@@ -61,7 +61,7 @@ Time = st.slider('Enter the Time', 0, 130, 25)
 #   st.write('Goodbye')
     # print the BMI INDEX
      #st.text("Your BMI Index is {}.".print(bmi))
-  print(bmi)  
+  print(Time)  
   chart_data = bmi,
   st.bar_chart(chart_data)
      
