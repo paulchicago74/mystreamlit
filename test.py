@@ -32,7 +32,7 @@ if(status == 'F'):
      
   try:
         bmi = Time
-   else
+   else:
        st.text("Enter some value of height")
          
 #elif(status == 'meters'):
