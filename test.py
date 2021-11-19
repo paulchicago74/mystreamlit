@@ -37,7 +37,7 @@ if(status == 'F'):
 #    height = st.number_input('Meters')
      
 #   try:
-        bmi = weight*dvalue / (height ** 2)
+#        bmi = weight*dvalue / (height ** 2)
 #    except:
  #       st.text("Enter some value of height")
          
