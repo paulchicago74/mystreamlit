@@ -10,7 +10,7 @@ st.title('Welcome to BMI Calculator')
 # TAKE WEIGHT INPUT in kgs
 weight = st.number_input("Enter your weight (in kgs)")
 
-dvalue = st.slider(0.0, 100.0, (25.0, 75.0))("Enter D-value")
+dvalue = st.slider('How old are you?', 0, 130, 25)
  
 # TAKE HEIGHT INPUT
 # radio button to choose height format
