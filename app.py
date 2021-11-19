@@ -68,7 +68,7 @@ def main():
   df = get_df(file)
   df = transform(df)
   explore(df)
-main()
+# main()
 
 import streamlit as st
 import pandas as pd
