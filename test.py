@@ -8,9 +8,9 @@ import numpy as np
 st.title('Predictive Model Calculation')
  
 # TAKE WEIGHT INPUT in kgs
-Tref = st.number_input('Enter the reference temperature')
+#Tref = st.number_input('Enter the reference temperature')
 
-Zref = st.number_input('Enter the reference Zvalue')
+#Zref = st.number_input('Enter the reference Zvalue')
 
 Temp = st.slider('Enter the temperature', 0, 130, 25)
 
@@ -25,7 +25,9 @@ status = st.selectbox('Select temperature format: ',
 # compare status value
 if(status == 'F'):
     # take height input in centimeters
-    Tref = st.number_input('Fahrenheit')
+    Tref = st.number_input('Enter the reference temperature')
+
+Zref = st.number_input('Enter the reference Zvalue')
      
     try:
         bmi = (Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
@@ -55,7 +57,7 @@ if(status == 'F'):
 if(st.button('Calculate BMI')):
      
     # print the BMI INDEX
-    st.text("Your BMI Index is {}.")
+     st.text("Your BMI Index is {}.".format(bmi))
     
     chart_data = bmi,
     st.bar_chart(chart_data)
