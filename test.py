@@ -19,18 +19,18 @@ Time = st.slider('Enter the Time', 0, 130, 25)
  
  #TAKE HEIGHT INPUT
  #radio button to choose height format
-status = st.selectbox('Select temperature format: ',
+#status = st.selectbox('Select temperature format: ',
                  ('F', 'C', 'feet'))
  
 # compare status value
-if(status == 'F'):
+#if(status == 'F'):
     # take height input in centimeters
  #   Tref = st.number_input('Enter the reference temperature')
 #and
 #if(status == 'F'):
    # Zref = st.number_input('Enter the reference Zvalue')
      
-  try:
+ # try:
         bmi = Time
 #   else:
 #       st.text("Enter some value of height")
