@@ -67,8 +67,6 @@ if(st.button('Calculate BMI')):
     
 
 
-chart_data = pd.bmi,
-
-
+chart_data = bmi,
 st.bar_chart(chart_data)
       
