@@ -40,9 +40,9 @@ def main():
 file = st.file_uploader("Upload file", type=['csv' 
                                              ,'xlsx'
                                              ,'pickle'])
-  if not file:
-    st.write("Upload a .csv or .xlsx file to get started")
-    return
-  df = get_df(file)
+  #if not file:
+  #  st.write("Upload a .csv or .xlsx file to get started")
+  #  return
+ # df = get_df(file)
   explore()
 main()
