@@ -62,10 +62,23 @@ if(st.button('Calculate BMI')):
     elif(bmi >= 30):
         st.error("Extremely Overweight")
       
-     chart = alt.Chart(bmi).mark_bar().encode(
-    alt.X("IMDB_Rating:Q", bin=True),
-    y='count()',
-).interactive()
-st.altair_chart(chart) 
-      
+     import altair as alt
+from vega_datasets import data
+
+source = data.wheat()
+
+bars = alt.Chart(source).mark_bar().encode(
+    x='wheat:Q',
+    y="year:O"
+)
+
+text = bars.mark_text(
+    align='left',
+    baseline='middle',
+    dx=3  # Nudges text to right so it doesn't appear on top of the bar
+).encode(
+    text='wheat:Q'
+)
+
+(bars + text).properties(height=900)
       
