@@ -8,7 +8,7 @@ import numpy as np
 st.title('Welcome to BMI Calculator')
  
 # TAKE WEIGHT INPUT in kgs
-weight = st.text_input('Enter your weight (in kgs)', key=int)
+weight = st.number_input('Enter your weight (in kgs)')
 
 dvalue = st.slider('How old are you?', 0, 130, 25)
  
