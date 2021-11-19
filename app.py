@@ -7,7 +7,7 @@ st.write(file)
 
 import streamlit as st
 import pandas as pd
-# def explore(df)...
+def explore(df):
 def transform(df):
   # Select sample size
   frac = st.slider('Random sample (%)', 1, 100, 100)
