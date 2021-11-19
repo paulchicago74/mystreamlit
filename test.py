@@ -30,10 +30,10 @@ Time = st.slider('Enter the Time', 0, 130, 25)
 #if(status == 'F'):
    # Zref = st.number_input('Enter the reference Zvalue')
      
-  #  try:
+  try:
         bmi = Time
- #   except:
-#        st.text("Enter some value of height")
+   except:
+       st.text("Enter some value of height")
          
 #elif(status == 'meters'):
     # take height input in meters
