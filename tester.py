@@ -2,6 +2,7 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
+import numpy as np
  
 # give a title to our app
 st.title('Welcome to BMI Calculator')
