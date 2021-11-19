@@ -67,7 +67,7 @@ if(st.button('Calculate BMI')):
 
 
 
-bars = alt.Chart(bmi).mark_bar().encode(
+bars = alt.Chart('bmi').mark_bar().encode(
     x='wheat:Q',
     y="year:O"
 )
