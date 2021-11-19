@@ -62,7 +62,7 @@ if(st.button('Calculate BMI')):
     elif(bmi >= 30):
         st.error("Extremely Overweight")
       
-     import altair as alt
+    
 from vega_datasets import data
 
 source = data.wheat()
