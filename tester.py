@@ -63,9 +63,9 @@ if(st.button('Calculate BMI')):
         st.error("Extremely Overweight")
       
     
-from vega_datasets import data
 
-source = data.wheat()
+
+source = data.bmi()
 
 bars = alt.Chart(source).mark_bar().encode(
     x='wheat:Q',
