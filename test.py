@@ -57,7 +57,8 @@ if(status == 'F'):
 # check if the button is pressed or not
 if st.button('Calculate BMI'):
  st.write(bmi)
-     
+     else:
+   st.write('Goodbye')
     # print the BMI INDEX
      #st.text("Your BMI Index is {}.".print(bmi))
     
