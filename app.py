@@ -1,4 +1,4 @@
-pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+import pandas_profiling from https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
 import streamlit as st
 import numpy as np
 import pandas as pd
