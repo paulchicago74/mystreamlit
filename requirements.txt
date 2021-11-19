@@ -2,3 +2,4 @@ streamlit-pandas-profiling
 pandas-profiling
 openpyxl
 streamlit-echarts
+pandas
