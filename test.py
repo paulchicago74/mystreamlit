@@ -27,7 +27,7 @@ if(status == 'F'):
     # take height input in centimeters
     Tref = st.number_input('Enter the reference temperature')
 
-Zref = st.number_input('Enter the reference Zvalue')
+    Zref = st.number_input('Enter the reference Zvalue')
      
     try:
         bmi = (Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
