@@ -8,12 +8,15 @@ from streamlit_pandas_profiling import st_profile_report
 
 from pandas_profiling import ProfileReport
 
-
-
+import pandas as pd
+df = pd.read_csv("crops data.csv")
+df.describe(include='all')
 
 df = pd.read_csv("crops data.csv", na_values=['='])
 
-
+from pandas_profiling import ProfileReport
+profile = ProfileReport(df)
+profile
 
 
 profile = ProfileReport(df,
