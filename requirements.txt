@@ -3,3 +3,4 @@ pandas-profiling
 openpyxl
 streamlit-echarts
 pandas
+streamlit_gallery
