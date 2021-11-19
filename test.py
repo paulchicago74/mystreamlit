@@ -27,6 +27,7 @@ if(status == 'F'):
     # take height input in centimeters
     Tref = st.number_input('Enter the reference temperature')
 and
+if(status == 'F'):
     Zref = st.number_input('Enter the reference Zvalue')
      
     try:
