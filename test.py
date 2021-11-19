@@ -20,7 +20,7 @@ Time = st.slider('Enter the Time', 0, 130, 25)
 # TAKE HEIGHT INPUT
 # radio button to choose height format
 #status = st.selectbox('Select temperature format: ',
-                  ('F', 'C', 'feet'))
+#                  ('F', 'C', 'feet'))
  
 # compare status value
 #if(status == 'F'):
