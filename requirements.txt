@@ -4,3 +4,4 @@ openpyxl
 streamlit-echarts
 pandas
 altair
+numpy
