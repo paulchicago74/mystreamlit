@@ -65,6 +65,9 @@ if(st.button('Calculate BMI')):
     
 
 
-
-st.bar_chart(data=bmi, width=100, height=100, use_container_width=True)
+>>> chart_data = pd.DataFrame(
+...     np.random.randn(50, 3),
+...     columns=["a", "b", "c"])
+...
+>>> st.bar_chart(chart_data)
       
