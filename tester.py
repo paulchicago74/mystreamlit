@@ -3,12 +3,12 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 import numpy as np
- 
+# =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # give a title to our app
 st.title('Welcome to BMI Calculator')
  
 # TAKE WEIGHT INPUT in kgs
-weight = st.number_input("Enter your weight (in kgs)")
+weight = st.text_input("Enter your weight (in kgs)")
 
 dvalue = st.slider('How old are you?', 0, 130, 25)
  
