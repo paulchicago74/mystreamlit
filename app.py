@@ -1,12 +1,13 @@
+pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
 import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle 
 import io
 import base64
-#from pandas_profiling import ProfileReport
-#from streamlit_pandas_profiling import st_profile_report
-#import df_helper as helper # custom script 
+from pandas_profiling import ProfileReport
+from streamlit_pandas_profiling import st_profile_report
+import df_helper as helper # custom script 
 
 def highlight(txt):
     return '<span style="color: #F04E4E">{}</span>'.format(txt)
