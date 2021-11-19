@@ -59,8 +59,8 @@ if(st.button('Calculate BMI')):
     # print the BMI INDEX
      st.text("Your BMI Index is {}.".format(bmi))
     
-    chart_data = bmi,
-    st.bar_chart(chart_data)
+   # chart_data = bmi,
+  #  st.bar_chart(chart_data)
      
     # give the interpretation of BMI index
     if(bmi < 16):
