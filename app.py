@@ -52,7 +52,7 @@ def transform(df):
     new_types = {}
     
     # CONVERT DATA TYPES
-    expander_types = st.beta_expander('Convert Data Types')
+    expander_types = st.expander('Convert Data Types')
     
     for i, col in enumerate(df.columns):
         txt = f'Convert {col} from {highlight(df[col].dtypes)} to:'
@@ -63,7 +63,7 @@ def transform(df):
                                             ,key=i)
 
     # HANDLE NULLS
-    expander_nulls = st.beta_expander('Missing values')
+    expander_nulls = st.expander('Missing values')
     null_dict = {'-':None, 'Drop rows': 0, 'Replace with Note':1, 
                  'Replace with Average': 2, 'Replace with Median': 3, 'Replace with 0 (Zero)':4}
     
@@ -80,7 +80,7 @@ def transform(df):
                                                 ,key=i)
     
     # HANDLE DUPLICATES
-    expander_duplicates = st.beta_expander('Duplicate rows')
+    expander_duplicates = st.expander('Duplicate rows')
     duplicates_count = len(df[df.duplicated(keep=False)])
     if duplicates_count > 0:
         expander_duplicates.write(df[df.duplicated(keep=False)].sort_values(df.columns.tolist()))
@@ -90,7 +90,7 @@ def transform(df):
         expander_duplicates.write('No duplicate rows')
     
     # ORDER VALUES
-    expander_sort = st.beta_expander('Order values')
+    expander_sort = st.expander('Order values')
     sort_by = expander_sort.multiselect('Sort by:', df.columns.values)
     order_dict = {'Ascending':True, 'Descending':False}
     ascending = []
