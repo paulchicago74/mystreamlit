@@ -32,8 +32,8 @@ if(status == 'F'):
      
   try:
         bmi = Time
-   else:
-       st.text("Enter some value of height")
+#   else:
+#       st.text("Enter some value of height")
          
 #elif(status == 'meters'):
     # take height input in meters
@@ -58,7 +58,7 @@ if(status == 'F'):
 if(st.button('Calculate BMI')):
      
     # print the BMI INDEX
-     st.text("Your BMI Index is {}.".format(bmi))
+     st.text("Your BMI Index is {}.".print(bmi))
     
   chart_data = bmi,
   st.bar_chart(chart_data)
