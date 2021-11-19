@@ -1,7 +1,10 @@
-import numpy as np
 import pandas as pd
-from pandas_profiling import ProfileReport
+import pandas_profiling
+import streamlit as st
 
-df = pd.DataFrame(np.random.rand(100, 5), columns=["a", "b", "c", "d", "e"])
+from streamlit_pandas_profiling import st_profile_report
 
-profile = ProfileReport(df, title="Pandas Profiling Report")
+df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
+pr = df.profile_report()
+
+st_profile_report(pr)
