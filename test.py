@@ -55,13 +55,13 @@ if(status == 'F'):
 #        st.text("Enter some value of height")
  
 # check if the button is pressed or not
-if st.button('Calculate BMI'):
- st.write(Temp)
-     else:
-   st.write('Goodbye')
+#if st.button('Calculate BMI'):
+ #st.write(Temp)
+#     else:
+#   st.write('Goodbye')
     # print the BMI INDEX
      #st.text("Your BMI Index is {}.".print(bmi))
-    
+  print(bmi)  
   chart_data = bmi,
   st.bar_chart(chart_data)
      
