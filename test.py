@@ -55,7 +55,7 @@ if(status == 'F'):
 #        st.text("Enter some value of height")
  
 # check if the button is pressed or not
-if(st.button('Calculate BMI')):
+st.button('Calculate BMI'):
      
     # print the BMI INDEX
      st.text("Your BMI Index is {}.".print(bmi))
