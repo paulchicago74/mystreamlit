@@ -44,5 +44,5 @@ file = st.file_uploader("Upload file", type=['csv'
   #  st.write("Upload a .csv or .xlsx file to get started")
   #  return
  # df = get_df(file)
-  explore()
+ # explore()
 main()
