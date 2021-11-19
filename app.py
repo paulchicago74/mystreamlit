@@ -4,8 +4,8 @@ import pandas as pd
 import pickle 
 import io
 import base64
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+#from pandas_profiling import ProfileReport
+#from streamlit_pandas_profiling import st_profile_report
 import df_helper as helper # custom script 
 
 def highlight(txt):
