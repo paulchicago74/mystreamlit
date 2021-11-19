@@ -5,46 +5,51 @@ import pandas as pd
 import numpy as np
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # give a title to our app
-st.title('Welcome to BMI Calculator')
+st.title('Predictive Model Calculation')
  
 # TAKE WEIGHT INPUT in kgs
-weight = st.number_input('Enter your weight (in kgs)')
+Tref = st.number_input('Enter the reference temperature')
 
-dvalue = st.slider('How old are you?', 0, 130, 25)
+Zref = st.number_input('Enter the reference Zvalue')
+
+Temp = st.slider('Enter the temperature', 0, 130, 25)
+
+Time = st.slider('Enter the Time', 0, 130, 25)
+
  
 # TAKE HEIGHT INPUT
 # radio button to choose height format
-status = st.selectbox('Select your height format: ',
-                  ('cms', 'meters', 'feet'))
+status = st.selectbox('Select temperature format: ',
+                  ('F', 'C', 'feet'))
  
 # compare status value
-if(status == 'cms'):
+if(status == 'F'):
     # take height input in centimeters
-    height = st.number_input('Centimeters')
+    Tref = st.number_input('Fahrenheit')
      
     try:
-        bmi = weight*dvalue / ((height/100)**2)
+        bmi = (Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
     except:
         st.text("Enter some value of height")
          
-elif(status == 'meters'):
+#elif(status == 'meters'):
     # take height input in meters
-    height = st.number_input('Meters')
+#    height = st.number_input('Meters')
      
-    try:
+#   try:
         bmi = weight*dvalue / (height ** 2)
-    except:
-        st.text("Enter some value of height")
+#    except:
+ #       st.text("Enter some value of height")
          
-else:
+#else:
     # take height input in feet
-    height = st.number_input('Feet')
+#    height = st.number_input('Feet')
      
     # 1 meter = 3.28
-    try:
-        bmi = weight / (((height/3.28))**2)
-    except:
-        st.text("Enter some value of height")
+#    try:
+#        bmi = weight / (((height/3.28))**2)
+#    except:
+#        st.text("Enter some value of height")
  
 # check if the button is pressed or not
 if(st.button('Calculate BMI')):
