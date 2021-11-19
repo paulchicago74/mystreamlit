@@ -25,20 +25,20 @@ def download_file(df, extension):
 
 def explore(df):
     pr = ProfileReport(df, explorative=True)
-    expander_df = st.beta_expander('Data frame')
+    expander_df = st.expander('Data frame')
     expander_df.write(df)
     st_profile_report(pr)
 
 def transform(df):
     # SAMPLE
-    expander_sample = st.beta_expander('Sample size (%)')
+    expander_sample = st.expander('Sample size (%)')
     expander_sample.text('Select a random sample from this dataset')
     frac = expander_sample.slider('Random sample (%)', 1, 100, 100)
     if frac < 100:
         df = df.sample(frac=frac/100)
 
     # COLUMNS / FIELDS
-    expander_fields = st.beta_expander('Select fields')
+    expander_fields = st.expander('Select fields')
     expander_fields.text('Select and order the fields')
     cols = expander_fields.multiselect('Columns', df.columns.tolist(), df.columns.tolist())
     df = df[cols]
