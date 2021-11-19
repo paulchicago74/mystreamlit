@@ -8,9 +8,9 @@ import numpy as np
 st.title('Predictive Model Calculation')
  
 # TAKE WEIGHT INPUT in kgs
-#Tref = st.number_input('Enter the reference temperature')
+Tref = st.number_input('Enter the reference temperature')
 
-#Zref = st.number_input('Enter the reference Zvalue')
+Zref = st.number_input('Enter the reference Zvalue')
 
 Temp = st.slider('Enter the temperature', 0, 130, 25)
 
@@ -19,21 +19,21 @@ Time = st.slider('Enter the Time', 0, 130, 25)
  
 # TAKE HEIGHT INPUT
 # radio button to choose height format
-status = st.selectbox('Select temperature format: ',
+#status = st.selectbox('Select temperature format: ',
                   ('F', 'C', 'feet'))
  
 # compare status value
-if(status == 'F'):
+#if(status == 'F'):
     # take height input in centimeters
-    Tref = st.number_input('Enter the reference temperature')
-and
-if(status == 'F'):
-    Zref = st.number_input('Enter the reference Zvalue')
+ #   Tref = st.number_input('Enter the reference temperature')
+#and
+#if(status == 'F'):
+   # Zref = st.number_input('Enter the reference Zvalue')
      
-    try:
+  #  try:
         bmi = (Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
-    except:
-        st.text("Enter some value of height")
+ #   except:
+#        st.text("Enter some value of height")
          
 #elif(status == 'meters'):
     # take height input in meters
