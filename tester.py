@@ -1,29 +1,69 @@
 import pandas as pd
+
 import pandas_profiling
+
 import streamlit as st
 
-from streamlit_gallery.utils import readme
 from streamlit_pandas_profiling import st_profile_report
 
-
-def main():
-    with readme("streamlit-pandas-profiling", st_profile_report, __file__):
-        dataset = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
-
-        df = pd.read_csv(dataset)
-        pr = gen_profile_report(df, explorative=True)
-
-        st.write(f"🔗 [Titanic dataset]({dataset})")
-        st.write(df)
-
-        with st.expander("REPORT", expanded=True):
-            st_profile_report(pr)
+from pandas_profiling import ProfileReport
 
 
-@st.cache(allow_output_mutation=True)
-def gen_profile_report(df, *report_args, **report_kwargs):
-    return df.profile_report(*report_args, **report_kwargs)
 
 
-if __name__ == "__main__":
-    main()
+df = pd.read_csv("crops data.csv", na_values=['='])
+
+
+
+
+profile = ProfileReport(df,
+
+                        title="Agriculture Data",
+
+        dataset={
+
+        "description": "This profiling report was generated for Analytics Vidhya Blog",
+
+        "copyright_holder": "Analytics Vidhya",
+
+        "copyright_year": "2021",
+
+        "url": "https://www.analyticsvidhya.com/blog/",
+
+    },
+
+    variables={
+
+        "descriptions": {
+
+            "State_Name": "Name of the state",
+
+            "District_Name": "Name of district",
+
+            "Crop_Year": "Year when it was seeded",
+
+            "Season": "Crop year",
+
+            "Crop": "Which crop was seeded?",
+
+            "Area": "How much area was allocated to the crop?",
+
+            "Production": "How much production?",
+
+
+
+
+        }
+
+    }
+
+)
+
+
+
+
+st.title("Pandas Profiling in Streamlit!")
+
+st.write(df)
+
+st_profile_report(profile)
