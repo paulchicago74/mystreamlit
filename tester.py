@@ -1,13 +1,29 @@
-from streamlit_echarts import st_echarts
+import pandas as pd
+import pandas_profiling
+import streamlit as st
 
-options = {
-    "xAxis": {
-        "type": "category",
-        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    },
-    "yAxis": {"type": "value"},
-    "series": [
-        {"data": [820, 932, 901, 934, 1290, 1330, 1320], "type": "line"}
-    ],
-}
-st_echarts(options=options)
+from streamlit_gallery.utils import readme
+from streamlit_pandas_profiling import st_profile_report
+
+
+def main():
+    with readme("streamlit-pandas-profiling", st_profile_report, __file__):
+        dataset = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
+
+        df = pd.read_csv(dataset)
+        pr = gen_profile_report(df, explorative=True)
+
+        st.write(f"🔗 [Titanic dataset]({dataset})")
+        st.write(df)
+
+        with st.expander("REPORT", expanded=True):
+            st_profile_report(pr)
+
+
+@st.cache(allow_output_mutation=True)
+def gen_profile_report(df, *report_args, **report_kwargs):
+    return df.profile_report(*report_args, **report_kwargs)
+
+
+if __name__ == "__main__":
+    main()
