@@ -31,7 +31,7 @@ Time = st.slider('Enter the Time', 0, 130, 25)
    # Zref = st.number_input('Enter the reference Zvalue')
      
   #  try:
-        bmi = (Time + (10 ** ((Temp - Tref)))
+        bmi = Time + Tref
  #   except:
 #        st.text("Enter some value of height")
          
