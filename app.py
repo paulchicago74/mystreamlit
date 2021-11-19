@@ -50,7 +50,7 @@ main()
 
 import streamlit as st
 import pandas as pd
-def explore(df)...
+# def explore(df)...
 def transform(df):
   # Select sample size
   frac = st.slider('Random sample (%)', 1, 100, 100)
@@ -62,7 +62,7 @@ def transform(df):
                         df.columns.tolist())
   df = df[cols]
   return df
-def get_df(file)...
+# def get_df(file)...
 def main():
   st.title('Explore a dataset')
   st.write('A general purpose data exploration app')
