@@ -29,7 +29,7 @@ st.metric('Temp', BMI, delta=None, delta_color="normal")
 
 st.metric('D value', D, delta=None, delta_color="normal")
 
-st.write ('D value, D)
+st.write (D)
 
           
           st.latex(r'''
