@@ -3,7 +3,7 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 import numpy as np
-from st_card import st_card
+import st_card
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
