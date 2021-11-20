@@ -3,6 +3,7 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 import numpy as np
+from st_card import st_card
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
@@ -27,6 +28,14 @@ st.metric('Temp', BMI, delta=None, delta_color="normal")
 
 st.metric('D value', D, delta=None, delta_color="normal")
 
+cols = st.columns(3)
+with cols[0]:
+    st_card('Orders', value=1200, delta=-45, delta_description='since last month')
+with cols[1]:
+    st_card('Competed Orders', value=76.4, unit='%', show_progress=True)
+with cols[2]:
+    st_card('Profit', value=45000, unit='($)', delta=48, use_percentage_delta=True, delta_description='since last year')
+  
 # st.button('Calculate BMI'):
  # st.write(Temp)
   
