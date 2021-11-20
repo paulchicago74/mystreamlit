@@ -24,13 +24,14 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 D= BMI / Dvalue
 
+cols = st.columns(3)
+with cols[0]:
 st.metric('Temp', BMI, delta=None, delta_color="normal")
-
+with cols[1]:
 st.metric('D value', D, delta=None, delta_color="normal")
 
-def app(data):
-    st.title('Streamlit Card Demo')
-    st.write('### Getting Started')
+
+  
     with st.echo():
         from st_card import st_card
         cols = st.columns(3)
