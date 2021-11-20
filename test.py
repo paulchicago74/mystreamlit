@@ -16,9 +16,9 @@ Zref = st.number_input('Enter the reference Zvalue', min_value=1)
 
 Dvalue = st.number_input('Enter the reference Dvalue', min_value=1)
 
-Temp = st.slider('Enter the temperature', 0.1, 130, 25)
+Temp = st.slider('Enter the temperature', 1, 130, 25)
 
-Time = st.slider('Enter the Time', 0.1, 130, 25)
+Time = st.slider('Enter the Time', 1, 130, 25)
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
