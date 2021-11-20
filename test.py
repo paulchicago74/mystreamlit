@@ -4,6 +4,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
+# (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
 st.title('Predictive Model Calculation')
  
@@ -16,7 +17,7 @@ Temp = st.slider('Enter the temperature', 0, 130, 25)
 
 Time = st.slider('Enter the Time', 0, 130, 25)
 
-BMI = (0 + ((10 ** (Temp - Tref) / Zref) + (10 ** ((Temp - Tref) / Zref))) / 2 * Time)
+BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 st.metric('Temp', BMI, delta=None, delta_color="normal")
 
