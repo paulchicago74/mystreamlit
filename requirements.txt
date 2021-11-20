@@ -8,4 +8,4 @@ numpy
 link-button
 st-radial
 st-card
-streamlit-apex-charts
+
