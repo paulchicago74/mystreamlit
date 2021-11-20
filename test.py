@@ -33,13 +33,9 @@ col1, col2, col3 = st.columns(3)
 
 col1.write (D)
 
-with col2:
+col2.write (BMI)
 
- st.image("https://static.streamlit.io/examples/dog.jpg")
-
-with col3:
-
-st.image("https://static.streamlit.io/examples/owl.jpg")
+col3.write (D)
 
 
 
