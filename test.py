@@ -31,7 +31,7 @@ st.metric('D value', D, delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
 
-col1.write (D)
+col1.metric('Temp', BMI, delta=None, delta_color="normal")
 
 col2.write (BMI)
 
