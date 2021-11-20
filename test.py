@@ -31,8 +31,7 @@ st.metric('D value', D, delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
 
-with col1:
-st.write (D)
+col1.write (D)
 
 with col2:
 
