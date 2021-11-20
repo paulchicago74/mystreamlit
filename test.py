@@ -25,6 +25,8 @@ D= BMI / Dvalue
 
 st.metric('Temp', BMI, delta=None, delta_color="normal")
 
+st.metric('D value', D, delta=None, delta_color="normal")
+
 # st.button('Calculate BMI'):
  # st.write(Temp)
   
