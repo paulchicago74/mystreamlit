@@ -21,8 +21,8 @@ st.metric('Temp', Temp, delta=None, delta_color="normal")
 # st.button('Calculate BMI'):
  # st.write(Temp)
   
-  chart_data = Temp,
-  st.bar_chart(chart_data)
+ # chart_data = Temp,
+#  st.bar_chart(chart_data)
      
   
     
