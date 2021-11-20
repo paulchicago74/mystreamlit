@@ -2,7 +2,7 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
-import sd-card
+
 
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
