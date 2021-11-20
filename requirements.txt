@@ -7,5 +7,5 @@ altair
 numpy
 link-button
 st-radial
-st_card
+st-card
 streamlit-apex-charts
