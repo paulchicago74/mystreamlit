@@ -16,7 +16,9 @@ Temp = st.slider('Enter the temperature', 0, 130, 25)
 
 Time = st.slider('Enter the Time', 0, 130, 25)
 
-st.metric('Temp', Temp, delta=None, delta_color="normal")
+BMI = Temp + Time
+
+st.metric('Temp', BMI, delta=None, delta_color="normal")
 
 # st.button('Calculate BMI'):
  # st.write(Temp)
