@@ -30,11 +30,11 @@ st.metric('Temp', BMI, delta=None, delta_color="normal")
 st.metric('D value', D, delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
-        with cols[1]:
+        with col1:
             st.write (D)
-        with cols[2]:
+        with col2:
            st.write (D)
-        with cols[3]:
+        with col3:
             st.write (D)
 
 
