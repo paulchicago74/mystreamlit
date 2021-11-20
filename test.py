@@ -32,8 +32,7 @@ st.metric('D value', D, delta=None, delta_color="normal")
 ol1, col2, col3 = st.columns(3)
 
 with col1:
-
-st.image("https://static.streamlit.io/examples/cat.jpg")
+st.metric('Temp', BMI, delta=None, delta_color="normal")
 
 with col2:
 
