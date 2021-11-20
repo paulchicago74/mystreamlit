@@ -16,7 +16,7 @@ Temp = st.slider('Enter the temperature', 0, 130, 25)
 
 Time = st.slider('Enter the Time', 0, 130, 25)
 
-BMI = Temp + Time
+BMI = Temp + Time ** 10
 
 st.metric('Temp', BMI, delta=None, delta_color="normal")
 
