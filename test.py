@@ -18,8 +18,8 @@ Time = st.slider('Enter the Time', 0, 130, 25)
 
 st.metric('Temp', Temp, delta=None, delta_color="normal")
 
- st.button('Calculate BMI'):
-  st.write(Temp)
+# st.button('Calculate BMI'):
+ # st.write(Temp)
   
   chart_data = Temp,
   st.bar_chart(chart_data)
