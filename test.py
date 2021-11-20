@@ -31,7 +31,7 @@ def app(data):
     st.title('Streamlit Card Demo')
     st.write('### Getting Started')
     with st.echo():
-        from st_card import st_card
+        from st-card import st_card
         cols = st.columns(3)
         with cols[0]:
             st_card('Orders', value=1200, delta=-45, delta_description='since last month')
