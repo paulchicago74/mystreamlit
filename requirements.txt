@@ -5,3 +5,7 @@ streamlit-echarts
 pandas
 altair
 numpy
+link-button
+st-radial
+st-card
+streamlit-apex-charts
