@@ -18,7 +18,7 @@ Time = st.slider('Enter the Time', 0, 130, 25)
 
  
  
-  print(Time)  
+  st.write(Time)  
   chart_data = Temp,
   st.bar_chart(chart_data)
      
