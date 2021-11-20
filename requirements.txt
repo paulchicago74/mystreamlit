@@ -6,6 +6,5 @@ pandas
 altair
 numpy
 link-button
-st-radial
-st-card
+
 
