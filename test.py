@@ -2,6 +2,7 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
+import sd-card
 
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
@@ -31,7 +32,7 @@ def app(data):
     st.title('Streamlit Card Demo')
     st.write('### Getting Started')
     with st.echo():
-        from st-card import st_card
+        from st_card import st_card
         cols = st.columns(3)
         with cols[0]:
             st_card('Orders', value=1200, delta=-45, delta_description='since last month')
