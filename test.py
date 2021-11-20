@@ -29,7 +29,7 @@ st.metric('Temp', BMI, delta=None, delta_color="normal")
 
 st.metric('D value', D, delta=None, delta_color="normal")
 
-st.write (D)
+st.write (altair, D)
 
 
 
