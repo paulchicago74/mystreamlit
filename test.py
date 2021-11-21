@@ -39,13 +39,13 @@ col2.write (BMI)
 col3.write (D)
 
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
-Pub2 = (10 ** ((Temp - 250)/10))/1 * Time / 3
+Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 
 
 option = st.selectbox('choose',
  ('Email', 'Home phone', 'Mobile phone'))
-if option == 'Email': replace (Tref, "220") and st.write(Pub1)
+if option == 'Email': st.write(Pub1)
 if option == 'Home phone': st.write(Pub2)
  
 #st.write('You selected:', option)
