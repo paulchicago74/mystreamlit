@@ -25,7 +25,7 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 D= BMI / Dvalue
 
-Tref = st.write (200)
+Tref = 200
 
 st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
 
