@@ -39,7 +39,7 @@ col2.write (BMI)
 col3.write (D)
 
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
-Pub2 = (10 ** ((Temp - 220)/10))/1 * Time / 3
+Pub2 = (10 ** ((Temp - 250)/10))/1 * Time / 3
 
 
 
