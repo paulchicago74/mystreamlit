@@ -23,7 +23,7 @@ Time = st.slider('Enter the Time', 1, 130, 25)
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
-Tref = st.write(200)
+Tref = st.metric(200)
 
 D= BMI / Dvalue
 
