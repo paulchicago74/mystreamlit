@@ -15,7 +15,7 @@ Tref = st.number_input('Enter the reference temperature', min_value=20)
 
 Zref = st.number_input('Enter the reference Zvalue', min_value=1)
 
-Dvalue = st.number_input('Enter the reference Dvalue', min_value=1, step=0.01)
+Dvalue = st.number_input('Enter the reference Dvalue', min_value=1, step=None)
 
 Temp = st.slider('Enter the temperature', 1, 130, 25)
 
