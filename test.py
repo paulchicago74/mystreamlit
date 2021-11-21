@@ -48,7 +48,7 @@ st.write('You selected:', option)
           
 else
 
-stop
+st.write('You selected NOT)
 
   
     
