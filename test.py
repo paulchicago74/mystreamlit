@@ -42,13 +42,12 @@ col3.write (D)
 
 option = st.selectbox('choose',
  ('Email', 'Home phone', 'Mobile phone'))
-if option == 'Email'
-
-st.write('You selected:', option)
+if option == 'Email': print('Good')
+#st.write('You selected:', option)
           
-else:
+#else:
 
-st.write('You selected NOT')
+#st.write('You selected NOT')
 
   
     
