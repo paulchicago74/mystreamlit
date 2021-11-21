@@ -25,8 +25,6 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 D= BMI / Dvalue
 
-Tref = 200
-
 st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
 
 st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
@@ -47,7 +45,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 option = st.selectbox('choose',
  ('Email', 'Home phone', 'Mobile phone'))
-if option == 'Email': st.write(Pub1)
+if option == 'Email': st.write(Pub1) and Tref = '200'
 if option == 'Home phone': st.write(Pub2)
  
 #st.write('You selected:', option)
