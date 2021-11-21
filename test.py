@@ -11,7 +11,7 @@ from millify import millify
 st.title('Predictive Model Calculation')
  
 # TAKE WEIGHT INPUT in kgs
-Tref = st.number_input('Enter the reference temperature', min_value=20)
+# Tref = st.number_input('Enter the reference temperature', min_value=20)
 
 Zref = st.number_input('Enter the reference Zvalue', min_value=1)
 
@@ -25,6 +25,7 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 D= BMI / Dvalue
 
+Tref = st.write (200)
 
 st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
 
