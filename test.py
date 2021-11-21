@@ -2,7 +2,7 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
-import millify
+from millify import millify
 
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
@@ -25,7 +25,7 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 D= BMI / Dvalue
 
 
-st.metric('Temp', millify(1234), delta=None, delta_color="normal")
+st.metric('Temp', D, millify(1234), delta=None, delta_color="normal")
 
 st.metric('D value', D, delta=None, delta_color="normal")
 
