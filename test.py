@@ -39,7 +39,7 @@ col2.write (BMI)
 col3.write (D)
 
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
-if Pub1 == st.replace (Tref, '200')
+if Pub1 == Tref = 130
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 
