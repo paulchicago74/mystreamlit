@@ -26,9 +26,9 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 D= BMI / Dvalue
 
 
-st.metric('Temp', millify(D, precision=2), delta=None, delta_color="normal")
+st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
 
-st.metric('D value', D, delta=None, delta_color="normal")
+st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
 
