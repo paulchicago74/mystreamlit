@@ -37,6 +37,8 @@ col1.metric('Temp', BMI, delta=None, delta_color="normal")
 
 col2.write (BMI)
 
+st.success (BMI)
+
 col3.write (D)
 
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
