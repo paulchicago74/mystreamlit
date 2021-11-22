@@ -21,8 +21,6 @@ Temp = st.slider('Enter the temperature', 1, 130, 25)
 
 Time = st.slider('Enter the Time', 1, 130, 25)
 
-if option == 'Email': Tref = 200
-
 Tref = 120
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
@@ -52,7 +50,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 option = st.selectbox('choose',
  ('Email', 'Home phone', 'Mobile phone'))
 if option == 'Email': Tref = 200
-if option == 'Email': st.write(Pub1) 
+#if option == 'Email': st.write(Pub1) 
 if option == 'Home phone': st.write(Pub2)
  
 #st.write('You selected:', option)
