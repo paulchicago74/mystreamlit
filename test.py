@@ -96,7 +96,7 @@ else:
     selected_options =  container.multiselect("Select one or more options:",
         ['Email', 'Home phone', 'Mobile phone'])
   
-st.write (container)
+st.write (selected_options)
     
 
 
