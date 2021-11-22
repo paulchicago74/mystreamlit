@@ -55,7 +55,7 @@ option = st.selectbox('choose',
  ('Phone', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if option == 'Phone': st.write(Pub1)
+if option == 'Phone': st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 if option == 'Home phone': st.write(Pub2)
  
 # df.loc[df['First Season'] > 1990, 'First Season'] = 1
