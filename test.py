@@ -43,7 +43,7 @@ col3.write (D)
 Tref = st.empty()
 Tref = 120
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
-Pub1 = st.empty(Tref, 200)
+Pub1 = st.empty("Tref": 200)
 #Tref = 200
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Tref = st.empty()
