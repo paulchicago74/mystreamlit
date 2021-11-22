@@ -40,9 +40,8 @@ col2.write (BMI)
 st.success (BMI)
 
 col3.write (D)
-Pub1 = BMI (Tref = 120)
 Tref = st.empty()
-Tref = 120
+Tref.text(Pub1: 120)
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 Tref = st.empty()
 #Tref = 200
