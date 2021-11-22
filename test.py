@@ -49,12 +49,13 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Tref = st.empty()
 #Tref = 180
 #Pub1.replace (BMI(Tref, 200))
+Pub1 = BMI.replace(Tref, 200)
 
 option = st.selectbox('choose',
  ('Phone', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if option == 'Phone': Pub1 = BMI.replace(Tref, 200)
+if option == 'Phone': st.write(Pub1)
 if option == 'Home phone': st.write(Pub2)
  
 # df.loc[df['First Season'] > 1990, 'First Season'] = 1
