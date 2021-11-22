@@ -80,7 +80,7 @@ if option == 'Home phone': st.write(Pub2)
 #st.bar_chart(chart_data)
      
   chart_data = pd.DataFrame(
-     (20, 3),
+     [20, 3],
      columns=['a'])
 
 st.line_chart(chart_data)
