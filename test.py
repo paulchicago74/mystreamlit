@@ -74,7 +74,7 @@ if option == 'Home phone': st.write(Pub2)
   
 form = st.form(key='my_form')
 SP = form.text_input(label='Enter some text')
-BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
+form.write (BMI)
 submit_button = form.form_submit_button(label='Submit')
 st.write(SP, BMI)
 
