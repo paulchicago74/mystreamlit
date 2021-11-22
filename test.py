@@ -41,7 +41,7 @@ st.success (BMI)
 
 col3.write (D)
 Tref = st.empty()
-Tref = 180
+Tref = 120
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 Tref = st.empty()
 Tref = 200
