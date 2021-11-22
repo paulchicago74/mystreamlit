@@ -51,7 +51,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Pub1.replace (BMI(Tref, 200))
 #Pub1 = BMI.replace(Tref, 200)
 
-option = st.selectbox('choose',
+option = st.multiselect('choose',
  ('Phone', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
