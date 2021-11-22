@@ -3,7 +3,7 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 from millify import millify
-
+import ProfileReport
 
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
