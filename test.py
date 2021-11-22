@@ -52,7 +52,14 @@ option = st.selectbox('choose',
 if option == 'Email': st.write(Pub1)
 if option == 'Home phone': st.write(Pub2)
  
-profile = ProfileReport(Pub1)
+profile = ProfileReport(
+                        title="Agriculture Data",
+        dataset={
+        "description": "This profiling report was generated for Analytics Vidhya Blog",
+        "copyright_holder": "Analytics Vidhya",
+        "copyright_year": "2021",
+        "url": "https://www.analyticsvidhya.com/blog/",
+    },)
 profile
  
 #st.write('You selected:', option)
