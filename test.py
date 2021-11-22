@@ -86,7 +86,15 @@ if submit:
 #chart_data = Pub1
 #st.bar_chart(chart_data)
      
-  
+  container = st.beta_container()
+all = st.checkbox("Select all")
+ 
+if all:
+    selected_options = container.multiselect("Select one or more options:",
+         ['A', 'B', 'C'],['A', 'B', 'C'])
+else:
+    selected_options =  container.multiselect("Select one or more options:",
+        ['A', 'B', 'C'])
     
 
 
