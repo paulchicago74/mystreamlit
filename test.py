@@ -51,7 +51,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Pub1.replace (string(Tref, 200))
 
 option = st.selectbox('choose',
- (Pub1, 'Home phone', 'Mobile phone'))
+ (('Phone', Pub1), 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
 if option == Pub1: st.write(Pub1)
