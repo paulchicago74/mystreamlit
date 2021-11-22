@@ -95,7 +95,7 @@ if all:
 else:
     selected_options =  container.multiselect("Select one or more options:",
         ['Email', 'Home phone', 'Mobile phone'])
-  if selected_options == 'Email':  st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
+selected_options == 'Email':  st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 st.write (selected_options)
     
 
