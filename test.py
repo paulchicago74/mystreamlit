@@ -45,12 +45,11 @@ Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 # if BMI2 == Pub1: st.write(Tref, 200)
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
-
+Pub1 = (Tref, '20')
 
 option = st.selectbox('choose',
  ('Email', 'Home phone', 'Mobile phone'))
 if option == 'Email': st.write(Pub1)
-if option == 'Email': Pub1.replace(Tref, '20')
 if option == 'Home phone': st.write(Pub2)
  
 #st.write('You selected:', option)
