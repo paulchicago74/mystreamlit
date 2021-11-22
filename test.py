@@ -52,10 +52,10 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Pub1 = BMI.replace(Tref, 200)
 
 option = st.multiselect('choose',
- ('Phone', 'Home phone', 'Mobile phone'))
+ (Phone, 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if option == 'Phone': st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
+Phone = st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 if option == 'Home phone': st.write(Pub2)
 st.write (option)
  
