@@ -76,7 +76,7 @@ if option == 'Home phone': st.write(Pub2)
 # st.button('Calculate BMI'):
  # st.write(Temp)
   
- chart_data = Pub1,
+chart_data = Pub1
 st.bar_chart(chart_data)
      
   
