@@ -15,7 +15,7 @@ st.title('Predictive Model Calculation')
 
 Zref = st.number_input('Enter the reference Zvalue', min_value=1)
 
-Dvalue = st.number_input('Enter the reference Dvalue', min_value=None, step=0.1)
+Dvalue = st.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
 Temp = st.slider('Enter the temperature', 1, 130, 25)
 
