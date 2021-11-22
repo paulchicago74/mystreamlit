@@ -52,6 +52,9 @@ option = st.selectbox('choose',
 if option == 'Email': st.write(Pub1)
 if option == 'Home phone': st.write(Pub2)
  
+profile = ProfileReport(Pub1)
+profile
+ 
 #st.write('You selected:', option)
           
 #else:
