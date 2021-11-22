@@ -96,7 +96,7 @@ else:
     selected_options =  container.multiselect("Select one or more options:",
         ['Email', 'Home phone', 'Mobile phone'])
 # selected_options == 'Email':  st.metric ('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
-st.metric (selected_options)
+st.success (selected_options)
     
      
 
