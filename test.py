@@ -86,7 +86,7 @@ if submit:
 #chart_data = Pub1
 #st.bar_chart(chart_data)
      
-container = st.beta_container()
+container = st.container()
 all = st.checkbox("Select all")
  
 if all:
