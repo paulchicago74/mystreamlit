@@ -74,10 +74,17 @@ if option == 'Home phone': st.write(Pub2)
   
 form = st.form(key='my_form')
 SP = form.text_input(label='Enter some text')
-form.write (BMI)
 submit_button = form.form_submit_button(label='Submit')
 st.write(SP, BMI)
 
+ form = st.form(key='my-form')
+name = form.text_input('Enter your name')
+submit = form.form_submit_button('Submit')
+
+st.write('Press submit to have your name printed below')
+
+if submit:
+    st.write(f'hello {name}')
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
