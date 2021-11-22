@@ -73,7 +73,7 @@ if option == 'Home phone': st.write(Pub2)
 
 
 
- form = st.form(key='my-form')
+form = st.form(key='my-form')
 name = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 
