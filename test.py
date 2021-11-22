@@ -24,7 +24,7 @@ Time = st.slider('Enter the Time', 1, 130, 25)
 #Tref = 120
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
-BMI.replace ('Tref', 200)
+BMI.replace (Tref, 200)
 D= BMI / Dvalue
 
 st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
