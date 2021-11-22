@@ -73,9 +73,10 @@ if option == 'Home phone': st.write(Pub2)
 
   
 with st.form('Form1'):
-        st.slider(label='Select intensity', min_value=0, max_value=100, key=4)
+        Time = st.slider('Enter the Time', 1, 130, 25)
         submitted1 = st.form_submit_button('Submit 1')
-
+if submit:
+    st.write(Time)
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
