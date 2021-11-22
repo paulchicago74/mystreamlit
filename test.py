@@ -72,8 +72,9 @@ if option == 'Home phone': st.write(Pub2)
 #st.write('You selected NOT')
 
   
-    
-st.button('button', on_click = st.write(Temp))
+with st.form('Form1'):
+        st.slider(label='Select intensity', min_value=0, max_value=100, key=4)
+        submitted1 = st.form_submit_button('Submit 1')
 
   
 #chart_data = Pub1
