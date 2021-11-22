@@ -55,7 +55,7 @@ option = st.multiselect('choose',
  ('Email', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if 'Email" in option: st.metric(Pub1, millify(Pub1, precision=2), delta=None, delta_color="normal") 
+if 'Email" in option: st.metric(Pub1)
 if option == 'Email':  st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 if option == 'Home phone': st.write(Pub2)
 st.write (option)
