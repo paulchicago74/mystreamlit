@@ -41,7 +41,7 @@ st.success (BMI)
 
 col3.write (D)
 Tref = st.empty()
-Tref.line_chart({"Pub1": [120]})
+#Tref.line_chart({"Pub1": [120]})
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 Tref = st.empty()
 #Tref = 200
@@ -54,7 +54,7 @@ option = st.selectbox('choose',
  ('Phone', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if option == 'Phone': df.loc[df(Tref = 120, Tref = 200)]
+if option == 'Phone': replaced_BMI = text.replace('Tref', 200)
 if option == 'Home phone': st.write(Pub2)
  
 # df.loc[df['First Season'] > 1990, 'First Season'] = 1
