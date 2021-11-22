@@ -21,9 +21,9 @@ Temp = st.slider('Enter the temperature', 1, 130, 25)
 
 Time = st.slider('Enter the Time', 1, 130, 25)
 
-BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
-
 Tref = 1 * 200
+
+BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 D= BMI / Dvalue
 
