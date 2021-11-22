@@ -51,7 +51,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 option = st.selectbox('choose',
  ('Email', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
-if option == 'Email': Tref = 200
+if option == 'Email': Tref = 1200
 if option == 'Email': st.write(Pub1)
  
 if option == 'Home phone': st.write(Pub2)
