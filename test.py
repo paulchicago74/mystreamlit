@@ -86,18 +86,7 @@ if submit:
 #chart_data = Pub1
 #st.bar_chart(chart_data)
      
-container = st.container()
-all = st.checkbox("Select all")
- 
-if all:
-    selected_options = container.multiselect("Select one or more options:",
-         ['Email', 'Home phone', 'Mobile phone'],['Email', 'Home phone', 'Mobile phone'])
-else:
-    selected_options =  container.multiselect("Select one or more options:",
-        ['Email', 'Home phone', 'Mobile phone'])
-selected_options == 'Email':  st.write('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
-st.write (selected_options)
-    
+
 
 
       
