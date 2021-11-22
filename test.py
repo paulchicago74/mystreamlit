@@ -80,7 +80,7 @@ submit = form.form_submit_button('Submit')
 st.write('Press submit to have your name printed below')
 
 if submit:
-    st.write.success (BMI)
+    st.success (BMI)
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
