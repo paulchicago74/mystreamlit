@@ -21,10 +21,7 @@ Temp = st.slider('Enter the temperature', 1, 130, 25)
 
 Time = st.slider('Enter the Time', 1, 130, 25)
 
-#Tref = 120
-
-Tref = st.empty()
-
+Tref = 120
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
@@ -45,7 +42,8 @@ st.success (BMI)
 col3.write (D)
 
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
-# if BMI2 == Pub1: st.write(Tref, 200)
+Tref = st.empty()
+Tref = 200
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 #Pub1.replace (string(Tref, 200))
