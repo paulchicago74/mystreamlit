@@ -73,7 +73,7 @@ if option == 'Home phone': st.write(Pub2)
 
   
     
-st.button('Calculate BMI', onclick = st.write(Pub1)
+st.button('Calculate BMI', onclick = st.write(Pub1))
 
   
 #chart_data = Pub1
