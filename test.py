@@ -13,7 +13,7 @@ st.title('Predictive Model Calculation')
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
 
-Zref = st.number_input('Enter the reference Zvalue', min_value=1)
+Zref = st.sidebar.number_input('Enter the reference Zvalue', min_value=1)
 
 Dvalue = st.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
