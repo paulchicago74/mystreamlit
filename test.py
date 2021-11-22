@@ -98,7 +98,7 @@ else:
 if selected_options == 'Email':  st.write ('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 st.write (selected_options)
     
-selection = st.multiselect('Select',['BMI']:BMI)
+selection = st.multiselect('Select',['BMI'])
 st.write(selection)
 
 
