@@ -56,7 +56,8 @@ option = st.multiselect('choose',
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
 if option == 'Email':  st.metric('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
-st.write (option, if option == 'Home phone': st.write(option)
+st.write (option)
+if option == 'Home phone': st.write(BMI)
 # st.write (option)
  
 # df.loc[df['First Season'] > 1990, 'First Season'] = 1
