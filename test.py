@@ -73,7 +73,7 @@ if option == 'Home phone': st.write(Pub2)
 
   
     
-st.button('button', on_click = st.write(Pub1))
+st.button('button', on_click = st.write(Temp))
 
   
 #chart_data = Pub1
