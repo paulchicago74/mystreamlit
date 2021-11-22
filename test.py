@@ -55,7 +55,7 @@ option = st.selectbox('choose',
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
 if option == 'Phone': st.write(Pub1)
- 
+ st.write(Pub2)
 if option == 'Home phone': st.write(Pub2)
  
 #profile = ProfileReport(
