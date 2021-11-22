@@ -71,11 +71,7 @@ if option == 'Home phone': st.write(Pub2)
 
 #st.write('You selected NOT')
 
-  
-form = st.form(key='my_form')
-SP = form.text_input(label='Enter some text')
-submit_button = form.form_submit_button(label='Submit')
-st.write(SP, BMI)
+
 
  form = st.form(key='my-form')
 name = form.text_input('Enter your name')
