@@ -72,11 +72,17 @@ if option == 'Home phone': st.write(Pub2)
 #st.write('You selected NOT')
 
   
-with st.form('Form1'):
-        Time = st.slider('Enter the Time', 1, 130, 25)
-        submitted1 = st.form_submit_button('Submit 1')
-if submit:
-    st.write(Time)
+ with st.form(key="recommender"):
+        st.write("Click **Submit** to get your recommendation!")
+        st.selectbox(
+            "Your favorite streamlit call",
+            ["st.form", "st.balloons 🎈 ", "st.form_submit_button", "st.write"],
+        )
+        st.text_input("Your favorite thing to build streamlit apps for")
+        st.slider("How excited you are about forms", 0, 11, 10)
+        submitted = st.form_submit_button()
+
+    st.write("")
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
