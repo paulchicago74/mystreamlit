@@ -33,7 +33,9 @@ st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
 
-st.success (col1.metric('Temp', BMI, delta=None, delta_color="normal"))
+st.sucess (col1)
+
+col1.metric('Temp', BMI, delta=None, delta_color="normal")
 
 col2.write (BMI)
 
