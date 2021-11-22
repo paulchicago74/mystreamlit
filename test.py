@@ -76,6 +76,7 @@ form = st.form(key='my_form')
 SP = form.text_input(label='Enter some text')
 submit_button = form.form_submit_button(label='Submit')
 st.write(SP)
+st.write(BMI)
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
