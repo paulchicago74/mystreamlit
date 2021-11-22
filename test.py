@@ -43,7 +43,7 @@ col3.write (D)
 
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 Tref = st.empty()
-Tref = 200
+#Tref = 200
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 #Pub1.replace (string(Tref, 200))
