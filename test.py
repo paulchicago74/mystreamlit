@@ -48,7 +48,7 @@ Tref = 200
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Tref = st.empty()
 #Tref = 180
-#Pub1.replace (string(Tref, 200))
+Pub1.replace (BMI(Tref, 200))
 
 option = st.selectbox('choose',
  ('Phone', 'Home phone', 'Mobile phone'))
