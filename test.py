@@ -44,7 +44,7 @@ col3.write (D)
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 # if BMI2 == Pub1: st.write(Tref, 200)
 Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
-
+Pub1.replace (Tref, 200)
 #Pub1.replace (string(Tref, 200))
 
 option = st.selectbox('choose',
