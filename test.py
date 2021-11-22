@@ -73,9 +73,9 @@ if option == 'Home phone': st.write(Pub2)
 
   
 form = st.form(key='my_form')
-form.text_input(label='Enter some text')
+SP = form.text_input(label='Enter some text')
 submit_button = form.form_submit_button(label='Submit')
-st.write("")
+st.write(SP)
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
