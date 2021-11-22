@@ -54,7 +54,7 @@ option = st.selectbox('choose',
  ('Phone', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if option == 'Phone': Pub1 = BMI.replace('Tref', 200)
+if option == 'Phone': Pub1 = BMI.replace(Tref, 200)
 if option == 'Home phone': st.write(Pub2)
  
 # df.loc[df['First Season'] > 1990, 'First Season'] = 1
