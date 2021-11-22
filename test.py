@@ -91,7 +91,7 @@ all = st.checkbox("Select all")
  
 if all:
     selected_options = container.multiselect("Select one or more options:",
-         ['Email', 'Home phone', 'Mobile phone'],['Email', 'Home phone', 'Mobile phone'])
+         [{'Email': BMI}, 'Home phone', 'Mobile phone'],['Email', 'Home phone', 'Mobile phone'])
 else:
     selected_options =  container.multiselect("Select one or more options:",
         ['Email', 'Home phone', 'Mobile phone'])
