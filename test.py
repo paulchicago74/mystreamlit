@@ -53,10 +53,10 @@ if option == 'Email': st.write(Pub1) and Pub1.replace (Tref, 200)
 
 if option == 'Home phone': st.write(Pub2)
  
-profile = ProfileReport(
-                        title="Agriculture Data"
-        )
-profile
+#profile = ProfileReport(
+#                        title="Agriculture Data"
+#        )
+#profile
  
 #st.write('You selected:', option)
           
