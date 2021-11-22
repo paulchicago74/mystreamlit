@@ -73,11 +73,11 @@ if option == 'Home phone': st.write(Pub2)
 
   
     
-# st.button('Calculate BMI'):
- # st.write(Temp)
+st.button('Calculate BMI'):
+ st.write(Pub1)
   
-chart_data = Pub1
-st.bar_chart(chart_data)
+#chart_data = Pub1
+#st.bar_chart(chart_data)
      
   
     
