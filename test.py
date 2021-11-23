@@ -112,12 +112,7 @@ st.text("value 1: %s" % i1)
 print(BMI)
 
 
-def app(data):
-    st.title('Streamlit Link Button Demo')
-    st.write('### Getting Started')
-    with st.echo():
-        from link_button import link_button
-        _clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
+_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
         if _clicked:    
             st.balloons()
 
