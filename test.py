@@ -103,6 +103,6 @@ if selected_options == 'Email':  st.success ('Pub1', millify(Pub1, precision=2),
 options = ("male", "female")
 i1 = st.multiselect("selectbox 1", options)
 st.text("value 1: %s" % i1)
-if st.text == "male" : st.write (BMI)
+if options == "male" : st.write (BMI)
 
     
