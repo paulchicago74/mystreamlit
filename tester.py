@@ -23,7 +23,7 @@ df = pd.DataFrame(data, columns = ['Time', 'Fvalue', 'Dvalue'])
 my_table = st.table(df)
 # df2 = ('Time' df + T2, df + 2, df + 3)
 df2 = ({'Time': [df + T2, 3, 4],
-                   'Fvalue': [360, 180, 360]},
+                   'Fvalue': [360, 180, 360]}
 my_table.add_rows(df2)
 # print dataframe.
 df
