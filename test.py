@@ -19,7 +19,7 @@ Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, st
 
 Tref = st.sidebar.number_input('Enter the reference Tref', min_value=0.1, step=0.1)
 
-Temp = st.container
+st.subheader('Parameters', anchor=None)
 
 Temp = st.sidebar.slider('Enter the temperature', min_value=1.00, max_value=250.00, value=120.00)
 
