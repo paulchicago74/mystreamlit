@@ -14,6 +14,7 @@ data = [[0, 0, 0]]
 F = (10 ** ((Temp - Tref)/Zref))/1 * Time
 Tref = 120
 Zref = 10
+Temp = 100
 
   
 # Create the pandas DataFrame
