@@ -8,12 +8,14 @@ import numpy as np
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # give a title to our app
 
-data = [['tom', 10], ['nick', 15], ['juli', 14]]
+D= 150
+Time = 50
+data = [[0, 0, 0]]
   
 # Create the pandas DataFrame
-df = pd.DataFrame(data, columns = ['Name', 'Age'])
+df = pd.DataFrame(data, columns = ['Time', 'Fvalue', 'Dvalue'])
 my_table = st.table(df)
-df2 = pd.DataFrame(data = [['tom', 10], ['nick', 15], ['juli', 14]])
+df2 = pd.DataFrame(data = [[Time/10, 10], ['nick', 15], ['juli', 14]])
 my_table.add_rows(df2)
 # print dataframe.
 df
