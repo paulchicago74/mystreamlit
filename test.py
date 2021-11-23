@@ -111,8 +111,8 @@ i1 = st.multiselect("selectbox 1", options)
 st.text("value 1: %s" % i1)
 print(BMI)
 
-
-st.button('Say hello', on_click="http://google.com")
+from link_button import link_button
+_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 
 
 
