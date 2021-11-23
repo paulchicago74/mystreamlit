@@ -12,7 +12,7 @@ data = [['tom', 10], ['nick', 15], ['juli', 14]]
   
 # Create the pandas DataFrame
 df = pd.DataFrame(data, columns = ['Name', 'Age'])
-my_table = st.table(df1)
+my_table = st.table(df)
 df2 = pd.DataFrame(data = [['tom', 10], ['nick', 15], ['juli', 14]])
 my_table.add_rows(df2)
 # print dataframe.
