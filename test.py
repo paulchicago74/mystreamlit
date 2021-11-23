@@ -21,7 +21,7 @@ Tref = st.sidebar.number_input('Enter the reference Tref', min_value=0.1, step=0
 
 Temp = st.sidebar.slider('Enter the temperature', min_value=1, max_value=250, value=120)
 
-Time = st.sidebar.slider('Enter the Time', min_value=0.1, max_value=200)
+Time = st.sidebar.slider('Enter the Time', min_value=0.1, max_value=200.0)
 
 Tref = 120
 
