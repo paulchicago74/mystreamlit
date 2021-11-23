@@ -21,7 +21,7 @@ T2 = Time / 10
 data = [[0, 0, 0]]
 df = pd.DataFrame(data, columns = ['Time', 'Fvalue', 'Dvalue'])
 my_table = st.table(df)
-df2 = (df +1, df + 2, df + 3)
+df2 = (df + T2, df + 2, df + 3)
 my_table.add_rows(df2)
 # print dataframe.
 df
