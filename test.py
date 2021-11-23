@@ -23,7 +23,7 @@ Temp = st.sidebar.slider('Enter the temperature', min_value=1.00, max_value=250.
 
 Time = st.sidebar.slider('Enter the Time', min_value=0.1, max_value=200.0)
 
-Tref = 120
+#Tref = 120
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
