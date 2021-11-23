@@ -3,4 +3,3 @@ altair
 millify
 pandas
 pandas-profiling
-link_button
