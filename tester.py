@@ -1,4 +1,7 @@
 # import the streamlit library
+[theme]
+base = "dark"
+
 import streamlit as st
 import altair as alt
 import pandas as pd
