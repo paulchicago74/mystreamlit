@@ -11,11 +11,15 @@ import numpy as np
 D= 150
 Time = 50
 data = [[0, 0, 0]]
+F = (10 ** ((Temp - Tref)/Zref))/1 * Time
+Tref = 120
+Zref = 10
+
   
 # Create the pandas DataFrame
 df = pd.DataFrame(data, columns = ['Time', 'Fvalue', 'Dvalue'])
 my_table = st.table(df)
-df2 = pd.DataFrame(data = [[Time/10, 10], ['nick', 15], ['juli', 14]])
+df2 = pd.DataFrame(data = [[Time/10, 10, 10])
 my_table.add_rows(df2)
 # print dataframe.
 df
