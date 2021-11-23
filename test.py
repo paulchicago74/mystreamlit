@@ -19,9 +19,9 @@ Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, st
 
 Tref = st.sidebar.number_input('Enter the reference Tref', min_value=0.1, step=0.1)
 
-Temp = st.slider('Enter the temperature', 1, 130, 25)
+Temp = st.sidebar.slider('Enter the temperature', 1, 130, 25)
 
-Time = st.slider('Enter the Time', 1, 130, 25)
+Time = st.sidebar.slider('Enter the Time', 1, 130, 25)
 
 Tref = 120
 
