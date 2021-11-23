@@ -12,6 +12,7 @@ data = [['tom', 10], ['nick', 15], ['juli', 14]]
   
 # Create the pandas DataFrame
 df = pd.DataFrame(data, columns = ['Name', 'Age'])
+df2 = pd.DataFrame(data = [['tom', 10], ['nick', 15], ['juli', 14]])
   
 # print dataframe.
 df
