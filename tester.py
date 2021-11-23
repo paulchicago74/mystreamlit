@@ -11,11 +11,10 @@ import numpy as np
 D= 150
 Time = 50
 data = [[0, 0, 0]]
-F = (10 ** ((Temp - Tref)/Zref))/1 * Time
 Tref = 120
 Zref = 10
 Temp = 100
-
+F = (10 ** ((Temp - Tref)/Zref))/1 * Time
   
 # Create the pandas DataFrame
 df = pd.DataFrame(data, columns = ['Time', 'Fvalue', 'Dvalue'])
