@@ -112,7 +112,7 @@ st.text("value 1: %s" % i1)
 print(BMI)
 
 
-st.button('Say hello', on_click="http://google.com)
+st.button('Say hello', on_click="http://google.com")
 
 
 
