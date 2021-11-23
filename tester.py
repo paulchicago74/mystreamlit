@@ -15,13 +15,13 @@ Zref = 10
 Temp = 100
 F = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
-T2 = Time/10
+T2 = Time / 10
 
 # Create the pandas DataFrame
 data = [[0, 0, 0]]
 df = pd.DataFrame(data, columns = ['Time', 'Fvalue', 'Dvalue'])
 my_table = st.table(df)
-df2 = pd.DataFrame(data = [[Temp / 10, 10, 10]])
+df2 = pd.DataFrame(data = [[T2, 10, 10]])
 my_table.add_rows(df2)
 # print dataframe.
 df
