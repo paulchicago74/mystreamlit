@@ -26,7 +26,7 @@ df2 = ({'Time': [df + T2, 3, 4],
                    'Fvalue': [360, 180, 360]}
 #my_table.add_rows(df2)
 # print dataframe.
-df
+#df
 
 
 df1 = pd.DataFrame(
