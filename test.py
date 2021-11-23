@@ -4,6 +4,7 @@ import altair as alt
 import pandas as pd
 from millify import millify
 from pandas_profiling import ProfileReport
+from link_button import link_button
 
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
@@ -110,7 +111,6 @@ i1 = st.multiselect("selectbox 1", options)
 st.text("value 1: %s" % i1)
 print(BMI)
 
-from link_button import link_button
 _clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 if _clicked:    
     st.balloons()
