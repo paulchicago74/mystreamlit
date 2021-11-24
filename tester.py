@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-data_path_naaz = "https://docs.google.com/spreadsheets/d/1QUitUwxUuxBXdyyrICIsZa2AQbvVxkH8jobi1qPs8u0/edit#gid=295594796"
+data_path_naaz = "https://docs.google.com/spreadsheets/d/1JpW4p19ypEIQDsY9ednNo6k1N-AAqf3jYn3P-7G64cU/edit?usp=sharing"
 data_path_bobby = "https://docs.google.com/spreadsheets/d/1hcZHPidIWgfaXp9S4rU3AdV8FrxY5vswjhZxm9po8k4/gviz/tq?tqx=out:csv&sheet=With-medication"
 get_url = lambda data_path : data_path.replace("/edit#gid=", "/export?format=csv&gid=")
 
