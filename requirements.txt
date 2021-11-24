@@ -3,4 +3,4 @@ altair
 millify
 pandas
 pandas-profiling
-
+plotly
