@@ -150,4 +150,4 @@ def main():
 
 main()
 
-st.latex('Streamlit is **_really_ cool**.')
+st.latex("Streamlite is really cool")
