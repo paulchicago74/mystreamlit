@@ -150,4 +150,4 @@ def main():
 
 main()
 
-st.talex.markdown('Streamlit is **_really_ cool**.')
+st.latex.markdown('Streamlit is **_really_ cool**.')
