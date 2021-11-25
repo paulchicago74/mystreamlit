@@ -149,3 +149,5 @@ def main():
         transform(df)
 
 main()
+
+st.markdown('Streamlit is **_really_ cool**.')
