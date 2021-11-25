@@ -150,4 +150,4 @@ def main():
 
 main()
 
-st.latex("Streamlite is really cool")
+st.markdown(latex, "Streamlite is really cool")
