@@ -33,7 +33,7 @@ genre = st.sidebar.radio(
 if genre == 'Yes':
     st.write('You selected comedy.')
 else:
-    #st.write("You didn't select comedy.")
+    st.write("You didn't select comedy.")
 
 Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
 
