@@ -10,12 +10,12 @@ from pandas_profiling import ProfileReport
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
-st.title('Predictive Model Calculation')
+st.sidebar.title('Predictive Model Calculation')
  
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
 
-Zref = st.sidebar.number_input('Enter the reference Zvalue', min_value=1)
+Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
 
 Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
