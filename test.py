@@ -74,22 +74,6 @@ option = st.multiselect('choose',
 if option == 'Email':  st.metric(Pub1, millify(Pub1, precision=2), delta=None, delta_color="normal")
 st.write (option)
 if option == 'Home phone': st.write(BMI)
-# st.write (option)
- 
-# df.loc[df['First Season'] > 1990, 'First Season'] = 1
- 
-#profile = ProfileReport(
-#                        title="Agriculture Data"
-#        )
-#profile
- 
-#st.write('You selected:', option)
-          
-#else:
-
-#st.write('You selected NOT')
-
-
 
 form = st.form(key='my-form')
 name = form.text_input('Enter your name')
@@ -121,7 +105,7 @@ i1 = st.multiselect("selectbox 1", options)
 st.text("value 1: %s" % i1)
 print(BMI)
 
-#_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
+_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 
 
 
