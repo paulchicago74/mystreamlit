@@ -107,6 +107,14 @@ print(BMI)
 
 _clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 
+col1, col2 = st.columns(2)
+
+col1.metric('Temp', BMI, delta=None, delta_color="normal")
+
+col2.write (BMI)
+
+st.success (BMI)
+
 
 
     
