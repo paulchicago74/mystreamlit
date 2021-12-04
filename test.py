@@ -101,13 +101,13 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Pub1.replace (BMI(Tref, 200))
 #Pub1 = BMI.replace(Tref, 200)
 
-option = st.multiselect('choose',
- ('Email', 'Home phone', 'Mobile phone'))
+#option = st.multiselect('choose',
+# ('Email', 'Home phone', 'Mobile phone'))
 #if option == 'Email': st.write(Pub1) 
 #if option == 'Email': Tref = 1200
-if option == 'Email':  st.metric(Pub1, millify(Pub1, precision=2), delta=None, delta_color="normal")
-st.write (option)
-if option == 'Home phone': st.write(BMI)
+#if option == 'Email':  st.metric(Pub1, millify(Pub1, precision=2), delta=None, delta_color="normal")
+#st.write (option)
+#if option == 'Home phone': st.write(BMI)
 
 form = st.form(key='my-form')
 name = form.text_input('Enter your name')
@@ -121,23 +121,23 @@ if submit:
 #chart_data = Pub1
 #st.bar_chart(chart_data)
 
-container = st.container()
-all = st.checkbox("Select all")
+#container = st.container()
+#all = st.checkbox("Select all")
  
-if all:
-    selected_options = container.multiselect("Select one or more options:",
-         ["Email", 'Home phone', 'Mobile phone'],['Email', 'Home phone', 'Mobile phone'])
-else:
-    selected_options =  container.multiselect("Select one or more options:",
-        ['Email', 'Home phone', 'Mobile phone'])
+#if all:
+#    selected_options = container.multiselect("Select one or more options:",
+#         ["Email", 'Home phone', 'Mobile phone'],['Email', 'Home phone', 'Mobile phone'])
+#else:
+#    selected_options =  container.multiselect("Select one or more options:",
+#        ['Email', 'Home phone', 'Mobile phone'])
   
-if selected_options == 'Email':  st.success ('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
+#if selected_options == 'Email':  st.success ('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 #st.write (selected_options)
 
-options = ("male", "female")
-i1 = st.multiselect("selectbox 1", options)
-st.text("value 1: %s" % i1)
-print(BMI)
+#options = ("male", "female")
+#i1 = st.multiselect("selectbox 1", options)
+#st.text("value 1: %s" % i1)
+#print(BMI)
 
 #_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 
