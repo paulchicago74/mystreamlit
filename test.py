@@ -77,15 +77,15 @@ BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 D= BMI / Dvalue
 
-st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
+#st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
 
-st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
+#st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric('Temp', BMI, delta=None, delta_color="normal")
+col1.metric('Z-value', BMI, delta=None, delta_color="normal")
 
-col2.write (BMI)
+col2.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
 st.success (BMI)
 
