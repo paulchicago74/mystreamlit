@@ -142,14 +142,10 @@ print(BMI)
 #_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 chart = st.line_chart(df)
 chart = st.line_chart(df2)
+
 col1, col2 = st.columns(2)
-
-col1.metric('Temp', BMI, delta=None, delta_color="normal")
 chart = col1.line_chart(df)
-col2.write (BMI)
-
-chart = st.line_chart(df)
-chart = st.line_chart(df2)
+chart = col2.line_chart(df2)
 
 
 
