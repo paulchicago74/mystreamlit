@@ -25,7 +25,7 @@ st.sidebar.subheader('Parameters', anchor=None)
 
 Temp = st.sidebar.slider('Enter the temperature', min_value=1.00, max_value=250.00, value=120.00, step=0.5)
 
-Time = st.sidebar.slider('Enter the Time', value=10.00, min_value=0.1, max_value=200.0)
+Time = st.sidebar.slider('Enter the Time', value=10.00, min_value=0.1, max_value=200.0, step=0.5)
 
 
 #Tref = 120
