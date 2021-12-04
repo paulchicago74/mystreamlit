@@ -5,31 +5,6 @@ import pandas as pd
 from millify import millify
 from pandas_profiling import ProfileReport
 #from link_button import link_button
-
-Fvalue0 = 0
-Fvalue1 = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
-Fvalue2 = (Fvalue1 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/9) - (Time/10)))
-Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/8) - (Time/9)))
-Fvalue4 = (Fvalue3 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/7) - (Time/8)))
-Fvalue5 = (Fvalue4 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/6) - (Time/7)))
-Fvalue6 = (Fvalue5 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/5) - (Time/6)))
-Fvalue7 = (Fvalue6 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/4) - (Time/5)))
-Fvalue8 = (Fvalue7 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/3) - (Time/4)))
-Fvalue9 = (Fvalue8 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/2) - (Time/3)))
-Fvalue10 = (Fvalue9 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/1) - (Time/2)))
-
-Dvalue0 = 0
-Dvalue1 = Fvalue1 / Dvalue
-Dvalue2 = Fvalue2 / Dvalue
-Dvalue3 = Fvalue3 / Dvalue
-Dvalue4 = Fvalue4 / Dvalue
-Dvalue5 = Fvalue5 / Dvalue
-Dvalue6 = Fvalue6 / Dvalue
-Dvalue7 = Fvalue7 / Dvalue
-Dvalue8 = Fvalue8 / Dvalue
-Dvalue9 = Fvalue9 / Dvalue
-Dvalue10 = Fvalue10 / Dvalue
-
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
@@ -58,6 +33,29 @@ else:
     st.write("")
 
 #Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
+Fvalue0 = 0
+Fvalue1 = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
+Fvalue2 = (Fvalue1 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/9) - (Time/10)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/8) - (Time/9)))
+Fvalue4 = (Fvalue3 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/7) - (Time/8)))
+Fvalue5 = (Fvalue4 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/6) - (Time/7)))
+Fvalue6 = (Fvalue5 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/5) - (Time/6)))
+Fvalue7 = (Fvalue6 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/4) - (Time/5)))
+Fvalue8 = (Fvalue7 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/3) - (Time/4)))
+Fvalue9 = (Fvalue8 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/2) - (Time/3)))
+Fvalue10 = (Fvalue9 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/1) - (Time/2)))
+
+Dvalue0 = 0
+Dvalue1 = Fvalue1 / Dvalue
+Dvalue2 = Fvalue2 / Dvalue
+Dvalue3 = Fvalue3 / Dvalue
+Dvalue4 = Fvalue4 / Dvalue
+Dvalue5 = Fvalue5 / Dvalue
+Dvalue6 = Fvalue6 / Dvalue
+Dvalue7 = Fvalue7 / Dvalue
+Dvalue8 = Fvalue8 / Dvalue
+Dvalue9 = Fvalue9 / Dvalue
+Dvalue10 = Fvalue10 / Dvalue
 
 
 #Tref = 120
