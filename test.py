@@ -29,7 +29,7 @@ Time = st.sidebar.slider('Enter the Time', value=10.00, min_value=0.1, max_value
 
 genre = st.sidebar.radio(
     "Predict minumum D-value required?",
-    ('Yes', 'No')
+    ('Yes', 'No'))
 if genre == 'Yes': st.write('You selected comedy.')
 else:
     st.write("You didn't select comedy.")
