@@ -145,7 +145,7 @@ chart = st.line_chart(df2)
 col1, col2 = st.columns(2)
 
 col1.metric('Temp', BMI, delta=None, delta_color="normal")
-col1.chart
+chart = col1.line_chart(df)
 col2.write (BMI)
 
 chart = st.line_chart(df)
