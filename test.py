@@ -30,6 +30,7 @@ genre = st.sidebar.radio(
     "Predict minumum D-value required?",
     ('Yes', 'No'))
 if genre == 'Yes': Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
+ and st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
 else:
     st.write("")
 
