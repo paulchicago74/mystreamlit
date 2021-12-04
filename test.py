@@ -69,10 +69,8 @@ df2 = pd.DataFrame({
     
 })
 
-df2
 
-chart = st.line_chart(df)
-chart = st.line_chart(df2)
+
 #Tref = 120
 
 BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
@@ -149,7 +147,8 @@ col1.metric('Temp', BMI, delta=None, delta_color="normal")
 
 col2.write (BMI)
 
-
+chart = st.col1.line_chart(df)
+chart = st.line_chart(df2)
 
 
 
