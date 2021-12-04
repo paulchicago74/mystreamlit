@@ -108,8 +108,8 @@ col1.metric('Z-value', BMI, delta=None, delta_color="normal")
 col2.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
 #st.success (BMI)
-
-col3.success (BMI)
+if genre == 'Yes': col3.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
+#col3.success (BMI)
 #Tref = st.empty()
 #Tref.line_chart({"Pub1": [120]})
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
