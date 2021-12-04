@@ -103,7 +103,7 @@ D= BMI / Dvalue
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric('Z-value', BMI, delta=None, delta_color="normal")
+col1.metric('F-value', Fvalue1, delta=None, delta_color="normal")
 
 col2.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 col3.metric('Predicted D-value', millify(Wanted_D, precision=2), delta=None, delta_color="normal")
