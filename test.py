@@ -106,12 +106,13 @@ col1, col2, col3 = st.columns(3)
 col1.metric('F-value', millify(Fvalue10, precision=2), delta=None, delta_color="normal")
 
 col2.metric('D value', millify(Dvalue10, precision=2), delta=None, delta_color="normal")
-col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
+#col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
+if genre == 'Yes': col2.metric('D value', millify(Dvalue10, precision=2), delta=None, delta_color="normal")
+else:
+    st.write("")
+
 #st.success (BMI)
-#col3.metric(Wanted_D)
-#col3.success (BMI)
-#Tref = st.empty()
-#Tref.line_chart({"Pub1": [120]})
+
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #Tref = st.empty()
 #Tref = 200
