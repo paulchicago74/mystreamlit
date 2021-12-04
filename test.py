@@ -17,15 +17,15 @@ st.sidebar.title('Predictive Model Calculation')
 
 Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
 
-Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
+Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
 
-Tref = st.sidebar.number_input('Enter the reference Tref', min_value=0.1, step=0.1)
+Tref = st.sidebar.number_input('Enter the reference Tref', value=150, min_value=0.1, step=0.1)
 
 st.sidebar.subheader('Parameters', anchor=None)
 
-Temp = st.sidebar.slider('Enter the temperature', min_value=1.00, max_value=250.00, value=120.00)
+Temp = st.sidebar.slider('Enter the temperature', value=150, min_value=1.00, max_value=250.00, value=120.00)
 
-Time = st.sidebar.slider('Enter the Time', min_value=0.1, max_value=200.0)
+Time = st.sidebar.slider('Enter the Time', value=10, min_value=0.1, max_value=200.0)
 
 
 #Tref = 120
