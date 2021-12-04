@@ -69,6 +69,25 @@ df2 = pd.DataFrame({
     
 })
 
+y = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
+#x = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]).reshape((-1, 1))
+x_1 = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10])
+y_1 = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1])
+#x, y = np.array(x), np.array(y)
+#model = LinearRegression()
+#model.fit(y, x)
+n = np.size(x_1)
+n_xy = x_1 * y_1
+x_mean = np.mean(x_1)
+y_mean = np.mean(y_1)
+Sxy = np.sum(x_1*y_1)- n*x_mean*y_mean
+Sxx = np.sum(x_1*x_1) - n*x_mean*x_mean
+b1 = Sxy/Sxx
+b0 = y_mean-b1*x_mean
+#st.write('slope b1 is', b1)
+#st.write('intercept b0 is', b0)
+st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
+
 
 
 #Tref = 120
