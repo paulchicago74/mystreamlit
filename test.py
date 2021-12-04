@@ -27,6 +27,8 @@ Temp = st.sidebar.slider('Enter the temperature', min_value=1.00, max_value=250.
 
 Time = st.sidebar.slider('Enter the Time', value=10.00, min_value=0.1, max_value=200.0, step=0.5)
 
+Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
+
 
 #Tref = 120
 
