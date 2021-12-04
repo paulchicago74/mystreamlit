@@ -106,7 +106,7 @@ col1, col2, col3 = st.columns(3)
 col1.metric('F-value', Fvalue10, delta=None, delta_color="normal")
 
 col2.metric('D value', millify(Dvalue10, precision=2), delta=None, delta_color="normal")
-col3.metric('Predicted D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
+col3.metric('Predicted time for a D-value of' Wanted_D, millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
 #st.success (BMI)
 #col3.metric(Wanted_D)
 #col3.success (BMI)
