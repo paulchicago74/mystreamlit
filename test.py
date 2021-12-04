@@ -87,9 +87,9 @@ col1.metric('Z-value', BMI, delta=None, delta_color="normal")
 
 col2.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
-st.success (BMI)
+#st.success (BMI)
 
-col3.write (D)
+col3.success (BMI)
 #Tref = st.empty()
 #Tref.line_chart({"Pub1": [120]})
 Pub1 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
