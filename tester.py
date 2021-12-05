@@ -14,7 +14,7 @@ st.sidebar.title('Predictive Model Calculation')
 
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
 if uploaded_file is not None:
-    file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
+    file_details = uploaded_file.getvalue()
     st.write(file_details)
   
 dataframe = pd.read_csv(uploaded_file)
