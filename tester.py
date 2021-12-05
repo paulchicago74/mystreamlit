@@ -16,7 +16,7 @@ uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
 else:
-st.subheader("About")     
+    st.subheader("About")     
 dataframe = pd.read_csv(uploaded_file)
 st.write(dataframe)
 
