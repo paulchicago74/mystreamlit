@@ -15,7 +15,7 @@ st.sidebar.title('Predictive Model Calculation')
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
 if uploaded_file is not None:
     file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
-     st.sidebar.write(file_details)
+     st.write(file_details)
   
 #bytes_data = uploaded_file.getvalue()
 # st.write(bytes_data)
