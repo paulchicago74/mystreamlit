@@ -13,6 +13,9 @@ import streamlit.components.v1 as stc
 st.sidebar.title('Predictive Model Calculation')
 
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
+if uploaded_file is None:
+st.write("")  
+
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
      
