@@ -17,6 +17,8 @@ if uploaded_file is not None:
     file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
     st.write(file_details)
   
+dataframe = pd.read_csv(uploaded_file)
+st.write(file_details)
 #bytes_data = uploaded_file.getvalue()
 # st.write(bytes_data)
  
