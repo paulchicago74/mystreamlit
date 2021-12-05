@@ -1,159 +1,98 @@
+import pdfkit
+from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
+from datetime import date
 import streamlit as st
+from streamlit.components.v1 import iframe
 import pandas as pd
+import numpy as np
+import streamlit_gchart as gchart
+import plotly.offline as offline
+import plotly.graph_objs as go
+import altair as alt
+import plotly.figure_factory as ff
 import plotly.express as px
-import plotly.graph_objects as go
+from sklearn.linear_model import LinearRegression
+from statsmodels.formula.api import ols
+from sklearn.metrics import mean_squared_error, r2_score
+import statsmodels.api as sm
+from millify import millify
 
-data_path_naaz = "https://docs.google.com/spreadsheets/d/1JpW4p19ypEIQDsY9ednNo6k1N-AAqf3jYn3P-7G64cU/edit?usp=sharing"
-data_path_bobby = "https://docs.google.com/spreadsheets/d/1hcZHPidIWgfaXp9S4rU3AdV8FrxY5vswjhZxm9po8k4/gviz/tq?tqx=out:csv&sheet=With-medication"
-get_url = lambda data_path : data_path.replace("/edit#gid=", "/export?format=csv&gid=")
+Temp = 150
+Tref = 144
+Zref = 10
+Time = 25
 
-url_map = {"Naaz":get_url(data_path_naaz), "Bobby":get_url(data_path_bobby)}
+Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
+Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
-def make_graph(grp_name, grp):
-    grp["hour"] = grp["Timestamp"].apply(lambda x: x.hour)
+Fvalue0 = 0
+Fvalue1 = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
+Fvalue2 = (Fvalue1 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/9) - (Time/10)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/8) - (Time/9)))
+Fvalue4 = (Fvalue3 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/7) - (Time/8)))
+Fvalue5 = (Fvalue4 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/6) - (Time/7)))
+Fvalue6 = (Fvalue5 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/5) - (Time/6)))
+Fvalue7 = (Fvalue6 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/4) - (Time/5)))
+Fvalue8 = (Fvalue7 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/3) - (Time/4)))
+Fvalue9 = (Fvalue8 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/2) - (Time/3)))
+Fvalue10 = (Fvalue9 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/1) - (Time/2)))
 
-    if grp_name != "Blood Pressure (SYS,DIA)":
-        fig = go.Figure()
-        grp["Recorded Value"] = pd.to_numeric(grp["Recorded Value"])
-        grp["sma"] = grp["Recorded Value"].rolling(9).mean().rolling(5).mean()
+Dvalue0 = 0
+Dvalue1 = Fvalue1 / Dvalue
+Dvalue2 = Fvalue2 / Dvalue
+Dvalue3 = Fvalue3 / Dvalue
+Dvalue4 = Fvalue4 / Dvalue
+Dvalue5 = Fvalue5 / Dvalue
+Dvalue6 = Fvalue6 / Dvalue
+Dvalue7 = Fvalue7 / Dvalue
+Dvalue8 = Fvalue8 / Dvalue
+Dvalue9 = Fvalue9 / Dvalue
+Dvalue10 = Fvalue10 / Dvalue
 
-        fig.add_trace(
-            go.Scatter(
-                name="Raw Data",
-                x=grp["Timestamp"],
-                y=grp["Recorded Value"],
-                mode="markers+lines",
-                hovertemplate="%{y}",
-                marker=dict(
-                    color=grp["hour"],
-                    colorscale="algae",
-                    size=10,
-                    colorbar=dict(thickness=10, title="Hour", titleside="top"),
-                ),
-            )
-        )
-        fig.add_trace(
-            go.Scatter(
-                name=f"Trend",
-                x=grp["Timestamp"],
-                y=grp["sma"],
-                mode="lines",
-                hovertemplate="%{y}",
-            )
-        )
+#D= Fvalue / Dvalue
 
-        fig.update_layout(hovermode="x unified")
-        layout = dict(
-            width=640,
-            height=360,
-            title=grp_name,
-            legend=dict(
-                orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1
-            ),
-        )
-        fig.update_layout(layout)
-        return [fig]
-    else:
-        figsys = go.Figure()
-        figdia = go.Figure()
-        grp[["SYS", "DIA"]] = grp["Recorded Value"].str.split(",", 1, expand=True)
-        grp["SYS"] = pd.to_numeric(grp["SYS"])
-        grp["DIA"] = pd.to_numeric(grp["DIA"])
-        grp["sma_sys"] = grp["SYS"].rolling(9).mean().rolling(5).mean()
-        grp["sma_dia"] = grp["DIA"].rolling(9).mean().rolling(5).mean()
-        figsys.add_trace(
-            go.Scatter(
-                name="Raw Data",
-                x=grp["Timestamp"],
-                y=grp["SYS"],
-                mode="markers+lines",
-                hovertemplate="%{y}",
-                marker=dict(
-                    color=grp["hour"],
-                    colorscale="algae",
-                    size=10,
-                    colorbar=dict(thickness=10, title="Hour", titleside="top"),
-                ),
-            )
-        )
-        figsys.add_trace(
-            go.Scatter(
-                name=f"Trend",
-                x=grp["Timestamp"],
-                y=grp["sma_sys"],
-                mode="lines",
-                hovertemplate="%{y}",
-            )
-        )
-        figdia.add_trace(
-            go.Scatter(
-                name="Raw Data",
-                x=grp["Timestamp"],
-                y=grp["DIA"],
-                mode="markers+lines",
-                hovertemplate="%{y}",
-                marker=dict(
-                    color=grp["hour"],
-                    colorscale="algae",
-                    size=10,
-                    colorbar=dict(thickness=10, title="Hour", titleside="top"),
-                ),
-            )
-        )
-        figdia.add_trace(
-            go.Scatter(
-                name=f"Trend",
-                x=grp["Timestamp"],
-                y=grp["sma_dia"],
-                mode="lines",
-                hovertemplate="%{y}",
-            )
-        )
-        layout_sys = dict(
-            width=1500,
-            height=600,
-            title="Blood Pressure - SYS",
-            legend=dict(
-                orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1
-            ),
-        )
-        layout_dia = dict(
-            width=1500,
-            height=600,
-            title="Blood Pressure - DIA",
-            legend=dict(
-                orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1
-            ),
-        )
-        figsys.update_layout(hovermode="x unified")
-        figsys.update_layout(layout_sys)
-        figdia.update_layout(hovermode="x unified")
-        figdia.update_layout(layout_dia)
-        return [figsys, figdia]
+metric = 100 / 10
+
+# sample data
+df = pd.DataFrame({
+    'F-value': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, Fvalue4, Fvalue5, Fvalue6, Fvalue7, Fvalue8, Fvalue9, Fvalue10],
+    #'D-value': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
+})
+
+#df
+
+df2 = pd.DataFrame({
+    #'F-value': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, Fvalue4, Fvalue5, Fvalue6, Fvalue7, Fvalue8, Fvalue9, Fvalue10],
+    'Dvalue': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10],
+    #'Time': [0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1],
+    
+})
+
+df2
+
+chart = st.line_chart(df)
+chart = st.line_chart(df2)
+
+y = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
+#x = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]).reshape((-1, 1))
+x_1 = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10])
+y_1 = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1])
+#x, y = np.array(x), np.array(y)
+#model = LinearRegression()
+#model.fit(y, x)
+n = np.size(x_1)
+n_xy = x_1 * y_1
+x_mean = np.mean(x_1)
+y_mean = np.mean(y_1)
+Sxy = np.sum(x_1*y_1)- n*x_mean*y_mean
+Sxx = np.sum(x_1*x_1) - n*x_mean*x_mean
+b1 = Sxy/Sxx
+b0 = y_mean-b1*x_mean
+#st.write('slope b1 is', b1)
+#st.write('intercept b0 is', b0)
+st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
 
 
-def get_graphs(url):
-    graphs = []
-    data = pd.read_csv(url)
-    data["Timestamp"] = pd.to_datetime(data["Timestamp"])
-    grouped = data.groupby("Test Type")
-    for name, group in grouped:    
-        graphs.extend(make_graph(name, group))
-    return graphs
 
 
-st.set_page_config(
-    page_title="Medical Monitoring System",
-    layout="wide",
-)
-
-patient_name = option = st.selectbox(
-    'Patient Name',
-    ('Naaz','Bobby'))
-if st.button("Fetch Data"):
-    with st.spinner("Fetching Data..."):
-        
-        url = url_map.get(patient_name,None)
-        graphs = get_graphs(url)
-    for graph in graphs:
-        st.plotly_chart(graph, use_container_width=True)
+           
