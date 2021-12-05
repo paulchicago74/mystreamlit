@@ -23,7 +23,7 @@ if uploaded_file is not None:
     df3 = pd.read_csv(uploaded_file)
     st.write(df3)
 
-    df3['sums'] = df3.iloc[:, 1:3].sum(axis=1)
+    df3['sums'] = df3.iloc[:, 2:3].sum(axis=1)
     st.write(df3)
 #else: st.write("")
 #bytes_data = uploaded_file.getvalue()
