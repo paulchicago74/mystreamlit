@@ -14,7 +14,7 @@ st.sidebar.title('Predictive Model Calculation')
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['png','jpeg'])
 if uploaded_file is not None:
     file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
-     st.write(file_details)
+     st.sidebar.write(file_details)
  
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
