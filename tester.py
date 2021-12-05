@@ -17,8 +17,8 @@ if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
     st.write(file_details)
   
-#dataframe = pd.read_csv(uploaded_file)
-#st.write(dataframe)
+dataframe = pd.read_csv(uploaded_file)
+st.write(dataframe)
 #bytes_data = uploaded_file.getvalue()
 # st.write(bytes_data)
  
