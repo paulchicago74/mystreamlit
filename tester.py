@@ -76,7 +76,7 @@ Dvalue8 = Fvalue8 / Dvalue
 Dvalue9 = Fvalue9 / Dvalue
 Dvalue10 = Fvalue10 / Dvalue
 
-df3['sums'] = df3.sum(axis=1)
+df3['sums'] = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
 st.write(df3)
 
 df = pd.DataFrame({
