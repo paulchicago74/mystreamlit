@@ -23,8 +23,8 @@ if uploaded_file is not None:
     df3 = pd.read_csv(uploaded_file)
     st.write(df3)
 
-    df3['sums'] = df3.sum(axis=1)
-    st.write(df3)
+   # df3['sums'] = df3.sum(axis=1)
+   # st.write(df3)
 #else: st.write("")
 #bytes_data = uploaded_file.getvalue()
 # st.write(bytes_data)
@@ -75,6 +75,9 @@ Dvalue7 = Fvalue7 / Dvalue
 Dvalue8 = Fvalue8 / Dvalue
 Dvalue9 = Fvalue9 / Dvalue
 Dvalue10 = Fvalue10 / Dvalue
+
+df3['sums'] = df3.sum(axis=1)
+    st.write(df3)
 
 df = pd.DataFrame({
     'F-value': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, Fvalue4, Fvalue5, Fvalue6, Fvalue7, Fvalue8, Fvalue9, Fvalue10],
