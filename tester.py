@@ -21,6 +21,7 @@ if uploaded_file is not None:
 
 if uploaded_file is not None:
     df3 = pd.read_csv(uploaded_file)
+    df3 = pd.DataFrame(columns=['A','B','C'])
     st.write(df3)
 
    # df3['sums'] = df3.sum(axis=1)
