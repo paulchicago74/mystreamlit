@@ -20,7 +20,7 @@ if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
 
 if uploaded_file is not None:
-    df3 = pd.read_csv((uploaded_file), (columns = ['A','B','C']))
+    df3 = pd.read_csv(uploaded_file)
     st.write(df3)
 
    # df3['sums'] = df3.sum(axis=1)
