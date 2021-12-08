@@ -85,6 +85,10 @@ if uploaded_file is not None:
     df3["Fo"] = ((10 ** ((df3["Temp"] - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift())))
     st.write(df3)
     
+     df3["F1"] = ((df3["Fo"].shift()) + (10 ** ((df3["Temp"] - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift())))
+    st.write(df3)
+    
+    
     #df['col'].shift()
 
 df = pd.DataFrame({
