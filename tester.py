@@ -81,7 +81,7 @@ Dvalue9 = Fvalue9 / Dvalue
 Dvalue10 = Fvalue10 / Dvalue
 
 if uploaded_file is not None:
-    df3['sums'] = ["Name"] 
+    df3['sums'] = ['Name'] 
     st.write(df3)
 
 df = pd.DataFrame({
