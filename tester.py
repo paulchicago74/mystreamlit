@@ -20,8 +20,9 @@ if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
 
 if uploaded_file is not None:
-    df3 = pd.read_csv(uploaded_file, names = header_list)
+    df3 = pd.read_csv(uploaded_file, names = None)
     header_list = ["Name", "Dept", "Start Date"]
+    df3 = pd.read_csv(uploaded_file, names=header_list)
     st.write(df3)
 
    
