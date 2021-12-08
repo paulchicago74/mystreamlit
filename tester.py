@@ -81,7 +81,7 @@ Dvalue9 = Fvalue9 / Dvalue
 Dvalue10 = Fvalue10 / Dvalue
 
 if uploaded_file is not None:
-    df3["Fo"] = df3["Name"] * df3["Dept"] 
+    df3["Fo"] = df3["Name"] * Zref 
     st.write(df3)
 
 df = pd.DataFrame({
