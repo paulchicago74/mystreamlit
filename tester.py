@@ -20,7 +20,7 @@ if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
 
 if uploaded_file is not None:
-    header_list = ["Name", "Dept"]
+    header_list = ["Time", "Temp"]
     df3 = pd.read_csv(uploaded_file, names=header_list)
     #header_list = ["Name", "Dept"]
     #df3 = pd.read_csv(uploaded_file, names=header_list)
@@ -82,7 +82,7 @@ Dvalue10 = Fvalue10 / Dvalue
 
 if uploaded_file is not None:
     #df3["Fo"] = df3["Name"] * Zref 
-    df3["Fo"] = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
+    df3["Fo"] = (Fvalue0 + (10 ** ((df3["Temp"] - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
     st.write(df3)
 
 df = pd.DataFrame({
