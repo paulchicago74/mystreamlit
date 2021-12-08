@@ -20,10 +20,10 @@ if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
 
 if uploaded_file is not None:
-    df3 = pd.read_csv(uploaded_file)
+    df3 = pd.read_csv(uploaded_file, names = None)
     st.write(df3)
 
-    df3.rename(columns={'*': 'newName1', '*': 'newName2'}, inplace=True, errors='raise')
+   
    # df3['sums'] = df3.sum(axis=1)
    # st.write(df3)
 #else: st.write("")
