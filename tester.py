@@ -143,7 +143,8 @@ col1, col2, col3 = st.columns(3)
 
 if uploaded_file is not None:
     col1.metric('F-value', millify(sum(df3["Fo"]), precision=2), delta=None, delta_color="normal")
-    
+else:
+    col1.metric('F-value', millify(Fvalue10, precision=2), delta=None, delta_color="normal")
 
 col1.metric('F-value', millify(Fvalue10, precision=2), delta=None, delta_color="normal")
 
