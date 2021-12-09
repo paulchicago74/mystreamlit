@@ -6,6 +6,7 @@ from millify import millify
 from pandas_profiling import ProfileReport
 import numpy as np
 import streamlit.components.v1 as stc
+from altair import Chart, X, Y, Axis, SortField, OpacityValue
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
@@ -217,7 +218,7 @@ else:
     chart = col1.line_chart(df)
     chart = col2.line_chart(df2)
 
-
+chart = st.altair_chart(df)
 
 
 
