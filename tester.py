@@ -84,7 +84,7 @@ if uploaded_file is not None:
     
     #df3["Fo"] = df3["Name"] * Zref
     df3["Fo"] = ((10 ** ((df3["Temp"] - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift())))
-    if df3["Time"] == 0: df3["Fo"] == 0
+    if df3["Time"] is None: df3["Fo"] = 0
     st.write(df3)
     
     df3["F1"] = ((df3["Fo"].shift()) + (10 ** ((df3["Temp"] - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift())))
