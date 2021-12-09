@@ -4,3 +4,4 @@ millify
 pandas
 pandas-profiling
 plotly
+numpy
