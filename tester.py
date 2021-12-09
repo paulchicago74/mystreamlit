@@ -93,6 +93,8 @@ if uploaded_file is not None:
     df3["F1"] = df3["F1"].fillna(0)
     st.write(df3)
     
+    df3["Dv"] = df3["Dv"] / Dvalue
+    st.write(df3)
     
     #df['col'].shift()
 
