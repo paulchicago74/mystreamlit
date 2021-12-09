@@ -85,7 +85,7 @@ Dvalue10 = Fvalue10 / Dvalue
 if uploaded_file is not None:
     
     #df3["Fo"] = df3["Name"] * Zref
-    df3["Fo"] = (df3["Fo"]) + ((10 ** ((df3["Temp"].shift() - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift())))
+    df3["Fo"] = (df3["Fo"]) + ((10 ** ((df3["Temp"].shift() - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift()))
     st.write(df3)
     
     
