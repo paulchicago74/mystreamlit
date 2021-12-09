@@ -90,8 +90,8 @@ if uploaded_file is not None:
     
     
     df3["Fo"] = df3["Fo"].fillna(0)
-    
-    df3["F1"] = (np.cumsum(df3["Fo"]) + (df3["Fo"]))
+    df3["F1"] = (df3["Fo"].shift() + (df3["Fo"]))
+    #df3["F1"] = (np.cumsum(df3["Fo"]) + (df3["Fo"]))
     df3["F1"] = df3["F1"].fillna(0)
     st.write(df3)
     
