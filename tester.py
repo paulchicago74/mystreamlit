@@ -7,6 +7,7 @@ from pandas_profiling import ProfileReport
 import numpy as np
 import streamlit.components.v1 as stc
 from altair import Chart, X, Y, Axis, SortField, OpacityValue
+from numpy import cumsum
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
