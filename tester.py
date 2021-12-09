@@ -140,7 +140,7 @@ if genre == 'Yes': st.write('The time you need for a D-value of', Wanted_D ,'is'
 #st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
 
 col1, col2, col3 = st.columns(3)
-if genre == 'Yes': col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
+if genre == 'Yes'and uploaded_file is not None: col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
 else:
     st.write("")
     
@@ -150,7 +150,7 @@ if uploaded_file is not None:
 else:
     col1.metric('F-value', millify(Fvalue10, precision=2), delta=None, delta_color="normal")
     col2.metric('D value', millify(Dvalue10, precision=2), delta=None, delta_color="normal")
-    col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
+    #col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
 
 
 
