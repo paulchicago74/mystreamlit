@@ -144,9 +144,9 @@ col1, col2, col3 = st.columns(3)
 if uploaded_file is not None:
     col1.metric('F-value', millify(sum(df3["Fo"]), precision=2), delta=None, delta_color="normal")
     col2.metric('D value', millify(sum(df3["Fo"]/Dvalue, precision=2), delta=None, delta_color="normal")
-else:
-    col1.metric('F-value', millify(Fvalue10, precision=2), delta=None, delta_color="normal")
-    col2.metric('D value', millify(Dvalue10, precision=2), delta=None, delta_color="normal")
+                else:
+                col1.metric('F-value', millify(Fvalue10, precision=2), delta=None, delta_color="normal")
+                col2.metric('D value', millify(Dvalue10, precision=2), delta=None, delta_color="normal")
 
 
 
