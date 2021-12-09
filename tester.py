@@ -212,10 +212,12 @@ if submit:
 col1, col2 = st.columns(2)
 if uploaded_file is not None:
     chart = col1.line_chart(df3["F1"])
+    chart = col2.line_chart(df3["Dv"])
 else:
     chart = col1.line_chart(df)
+    chart = col2.line_chart(df2)
 
-chart = col2.line_chart(df2)
+
 
 
 
