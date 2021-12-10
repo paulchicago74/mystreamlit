@@ -6,4 +6,4 @@ pandas-profiling
 plotly
 numpy
 st_material_table
-streamlit_apex_charts
+streamlit-apex-charts
