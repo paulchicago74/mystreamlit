@@ -221,6 +221,18 @@ else:
 
 chart = st.altair_chart(df)
 
+form = st.form(key='my-form')
+name = form.text_input('Enter your name')
+submit = form.form_submit_button('Submit')
 
+
+col1, col2 = st.columns(2)
+col1.write('Press submit to have your name printed below')
+
+col2.write('Press submit to have your name printed below')
+
+
+if submit:
+    st.success (BMI)
 
     
