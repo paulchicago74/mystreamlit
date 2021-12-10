@@ -228,7 +228,7 @@ col2.text_input('Name')
 col2.date_input('Date')
 
 
-if submit:
-    st.success (BMI)
+#if submit:
+#    st.success (BMI)
 
     
