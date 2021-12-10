@@ -8,6 +8,7 @@ import numpy as np
 import streamlit.components.v1 as stc
 from altair import Chart, X, Y, Axis, SortField, OpacityValue
 from numpy import cumsum
+from st_material_table import st_material_table
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 # (10^((Temp-Tref)/Zref))/1*Time
@@ -96,7 +97,7 @@ if uploaded_file is not None:
     st.write(df3)
     
     df3["Dv"] = df3["F1"] / Dvalue
-    st.write(df3)
+    st_material_table(df3)
     
     #df['col'].shift()
 
