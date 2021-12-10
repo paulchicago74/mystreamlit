@@ -129,7 +129,7 @@ b1 = Sxy/Sxx
 b0 = y_mean-b1*x_mean
 #st.write('slope b1 is', b1)
 #st.write('intercept b0 is', b0)
-if genre == 'Yes': st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
+#if genre == 'Yes': st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
 
 
 
@@ -178,14 +178,14 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #st.write (option)
 #if option == 'Home phone': st.write(BMI)
 
-form = st.form(key='my-form')
-name = form.text_input('Enter your name')
-submit = form.form_submit_button('Submit')
+#form = st.form(key='my-form')
+#name = form.text_input('Enter your name')
+#submit = form.form_submit_button('Submit')
 
-st.write('Press submit to have your name printed below')
+#st.write('Press submit to have your name printed below')
 
-if submit:
-    st.success (BMI)
+#if submit:
+#    st.success (BMI)
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
