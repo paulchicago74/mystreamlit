@@ -224,7 +224,7 @@ chart = st.altair_chart(df)
 
 col1, col2 = st.columns(2)
 col1.text_area('Enter description')
-col2.text_area('Enter')
+col2.date_input('Date')
 
 
 if submit:
