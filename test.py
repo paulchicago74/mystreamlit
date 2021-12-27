@@ -182,9 +182,11 @@ pdf.cell(-30)
 pdf.image('barchart.png', x = None, y = None, w = 0, h = 0, type = '', link = '')
 pdf.output('test.pdf', 'F')   
 
+pdf2 = pdf.output('test.pdf', 'F')
+
 st.download_button(
      label="Download data as CSV",
-     data='pdf.output',
+     data='pdf2',
      file_name="test.pdf",
      mime="text/pdf",
  )
