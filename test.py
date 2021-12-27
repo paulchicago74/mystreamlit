@@ -186,5 +186,5 @@ st.download_button(
      label="Download data as CSV",
      data=pdf,
      file_name='test.pdf',
-     #mime='text/csv',
+     mime='pdf',
  )
