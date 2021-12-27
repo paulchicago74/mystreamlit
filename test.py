@@ -172,7 +172,7 @@ chart = col2.line_chart(df2)
 
 savefig('barchart.png')
 
- pdf = FPDF()
+pdf = FPDF()
 pdf.add_page()
 pdf.set_xy(0, 0)
 pdf.set_font('arial', 'B', 12)
