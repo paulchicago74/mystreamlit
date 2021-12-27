@@ -172,4 +172,12 @@ chart = col2.line_chart(df2)
 
 savefig('barchart.png')
 
-    
+ pdf = FPDF()
+pdf.add_page()
+pdf.set_xy(0, 0)
+pdf.set_font('arial', 'B', 12)
+pdf.cell(60)
+pdf.cell(75, 10, "A Tabular and Graphical Report of Professor Criss's Ratings by Users Charles and Mike", 0, 2, 'C')
+pdf.cell(-30)
+pdf.image('barchart.png', x = None, y = None, w = 0, h = 0, type = '', link = '')
+pdf.output('test.pdf', 'F')   
