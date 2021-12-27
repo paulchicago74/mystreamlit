@@ -170,6 +170,6 @@ col1, col2 = st.columns(2)
 chart = col1.line_chart(df)
 chart = col2.line_chart(df2)
 
-
+savefig('barchart.png')
 
     
