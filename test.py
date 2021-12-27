@@ -181,3 +181,10 @@ pdf.cell(75, 10, "A Tabular and Graphical Report of Professor Criss's Ratings by
 pdf.cell(-30)
 pdf.image('barchart.png', x = None, y = None, w = 0, h = 0, type = '', link = '')
 pdf.output('test.pdf', 'F')   
+
+st.download_button(
+     label="Download data as CSV",
+     data=pdf,
+     file_name='test.pdf',
+     #mime='text/csv',
+ )
