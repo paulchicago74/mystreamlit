@@ -184,7 +184,7 @@ pdf.output('test.pdf', 'F')
 
 st.download_button(
      label="Download data as CSV",
-     data="FPDF",
+     data=pdf.output('test.pdf', 'F'),
      file_name="test.pdf",
     # mime="text/pdf",
  )
