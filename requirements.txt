@@ -6,4 +6,5 @@ pandas-profiling
 plotly
 numpy
 st_material_table
-
+pylab
+fpdf
