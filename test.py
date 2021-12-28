@@ -192,4 +192,4 @@ st.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500)
 #plt.plot(x,y)
 #st.pyplot(plt)
 #plt.savefig('example.pdf')
-#st.pyplot(
+
