@@ -188,7 +188,7 @@ st.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500)
                .mark_line(color='#0068c9', opacity=0.5)
                .encode(
                x='Dvalue',
-               y='Time')
+               y='Time'))
 
 #alt.Chart(source).mark_line().encode(
 #    x='x',
