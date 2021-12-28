@@ -195,7 +195,7 @@ st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     y='Dvalue',
     color='Origin',
     tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
-).interactive()
+).interactive())
 
 #alt.Chart(source).mark_line().encode(
 #    x='x',
