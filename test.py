@@ -199,7 +199,7 @@ chart = st.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500)
                .encode(
                y='F-value',
                x='D-value',
-               tooltip=['Fvalue', 'Dvalue'],
+               tooltip=['F-value', 'D-value'],
                
                ).interactive())
 
