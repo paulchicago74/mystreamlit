@@ -184,7 +184,8 @@ st.download_button(
  )
 
 
-st.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500))
+st.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500)
+               .mark_circle(color='#0068c9', opacity=0.5))
        
 #x = np.arange(-10,20,0.1)
 #y = x**2
