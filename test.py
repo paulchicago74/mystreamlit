@@ -188,4 +188,5 @@ y = x**2
 
 plt.plot(x,y)
 st.pyplot(plt)
-plt.savefig('example.pdf')
+#plt.savefig('example.pdf')
+#st.pyplot(
