@@ -194,13 +194,13 @@ st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     x='Time',
     y='Dvalue',
     color='Origin',
-    tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
+    #tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
 ).interactive())
 
 #alt.Chart(source).mark_line().encode(
 #    x='x',
 #    y='f(x)'
-#)
+#)e
        
 #x = np.arange(-10,20,0.1)
 #y = x**2
