@@ -193,7 +193,7 @@ chart = st.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
                tooltip=['Time', 'Dvalue'],
                
                ).interactive())
-#st.altair_chart(chart.save('chart.pdf'))
+st.altair_chart(chart.save('chart.pdf'))
 #chart.save('chart.html', embed_options={'renderer':'svg'})
 
 st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
