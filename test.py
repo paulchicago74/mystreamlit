@@ -190,7 +190,7 @@ st.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
                y='Dvalue',
                x='Time',
                tooltip=['Time', 'Dvalue']
-               ).interactive())))
+               ).interactive())
 
 st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     x='Time',
