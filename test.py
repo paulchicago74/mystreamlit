@@ -67,7 +67,7 @@ Dvalue10 = Fvalue10 / Dvalue
 
 df = pd.DataFrame({
     'F-value': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, Fvalue4, Fvalue5, Fvalue6, Fvalue7, Fvalue8, Fvalue9, Fvalue10],
-    #'D-value': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
+    'D-value': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
 })
 
 df2 = pd.DataFrame({
@@ -194,18 +194,17 @@ chart = st.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
                
                ).interactive())
 
-chart.save('chart.html', embed_options={'renderer':'svg'})
+chart = st.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500)
+               .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
+               .encode(
+               y='F-value',
+               x='D-value',
+               tooltip=['Fvalue', 'Dvalue'],
+               
+               ).interactive())
+
+#chart.save('chart.html', embed_options={'renderer':'svg'})
 
 
-#alt.Chart(source).mark_line().encode(
-#    x='x',
-#    y='f(x)'
-#)e
-       
-#x = np.arange(-10,20,0.1)
-#y = x**2
 
-#plt.plot(x,y)
-#st.pyplot(plt)
-#plt.savefig('example.pdf')
 
