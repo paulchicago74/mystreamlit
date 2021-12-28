@@ -190,10 +190,11 @@ st.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
                .encode(
                y='Dvalue',
                x='Time',
-               tooltip=['Time', 'Dvalue']
+               tooltip=['Time', 'Dvalue'],
+               chart.save('chart.pdf'),
                ).interactive())
-st.altair_chart(chart.save('chart.pdf'))
-chart.save('chart.html', embed_options={'renderer':'svg'})
+#st.altair_chart(chart.save('chart.pdf'))
+#chart.save('chart.html', embed_options={'renderer':'svg'})
 
 st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     x='Time',
