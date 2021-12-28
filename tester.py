@@ -233,7 +233,7 @@ else:
                x='D-value',
                tooltip=['F-value', 'D-value'],
                
-               ).interactive
+               ).interactive())
 
 #chart = st.altair_chart(df)
 
