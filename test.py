@@ -185,7 +185,7 @@ st.download_button(
  )
 
 col1, col2 = st.columns(2)
-chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
+chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
                .encode(
                y='Dvalue',
@@ -194,7 +194,7 @@ chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
                
                ).interactive())
 
-chart = col2.altair_chart(alt.Chart(pd.DataFrame(df), height=500, width=500)
+chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
                .encode(
                y='F-value',
