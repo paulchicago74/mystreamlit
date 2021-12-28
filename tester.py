@@ -212,15 +212,39 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #_clicked = link_button(name = 'Click Me!', url = 'https://docs.streamlit.io/en/stable/')
 
 
+#col1, col2 = st.columns(2)
+#if uploaded_file is not None:
+#    chart = col1.line_chart(df3["F1"])
+#    chart = col2.area_chart(df3["Dv"])
+#else:
+#    chart = col1.line_chart(df)
+#    chart = col2.line_chart(df2)
+
+#chart = st.altair_chart(df)
+
 col1, col2 = st.columns(2)
 if uploaded_file is not None:
-    chart = col1.line_chart(df3["F1"])
-    chart = col2.area_chart(df3["Dv"])
-else:
+    chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
+               .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
+               .encode(
+               y='Dvalue',
+               x='Time',
+               tooltip=['Time', 'Dvalue'],
+               
+               ).interactive())
+
+    chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
+               .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
+               .encode(
+               y='F-value',
+               x='D-value',
+               tooltip=['F-value', 'D-value'],
+               
+               ).interactive
+                              
+  else:
     chart = col1.line_chart(df)
     chart = col2.line_chart(df2)
-
-chart = st.altair_chart(df)
 
 
 col1, col2 = st.columns(2)
