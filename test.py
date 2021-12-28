@@ -183,8 +183,3 @@ st.download_button(
      mime="text/pdf",
  )
 
-x = np.arange(-10,20,0.1)
-y = x**2
-
-plt.plot(x,y)
-plt.savefig('example.pdf')
