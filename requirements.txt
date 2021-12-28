@@ -9,3 +9,4 @@ st_material_table
 FPDF
 matplotlib
 pypdfplot
+altair_saver
