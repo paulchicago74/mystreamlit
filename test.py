@@ -192,8 +192,8 @@ st.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
 
 st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     x='Time',
-    y='Dvalue',
-    color='Origin'
+    y='Dvalue'
+    #color='Origin'
     #tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
 ).interactive())
 
