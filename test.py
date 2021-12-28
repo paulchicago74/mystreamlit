@@ -194,7 +194,8 @@ st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     x='Time',
     y='Dvalue',
     #color='Origin'
-    tooltip=['Time', 'Dvalue']
+    tooltip=['Time', 'Dvalue'],
+    millify(df2, precision=2)
 ).interactive())
 
 #alt.Chart(source).mark_line().encode(
