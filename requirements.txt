@@ -8,4 +8,4 @@ numpy
 st_material_table
 FPDF
 matplotlib
-
+pypdfplot
