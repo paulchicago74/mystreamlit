@@ -27,7 +27,7 @@ if uploaded_file is not None:
     df3 = pd.read_csv(uploaded_file, names=header_list)
     #header_list = ["Name", "Dept"]
     #df3 = pd.read_csv(uploaded_file, names=header_list)
-    st.write(df3)
+    #st.write(df3)
 
    
    # df3['sums'] = df3.sum(axis=1)
