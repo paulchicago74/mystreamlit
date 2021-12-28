@@ -10,6 +10,7 @@ from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, save
 from fpdf import FPDF
 import pypdfplot.backend
 import matplotlib.pyplot as plt
+import altair_saver
 
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
@@ -192,6 +193,7 @@ st.altair_chart(alt.Chart(pd.DataFrame(df2), height=500, width=500)
                tooltip=['Time', 'Dvalue']
                ).interactive())
 chart.save('chart.pdf')
+chart.save('chart.html', embed_options={'renderer':'svg'})
 
 st.altair_chart(alt.Chart(df2).mark_circle(size=60).encode(
     x='Time',
