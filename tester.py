@@ -242,7 +242,7 @@ if uploaded_file is not None:
                
                ).interactive
                               
-  else:
+else:
     chart = col1.line_chart(df)
     chart = col2.line_chart(df2)
 
