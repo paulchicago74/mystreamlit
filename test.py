@@ -8,8 +8,8 @@ import numpy as np
 import matplotlib
 from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, savefig
 from fpdf import FPDF
-#import pypdfplot.backend
-#import matplotlib.pyplot as plt
+import pypdfplot.backend
+import matplotlib.pyplot as plt
 
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
