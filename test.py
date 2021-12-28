@@ -186,5 +186,6 @@ st.download_button(
 x = np.arange(-10,20,0.1)
 y = x**2
 
-st.pyplot(x,y)
+plt.plot(x,y)
+st.pyplot(plt)
 #plt.savefig('example.pdf')
