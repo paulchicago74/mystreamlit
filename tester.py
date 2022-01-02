@@ -134,8 +134,8 @@ b0 = y_mean-b1*x_mean
 
 a = np.array(df3["Dv"]).reshape((-1, 1))
 #x = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]).reshape((-1, 1))
-x_2 = np.array(Dv)
-y_2 = np.array(Time)
+x_2 = np.array(df3["Dv"])
+y_2 = np.array(df3["Time"])
 #x, y = np.array(x), np.array(y)
 #model = LinearRegression()
 #model.fit(y, x)
