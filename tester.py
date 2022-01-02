@@ -160,7 +160,7 @@ b3 = y_mean-b2*x_mean
 
 col1, col2, col3 = st.columns(3)
 if genre == 'Yes'and uploaded_file is None: col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
-if genre == 'Yes'and uploaded_file is not None: col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
+if genre == 'Yes'and uploaded_file is not None: col3.metric('Predicted time for the D-value', millify(b3*Wanted_D + b2, precision=2), delta=None, delta_color="normal")
 else:
     st.write("")
     
