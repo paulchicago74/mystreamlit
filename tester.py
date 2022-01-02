@@ -228,9 +228,9 @@ if uploaded_file is not None:
     chart = col2.altair_chart(alt.Chart(pd.DataFrame(df3))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
                .encode(
-               y='F-value',
-               x='D value',
-               tooltip=['F-value', 'D value'],
+               y='F1',
+               x='Dv',
+               tooltip=['F1', 'Dv'],
                
                ).interactive())
 
