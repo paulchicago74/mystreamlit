@@ -97,7 +97,7 @@ if uploaded_file is not None:
     #st.write(df3)
     
     df3["Dv"] = df3["F1"] / Dvalue
-    #st_material_table(df3)
+    st_material_table(df3)
     
     #df['col'].shift()
 
