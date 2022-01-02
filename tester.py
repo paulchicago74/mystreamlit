@@ -214,8 +214,26 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 col1, col2 = st.columns(2)
 if uploaded_file is not None:
-    chart = col1.line_chart(df3["F1"])
-    chart = col2.area_chart(df3["Dv"])
+    #chart = col1.line_chart(df3["F1"])
+    #chart = col2.area_chart(df3["Dv"])
+    chart = col1.altair_chart(alt.Chart(pd.DataFrame(df3))
+               .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
+               .encode(
+               y='D value',
+               x='Time',
+               tooltip=['Time', 'D value'],
+               
+               ).interactive())
+
+    chart = col2.altair_chart(alt.Chart(pd.DataFrame(df3))
+               .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
+               .encode(
+               y='F-value',
+               x='D value',
+               tooltip=['F-value', 'D value'],
+               
+               ).interactive())
+
 else:
     chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
