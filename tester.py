@@ -219,9 +219,9 @@ if uploaded_file is not None:
     chart = col1.altair_chart(alt.Chart(pd.DataFrame(df3))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
                .encode(
-               y='D value',
+               y='Dv',
                x='Time',
-               tooltip=['Time', 'D value'],
+               tooltip=['Time', 'Dv'],
                
                ).interactive())
 
