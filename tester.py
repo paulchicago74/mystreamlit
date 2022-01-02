@@ -132,7 +132,21 @@ b0 = y_mean-b1*x_mean
 #st.write('intercept b0 is', b0)
 #if genre == 'Yes': st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
 
-
+a = np.array(Dv).reshape((-1, 1))
+#x = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]).reshape((-1, 1))
+x_2 = np.array(Dv)
+y_2 = np.array(Time)
+#x, y = np.array(x), np.array(y)
+#model = LinearRegression()
+#model.fit(y, x)
+n = np.size(x_2)
+n_xy = x_2 * y_2
+x_mean = np.mean(x_2)
+y_mean = np.mean(y_2)
+Sxy = np.sum(x_2*y_2)- n*x_mean*y_mean
+Sxx = np.sum(x_2*x_2) - n*x_mean*x_mean
+b2 = Sxy/Sxx
+b3 = y_mean-b2*x_mean
 
 #Tref = 120
 
