@@ -44,10 +44,12 @@ Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_valu
 #Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
 option = st.selectbox(
      'How would you like to be contacted?',
-     ('Email', 'Home phone', 'Mobile phone'))
+     ('Paper1', 'Paper2', 'Paper3'))
 
-if option == 'Email' : Dvalue = 5
-
+if option == 'Paper1' : Dvalue = 5
+if option == 'Paper2' : Dvalue = 10
+if option == 'Paper3' : Dvalue = 15
+    
 Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
 st.sidebar.subheader('Parameters', anchor=None)
