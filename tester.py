@@ -41,7 +41,12 @@ if uploaded_file is not None:
 
 Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
 
-Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
+#Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
+option = st.selectbox(
+     'How would you like to be contacted?',
+     ('Email', 'Home phone', 'Mobile phone'))
+
+if option == 'Email' : Dvalue = 5
 
 Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
