@@ -202,9 +202,9 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
 #chart.save('chart.html', embed_options={'renderer':'svg'})
 
 
-report_text = 
-    st.text_input("Report Text")
-    st.text_input("Report")
+report_text = (
+ st.text_input("Report Text"),
+ st.text_input("Report"))
 
 
 export_as_pdf = st.button("Export Report")
