@@ -179,7 +179,8 @@ savefig('barchart.png')
 
 
 st.download_button(label="Export_Report",
-                    data=df2,
+                    write='The time you need for a D-value of ',
+                    #data=df2,
                     file_name="test.pdf",
                     mime='application/octet-stream')
 
