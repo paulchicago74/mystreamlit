@@ -179,7 +179,7 @@ savefig('barchart.png')
 
 
 st.download_button(label="Export_Report",
-                    data=PDFbyte,
+                    data=df2,
                     file_name="test.pdf",
                     mime='application/octet-stream')
 
