@@ -181,9 +181,9 @@ savefig('barchart.png')
 st.download_button(label="Export_Report",
                     write='The time you need for a D-value of ',
                     #data=df2,
-                    file_name="test.pdf"
+                    file_name="test.pdf")
                     #mime='application/octet-stream'
-                  )
+                  
 
 col1, col2 = st.columns(2)
 chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
