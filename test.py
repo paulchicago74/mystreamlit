@@ -181,8 +181,8 @@ savefig('barchart.png')
 st.download_button(label="Export_Report",
                     write='The time you need for a D-value of ',
                     #data=df2,
-                    file_name="test.pdf")
-                    #mime='application/octet-stream'
+                    file_name="test.pdf",
+                    mime='application/pdf')
                   
 
 col1, col2 = st.columns(2)
