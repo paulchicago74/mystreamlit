@@ -203,7 +203,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
 
 
 report_text = st.text_input("Report Text")
-report_text1 = st.text_input("Report")
+report_text1 = Wanted_D
 
 
 export_as_pdf = st.button("Export Report")
