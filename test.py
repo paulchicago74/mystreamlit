@@ -182,7 +182,7 @@ with open("dummy.pdf", "rb") as pdf_file:
 
 st.download_button(label="Export_Report",
                     write='The time you need for a D-value of ',
-                    #data=df2,
+                    data=df2,
                     file_name="test.pdf",
                     mime='application/octet-stream')
                   
