@@ -176,6 +176,8 @@ chart = col2.line_chart(df2)
 
 savefig('barchart.png')
 
+with open("dummy.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
 
 
 st.download_button(label="Export_Report",
