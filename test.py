@@ -177,12 +177,11 @@ chart = col2.line_chart(df2)
 savefig('barchart.png')
 
 
-st.download_button(
-     label="Download data as CSV",
-     data='pdf',
-     file_name='test.pdf',
-     mime="text/pdf",
- )
+
+st.download_button(label="Export_Report",
+                    data=PDFbyte,
+                    file_name="test.pdf",
+                    mime='application/octet-stream')
 
 col1, col2 = st.columns(2)
 chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
