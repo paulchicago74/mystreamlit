@@ -202,9 +202,8 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
 #chart.save('chart.html', embed_options={'renderer':'svg'})
 
 
-report_text = (
- st.text_input("Report Text"),
- st.text_input("Report"))
+report_text = st.text_input("Report Text")
+report_text1 = st.text_input("Report")
 
 
 export_as_pdf = st.button("Export Report")
@@ -218,6 +217,7 @@ if export_as_pdf:
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, report_text)
+    pdf.cell(50, 10, report_text1)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 
