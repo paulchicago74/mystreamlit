@@ -10,3 +10,4 @@ FPDF
 matplotlib
 pypdfplot
 altair_saver
+NamedTemporaryFile
