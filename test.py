@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import altair_saver
 import base64
 from tempfile import NamedTemporaryFile
+from sklearn.datasets import load_iris
 
 
 
@@ -205,7 +206,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
 #chart.save('chart.html', embed_options={'renderer':'svg'})
 
 
-from sklearn.datasets import load_iris
+
 
 def create_download_link(val, filename):
     b64 = base64.b64encode(val)  # val looks like b'...'
