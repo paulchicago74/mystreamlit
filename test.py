@@ -228,7 +228,7 @@ export_as_pdf = st.button("Export Report")
 
 if export_as_pdf:
     pdf = FPDF()
-    for fig in figs:
+    for fig in chart:
         pdf.add_page()
         with NamedTemporaryFile(delete=False, suffix=".png") as tmpfile:
                 fig.savefig(tmpfile.name)
