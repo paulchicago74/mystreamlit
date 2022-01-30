@@ -11,3 +11,4 @@ matplotlib
 pypdfplot
 altair_saver
 sklearn
+pyautogui
