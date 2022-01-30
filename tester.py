@@ -3,21 +3,25 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 from millify import millify
-from pandas_profiling import ProfileReport
+#from pandas_profiling import ProfileReport
 import numpy as np
 import streamlit.components.v1 as stc
 from altair import Chart, X, Y, Axis, SortField, OpacityValue
 from numpy import cumsum
 from st_material_table import st_material_table
+import time
+import pyautogui
+import pdfkit
 #from link_button import link_button
-# =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
+# =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
+st.set_page_config(layout='wide')
 st.sidebar.title('Predictive Model Calculation')
 
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
 if uploaded_file is None:
-    st.write("")  
+    st.write("")
 
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
@@ -29,13 +33,13 @@ if uploaded_file is not None:
     #df3 = pd.read_csv(uploaded_file, names=header_list)
     #st.write(df3)
 
-   
+
    # df3['sums'] = df3.sum(axis=1)
    # st.write(df3)
 #else: st.write("")
 #bytes_data = uploaded_file.getvalue()
 # st.write(bytes_data)
- 
+
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
 
@@ -49,7 +53,7 @@ option = st.selectbox(
 if option == 'Paper1' : Dvalue = 5
 if option == 'Paper2' : Dvalue = 10
 if option == 'Paper3' : Dvalue = 15
-    
+
 Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
 st.sidebar.subheader('Parameters', anchor=None)
@@ -91,21 +95,21 @@ Dvalue9 = Fvalue9 / Dvalue
 Dvalue10 = Fvalue10 / Dvalue
 
 if uploaded_file is not None:
-    
+
     #df3["Fo"] = df3["Name"] * Zref
     df3["Fo"] = ((10 ** ((df3["Temp"].shift() - Tref)/Zref) + (10 ** ((df3["Temp"] - Tref)/Zref)))/2*((df3["Time"])-(df3["Time"].shift())))
     #st.write(df3)
-    
-    
+
+
     df3["Fo"] = df3["Fo"].fillna(0)
     df3["F1"] = (np.cumsum(df3["Fo"].shift()) + (df3["Fo"]))
     #df3["F1"] = (np.cumsum(df3["Fo"]) + (df3["Fo"]))
     df3["F1"] = df3["F1"].fillna(0)
     #st.write(df3)
-    
+
     df3["Dv"] = df3["F1"] / Dvalue
     st_material_table(df3)
-    
+
     #df['col'].shift()
 
 df = pd.DataFrame({
@@ -117,7 +121,7 @@ df2 = pd.DataFrame({
     #'F-value': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, Fvalue4, Fvalue5, Fvalue6, Fvalue7, Fvalue8, Fvalue9, Fvalue10],
     'Dvalue': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10],
     'Time': [0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1],
-    
+
 })
 
 y = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
@@ -152,7 +156,7 @@ if genre == 'Yes'and uploaded_file is not None:
     y_mean = np.mean(y_2)
     Sxy = np.sum(x_2*y_2)- n*x_mean*y_mean
     Sxx = np.sum(x_2*x_2) - n*x_mean*x_mean
-    b2 = Sxy/Sxx    
+    b2 = Sxy/Sxx
     b3 = y_mean-b2*x_mean
 
 #Tref = 120
@@ -170,7 +174,7 @@ if genre == 'Yes'and uploaded_file is None: col3.metric('Predicted time for the 
 if genre == 'Yes'and uploaded_file is not None: col3.metric('Predicted time for the D-value', millify(b3*Wanted_D + b2, precision=2), delta=None, delta_color="normal")
 else:
     st.write("")
-    
+
 if uploaded_file is not None:
     col1.metric('F-value', millify(sum(df3["Fo"]), precision=2), delta=None, delta_color="normal")
     col2.metric('D value', millify((sum(df3["Fo"]) / Dvalue), precision=2), delta=None, delta_color="normal")
@@ -194,7 +198,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 #option = st.multiselect('choose',
 # ('Email', 'Home phone', 'Mobile phone'))
-#if option == 'Email': st.write(Pub1) 
+#if option == 'Email': st.write(Pub1)
 #if option == 'Email': Tref = 1200
 #if option == 'Email':  st.metric(Pub1, millify(Pub1, precision=2), delta=None, delta_color="normal")
 #st.write (option)
@@ -208,20 +212,20 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 #if submit:
 #    st.success (BMI)
-  
+
 #chart_data = Pub1
 #st.bar_chart(chart_data)
 
 #container = st.container()
 #all = st.checkbox("Select all")
- 
+
 #if all:
 #    selected_options = container.multiselect("Select one or more options:",
 #         ["Email", 'Home phone', 'Mobile phone'],['Email', 'Home phone', 'Mobile phone'])
 #else:
 #    selected_options =  container.multiselect("Select one or more options:",
 #        ['Email', 'Home phone', 'Mobile phone'])
-  
+
 #if selected_options == 'Email':  st.success ('Pub1', millify(Pub1, precision=2), delta=None, delta_color="normal")
 #st.write (selected_options)
 
@@ -243,7 +247,7 @@ if uploaded_file is not None:
                y='Dv',
                x='Time',
                tooltip=['Time', 'Dv'],
-               
+
                ).interactive())
 
     chart = col2.altair_chart(alt.Chart(pd.DataFrame(df3))
@@ -252,7 +256,7 @@ if uploaded_file is not None:
                y='F1',
                x='Dv',
                tooltip=['F1', 'Dv'],
-               
+
                ).interactive())
 
 else:
@@ -262,7 +266,7 @@ else:
                y='Dvalue',
                x='Time',
                tooltip=['Time', 'Dvalue'],
-               
+
                ).interactive())
 
     chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
@@ -271,7 +275,7 @@ else:
                y='F-value',
                x='D-value',
                tooltip=['F-value', 'D-value'],
-               
+
                ).interactive())
 
 #chart = st.altair_chart(df)
@@ -283,8 +287,34 @@ col1.text_area('Enter description')
 col2.text_input('Name')
 col2.date_input('Date')
 
+if st.sidebar.button('Print Report'):
+    time.sleep(2)
+    screenshot = pyautogui.screenshot()
+    screenshot.save("screen.pdf")
+    with open("screen.pdf", "rb") as file:
+            btn = st.download_button(
+                 label="Print Screenshot",
+                 #on_click=screenshot.save,
+                 data=file,
+                 file_name="screen.pdf",
+                 mime="file/pdf"
+               )
+
+
+#time.sleep(5)
+#screenshot = pyautogui.screenshot()
+#screenshot.save("screen.png")
+#with open("screen.png", "rb") as file:
+#        btn = st.download_button(
+#             on_click=screenshot.save,
+#             data=file,
+#             file_name="screen.png",
+#             mime="image/png"
+#           )
+
 
 #if submit:
 #    st.success (BMI)
+
 
     
