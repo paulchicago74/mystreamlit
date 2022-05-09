@@ -222,7 +222,7 @@ pdf.set_xy(10.0, 20)
 
 st.download_button(
     "Download Report",
-    data=lines,
+    data=pdf.output(dest='S').encode('latin-1'),
     file_name="Output.pdf",
 )
 
