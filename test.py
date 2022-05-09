@@ -211,7 +211,7 @@ pdf = FPDF()  # pdf object
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
 
-pdf.set_font("Times", "B", 18)
+pdf.set_font("Arial", "I", 12)
 pdf.set_xy(10.0, 20)
 pdf.cell(40, 10, 'Hello World!', 1)
 pdf.ln(h = 25.0)
