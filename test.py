@@ -213,7 +213,7 @@ pdf.add_page()
 
 pdf.set_font("Arial", "I", 12)
 pdf.set_xy(10.0, 20)
-pdf.cell(40, 10, Wanted_D, 1)
+pdf.cell(40, 10, txt=Wanted_D, 1)
 pdf.ln(h = 25.0)
 pdf.cell(40, 10, "Dvalue10", 0)
 pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of")
