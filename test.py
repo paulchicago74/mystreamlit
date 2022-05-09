@@ -205,6 +205,13 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
 
 #chart.save('chart.html', embed_options={'renderer':'svg'})
 
+lines = ['Readme', 'How to write text files in Python']
+with open('readme.txt', 'w') as f:
+    for line in lines:
+        f.write(line)
+        f.write('\n')
+
+
 pdf = FPDF()  # pdf object
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
@@ -215,15 +222,11 @@ pdf.set_xy(10.0, 20)
 
 st.download_button(
     "Download Report",
-    data=pdf.output(dest='S').encode('latin-1'),
+    data=lines,
     file_name="Output.pdf",
 )
 
 
-lines = ['Readme', 'How to write text files in Python']
-with open('readme.txt', 'w') as f:
-    for line in lines:
-        f.write(line)
-        f.write('\n')
+
 
 
