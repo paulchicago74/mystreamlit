@@ -213,34 +213,14 @@ pdf.add_page()
 
 pdf.set_font("Arial", "I", 12)
 pdf.set_xy(10.0, 20)
-pdf.cell(40, 10, 'Hello World!', 1)
+pdf.cell(40, 10, Wanted_D, 1)
 pdf.ln(h = 25.0)
 pdf.cell(40, 10, "Dvalue10", 0)
 pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of")
 pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 #pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of",Wanted_D ,"is" , millify(b1*Wanted_D + b0, precision=2))
 
-class PDF(FPDF):
-    def header(self):
-        # Logo
-        self.image('logo_pb.png', 10, 8, 33)
-        # Arial bold 15
-        self.set_font('Arial', 'B', 15)
-        # Move to the right
-        self.cell(80)
-        # Title
-        self.cell(30, 10, 'Title', 1, 0, 'C')
-        # Line break
-        self.ln(20)
 
-    # Page footer
-    def footer(self):
-        # Position at 1.5 cm from bottom
-        self.set_y(-15)
-        # Arial italic 8
-        self.set_font('Arial', 'I', 8)
-        # Page number
-        self.cell(0, 10, 'Page ' + str(self.page_no()) + '/{nb}', 0, 0, 'C')
 st.download_button(
     "Download Report",
     data=pdf.output(dest='S').encode('latin-1'),
