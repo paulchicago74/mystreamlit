@@ -199,7 +199,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                .encode(
                y='F-value',
                x='D-value',
-               tooltip=['F-value', 'D-value'],e
+               tooltip=['F-value', 'D-value'],
                
                ).interactive())
 
@@ -214,7 +214,7 @@ pdf.add_page()
 pdf.set_font("Times", "B", 18)
 pdf.set_xy(10.0, 20)
 pdf.cell(40, 10, 'Hello World!', 1)
-fpdf.ln(h = '')
+fpdf.ln(h = '5.0')
 pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of")
 pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 #pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of",Wanted_D ,"is" , millify(b1*Wanted_D + b0, precision=2))
