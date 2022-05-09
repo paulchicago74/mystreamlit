@@ -220,6 +220,14 @@ pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of")
 pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 #pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of",Wanted_D ,"is" , millify(b1*Wanted_D + b0, precision=2))
 
+def footer(self):
+        # Position at 1.5 cm from bottom
+        self.set_y(-15)
+        # Arial italic 8
+        self.set_font('Arial', 'I', 8)
+        # Page number
+        self.cell(0, 10, 'Page ' + str(self.page_no()) + '/{nb}', 0, 0, 'C')
+
 st.download_button(
     "Download Report",
     data=pdf.output(dest='S').encode('latin-1'),
