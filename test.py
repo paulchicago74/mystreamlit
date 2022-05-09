@@ -222,7 +222,7 @@ st.download_button(
 
 sys.stdout = open("test.txt", "w")
 
-print("Hello World")
+st.print("Hello World")
 
 sys.stdout.close()
 
