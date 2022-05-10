@@ -222,7 +222,7 @@ pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 
 import fpdf
 
-data=[1,2,3,4,5,6]
+data=Zref
 
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
