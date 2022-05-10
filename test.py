@@ -236,7 +236,7 @@ for i in data2:
     pdf.ln()
     
 for i in Tref:
-    pdf.write(5, "The time you need for a D-value of ", [Tref]) 
+    pdf.write(5, "The time you need for a D-value of ") 
     pdf.write(5, str(i))
     pdf.ln()
 pdf.write(5, "Zref")    
