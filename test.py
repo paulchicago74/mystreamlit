@@ -229,7 +229,7 @@ pdf.add_page()
 pdf.set_font("Arial", size=12)
 
 for i in data2:
-    pdf.write(5, "Dvalue, Zref = ") 
+    pdf.write(5, "Dvalue", "Zref = ") 
     pdf.write(5,str(i))
     pdf.ln()
     
