@@ -232,7 +232,7 @@ for i in data2:
     pdf.write(5, "Dvalue", "Zref = ") 
     pdf.write(5,str(i))
     pdf.ln()
-    
+pdf.write(5, "Zref")    
 pdf.output("testings.pdf")
 
 st.download_button(
