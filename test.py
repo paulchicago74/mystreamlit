@@ -229,7 +229,7 @@ Tref = [Tref]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-fpdf.set_title(title: str)
+fpdf.set_title("Title")
 for i in data2:
     pdf.write(5, "Dvalue", "Zref = ") 
     pdf.write(5, str(i))
