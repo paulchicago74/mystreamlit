@@ -10,7 +10,7 @@ from altair import Chart, X, Y, Axis, SortField, OpacityValue
 from numpy import cumsum
 from st_material_table import st_material_table
 import time
-import pyautogui
+#import pyautogui
 import pdfkit
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
