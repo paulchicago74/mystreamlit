@@ -222,13 +222,13 @@ pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 
 import fpdf
 
-data=Zref
+data2=Zref
 
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
 
-for i in data:
+for i in data2:
     pdf.write(5,str(i))
     pdf.ln()
 pdf.output("testings.pdf")
