@@ -236,7 +236,7 @@ for i in data2:
     pdf.ln()
     
 for i in Tref:
-    pdf.write(5, "Dvalue", "Zref = ") 
+    pdf.write(5, "Tref = ") 
     pdf.write(5, str(i))
     pdf.ln()
 pdf.write(5, "Zref")    
