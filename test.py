@@ -220,6 +220,18 @@ pdf.cell(w=75.0, h=5.0, align="L", txt = "Zref")
 pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 #pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of",Wanted_D ,"is" , millify(b1*Wanted_D + b0, precision=2))
 
+import fpdf
+
+data=[1,2,3,4,5,6]
+
+pdf = fpdf.FPDF(format='letter')
+pdf.add_page()
+pdf.set_font("Arial", size=12)
+
+for i in data:
+    pdf.write(5,str(i))
+    pdf.ln()
+pdf.output("testings.pdf")
 
 st.download_button(
     "Download Report",
