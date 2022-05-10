@@ -222,7 +222,7 @@ pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 
 import fpdf
 
-data2= [Zref]
+data2= "TEXT" [Zref]
 
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
@@ -232,6 +232,7 @@ for i in data2:
     pdf.write(5, "Zref = ") 
     pdf.write(5,str(i))
     pdf.ln()
+    
 pdf.output("testings.pdf")
 
 st.download_button(
