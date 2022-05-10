@@ -216,7 +216,7 @@ pdf.set_xy(10.0, 20)
 pdf.write(5, "Zref")
 pdf.ln(h = 25.0)
 pdf.cell(40, 10, "Dvalue10", 0)
-pdf.cell(w=75.0, h=5.0, align="L", write = ["Zref"])
+pdf.cell(w=75.0, h=5.0, align="L", write = "Zref")
 pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 #pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of",Wanted_D ,"is" , millify(b1*Wanted_D + b0, precision=2))
 
