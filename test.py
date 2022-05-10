@@ -213,7 +213,7 @@ pdf.add_page()
 
 pdf.set_font("Arial", "I", 12)
 pdf.set_xy(10.0, 20)
-pdf.write(5, [Zref])
+pdf.write(5, "Zref")
 pdf.ln(h = 25.0)
 pdf.cell(40, 10, "Dvalue10", 0)
 pdf.cell(w=75.0, h=5.0, align="L", txt = "Zref")
