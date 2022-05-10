@@ -229,7 +229,7 @@ Tref = [Tref]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-fpdf.set_title("Title")
+
 for i in data2:
     pdf.write(5, "Dvalue", "Zref = ") 
     pdf.write(5, str(i))
@@ -237,7 +237,7 @@ for i in data2:
     
 for i in Tref:
     pdf.write(5, "The time you need for a D-value of ") 
-    pdf.write(5, str(i))
+    pdf.write(5, --str(i)--)
     pdf.write(5, "The time you need for a D-value of ") 
     pdf.ln()
 pdf.write(5, "Zref")    
