@@ -229,8 +229,8 @@ pdf.add_page()
 pdf.set_font("Arial", size=12)
 
 for i in data2:
+    pdf.write(5, "Zref = ") 
     pdf.write(5,str(i))
-    pdf.write(5, "Zref")
     pdf.ln()
 pdf.output("testings.pdf")
 
