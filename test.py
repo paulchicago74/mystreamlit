@@ -113,7 +113,8 @@ if genre == 'Yes': st.write('The time you need for a D-value of', Wanted_D ,'is'
 #st.metric('Temp', millify(BMI, precision=2), delta=None, delta_color="normal")
 
 #st.metric('D value', millify(D, precision=2), delta=None, delta_color="normal")
-col1.text_area('Enter description')
+st.text_area('Enter description')
+
 col1, col2, col3 = st.columns(3)
 
 
