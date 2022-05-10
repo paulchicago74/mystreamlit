@@ -230,7 +230,12 @@ pdf.set_font("Arial", size=12)
 
 for i in data2:
     pdf.write(5, "Dvalue", "Zref = ") 
-    pdf.write(5, "Dvalue", str(i))
+    pdf.write(5, str(i))
+    pdf.ln()
+    
+for i in Tref:
+    pdf.write(5, "Dvalue", "Zref = ") 
+    pdf.write(5, str(i))
     pdf.ln()
 pdf.write(5, "Zref")    
 pdf.output("testings.pdf")
