@@ -233,7 +233,7 @@ Tref = [area]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-
+pdf.set_title("20000 Leagues Under the Seas")
 def header(self):
         # Rendering logo:
         self.image("logo.png", 10, 8, 33)
