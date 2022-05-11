@@ -233,7 +233,7 @@ Tref = [area]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-pdf.set_title("20000 Leagues Under the Seas")
+
 def header(self):
         # Rendering logo:
         self.image("logo.png", 10, 8, 33)
@@ -260,7 +260,8 @@ for i in Tref:
     pdf.write(55, str(i))
     pdf.write(55, " The time you need for a D-value of ") 
     pdf.ln(5)
-#pdf.write(5, "Zref")    
+#pdf.write(5, "Zref")
+pdf.set_title("20000 Leagues Under the Seas")
 pdf.output("testings.pdf")
 
 st.download_button(
