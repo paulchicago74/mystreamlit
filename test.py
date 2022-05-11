@@ -233,7 +233,7 @@ Tref = [area]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-pdf.image("imgA.png", h=pdf.eph, w=pdf.epw/2)
+pdf.image("docs/fpdf2-logo.png", x=20, y=60)
 
 for i in data2:
     pdf.write(5, "Dvalue", "Zref = ") 
