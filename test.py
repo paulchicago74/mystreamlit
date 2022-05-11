@@ -235,8 +235,8 @@ pdf.add_page()
 pdf.set_font("Arial", size=12)
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
-pdf.cell(w=75.0, h=5.0, align="L", txt = "Zref")
-
+pdf.cell(h=5.0, align="C", txt = "Zref")
+pdf.ln()
 for i in data2:
     #pdf.image("logo.png", x=5, y=5, w=60, h=30)
     pdf.write(55, "Dvalue", "Zref = ") 
