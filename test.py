@@ -233,6 +233,19 @@ Tref = [area]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
+
+def header(self):
+        # Rendering logo:
+        self.image("logo.png", 10, 8, 33)
+        # Setting font: helvetica bold 15
+        self.set_font("helvetica", "B", 15)
+        # Moving cursor to the right:
+        self.cell(80)
+        # Printing title:
+        self.cell(30, 10, "Title", border=1, align="C")
+        # Performing a line break:
+        self.ln(20)
+        
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 pdf.cell(h=5.0, align="C", txt = "Zref")
