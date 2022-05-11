@@ -241,11 +241,11 @@ for i in data2:
     pdf.ln()
     
 for i in Tref:
-    pdf.write(45, "The time you need for a D-value of ") 
-    pdf.write(45, str(i))
-    pdf.write(45, "The time you need for a D-value of ") 
+    pdf.write(5, "The time you need for a D-value of ") 
+    pdf.write(5, str(i))
+    pdf.write(5, "The time you need for a D-value of ") 
     pdf.ln()
-pdf.write(45, "Zref")    
+pdf.write(5, "Zref")    
 pdf.output("testings.pdf")
 
 st.download_button(
