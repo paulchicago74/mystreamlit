@@ -236,16 +236,16 @@ pdf.set_font("Arial", size=12)
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 
 for i in data2:
-    pdf.write(5, "Dvalue", "Zref = ") 
-    pdf.write(5, str(i))
+    pdf.write(45, "Dvalue", "Zref = ") 
+    pdf.write(45, str(i))
     pdf.ln()
     
 for i in Tref:
-    pdf.write(5, "The time you need for a D-value of ") 
-    pdf.write(5, str(i))
-    pdf.write(5, "The time you need for a D-value of ") 
+    pdf.write(45, "The time you need for a D-value of ") 
+    pdf.write(45, str(i))
+    pdf.write(45, "The time you need for a D-value of ") 
     pdf.ln()
-pdf.write(5, "Zref")    
+pdf.write(45, "Zref")    
 pdf.output("testings.pdf")
 
 st.download_button(
