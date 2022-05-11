@@ -233,6 +233,7 @@ Tref = [area]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
+pdf.image("imgA.png", h=pdf.eph, w=pdf.epw/2)
 
 for i in data2:
     pdf.write(5, "Dvalue", "Zref = ") 
@@ -243,7 +244,7 @@ for i in Tref:
     pdf.write(5, "The time you need for a D-value of ") 
     pdf.write(5, str(i))
     pdf.write(5, "The time you need for a D-value of ") 
-    pdf.ln()
+    pdf.ln()e
 pdf.write(5, "Zref")    
 pdf.output("testings.pdf")
 
