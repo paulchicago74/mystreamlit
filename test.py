@@ -248,8 +248,7 @@ def header(self):
         
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
-pdf.cell(h=5.0, align="C", txt = "Zref")
-pdf.ln()
+
 for i in data2:
     #pdf.image("logo.png", x=5, y=5, w=60, h=30)
     pdf.write(55, "Dvalue", "Zref = ") 
