@@ -244,7 +244,7 @@ for i in data2:
     
 for i in Tref:
     pdf.write(55, "The time you need for a D-value of ") 
-    pdf.write(5, str(i))
+    pdf.write(55, str(i))
     pdf.write(55, "The time you need for a D-value of ") 
     pdf.ln(5)
 #pdf.write(5, "Zref")    
