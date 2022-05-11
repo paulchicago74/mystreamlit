@@ -237,7 +237,7 @@ pdf.image("logo.png", x=5, y=5, w=60, h=30)
 
 for i in data2:
     pdf.write(45, "Dvalue", "Zref = ") 
-    pdf.write(45, str(i))
+    pdf.write(5, str(i))
     pdf.ln()
     
 for i in Tref:
