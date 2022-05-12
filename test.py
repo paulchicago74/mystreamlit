@@ -199,8 +199,9 @@ fig = px.scatter(px.data.iris(), x="sepal_length", y="sepal_width", color="speci
 fig.write_image("figure.png", engine="kaleido")
 
 
-fig = sns.pairplot(df, hue="species")
-st.pyplot(fig)
+df = pd.DataFrame({'x': [1, 2, 3], 'y': [10, 30, 70]})
+sns.lineplot(x='x', y='y', data=df)
+st.pyplot()
                   
 
 col1, col2 = st.columns(2)
