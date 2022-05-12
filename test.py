@@ -275,7 +275,7 @@ for i in Tref:
 pdf.output("testings.pdf")
 
 
-form = st.form(key='my-form')
+form = st.form(key='my-form2')
 name = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 
