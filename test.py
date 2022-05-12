@@ -17,8 +17,8 @@ from sklearn.datasets import load_iris
 import fpdf
 from altair_saver import save
 
-def do_stuff_on_page_load(...):
-    st.set_page_config(layout="wide")
+
+st.set_page_config(layout="wide")
 
 
 #from link_button import link_button
