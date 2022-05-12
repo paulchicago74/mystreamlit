@@ -198,8 +198,7 @@ chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                x='Time',
                tooltip=['Time', 'Dvalue'],
                
-               ).interactive(),
-               chart.save('chart.png'))
+               ).interactive())
 chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
                .encode(
