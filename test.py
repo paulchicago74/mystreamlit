@@ -276,7 +276,7 @@ pdf.output("testings.pdf")
 st.download_button(
     "Download Chart",
     savefig('barchart.png'),
-    file_name="Output.pdf",
+    
 )
 
 
