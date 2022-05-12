@@ -9,7 +9,7 @@ import matplotlib
 from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, savefig
 from fpdf import FPDF
 import pypdfplot.backend
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plte
 import altair_saver
 import base64
 from tempfile import NamedTemporaryFile
@@ -208,7 +208,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df), title="Evolution of stock 
                tooltip=['Time', 'F-value'],
                ).interactive()
                .properties(     
-               continuousWidth=600
+               'continuousWidth': 400, 'continuousHeight': 300
                ))
 #save(chart, "chart.pdf")
 
