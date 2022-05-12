@@ -15,6 +15,7 @@ import base64
 from tempfile import NamedTemporaryFile
 from sklearn.datasets import load_iris
 import fpdf
+from altair_saver import save
 
 
 
@@ -207,7 +208,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                tooltip=['F-value', 'D-value'],
                
                ).interactive())
-
+save(chart, "chart.pdf")
 
 #chart.save('chart.png')
 data = st.write(Dvalue10)
