@@ -199,7 +199,7 @@ chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                tooltip=['Time', 'Dvalue'],
                
                ).interactive())
-
+               chart.save('chart.png')
 chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
                .encode(
@@ -209,7 +209,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                
                ).interactive())
 
-chart.save('chart.html', embed_options={'renderer':'svg'})
+#chart.save('chart.html', embed_options={'renderer':'svg'})
 #chart.save('chart.png')
 data = st.write(Dvalue10)
 
