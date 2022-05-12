@@ -194,15 +194,12 @@ if submit:
 col1, col2 = st.columns(2)
 chart = col1.line_chart(df, use_container_width=True)
 chart2 = col2.line_chart(df2, use_container_width=True)
-import plotly.express as px
-fig = px.scatter(px.data.iris(), x="sepal_length", y="sepal_width", color="species")
-fig.write_image("figure.png", engine="kaleido")
 
 
 df5 = pd.DataFrame({'x': [1, 2, 3], 'y': [10, 30, 70]})
 sns.lineplot(x='x', y='y', data=df5)
-st.pyplot()
-df5.write_image("figure.png", engine="kaleido")
+fig1 = st.pyplot()
+fig1.write_image("figure.png", engine="kaleido")
                   
 
 col1, col2 = st.columns(2)
