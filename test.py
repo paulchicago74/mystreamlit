@@ -16,6 +16,7 @@ from tempfile import NamedTemporaryFile
 from sklearn.datasets import load_iris
 import fpdf
 from altair_saver import save
+import kaleido
 
 
 st.set_page_config(layout="wide")
