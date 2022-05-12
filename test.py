@@ -266,7 +266,7 @@ for i in Tref:
 
 pdf.output("testings.pdf")
 
-st.download_button(
+st.download_button1(
     "Download Report",
     savefig('barchart.png'),
     data=pdf.output(dest='S').encode('latin-1'),    
