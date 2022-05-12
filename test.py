@@ -193,7 +193,7 @@ savefig('shot.png')
                   
 
 col1, col2 = st.columns(2)
-chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2, use_container_width=True))
+chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
                .encode(
                y='Dvalue',
