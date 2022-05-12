@@ -209,7 +209,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                
                ).interactive())
 
-#chart.save('chart.html', embed_options={'renderer':'svg'})
+
 #chart.save('chart.png')
 data = st.write(Dvalue10)
 
