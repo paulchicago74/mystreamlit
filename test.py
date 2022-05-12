@@ -169,7 +169,7 @@ if submit:
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
-fig = sns.pairplot(penguins, hue="species")
+fig = sns.pairplot(chart2, hue="species")
 st.pyplot(fig)
 
 
