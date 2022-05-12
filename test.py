@@ -208,8 +208,9 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                tooltip=['F-value', 'D-value'],
                
                ).interactive())
-save(chart, "chart.pdf")
+#save(chart, "chart.pdf")
 
+savefig('barchart.png')
 #chart.save('chart.png')
 data = st.write(Dvalue10)
 
