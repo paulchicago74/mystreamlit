@@ -17,7 +17,7 @@ from sklearn.datasets import load_iris
 import fpdf
 from altair_saver import save
 import kaleido
-
+import seaborn as sns
 
 st.set_page_config(layout="wide")
 
@@ -169,6 +169,10 @@ if submit:
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
+fig = sns.pairplot(penguins, hue="species")
+st.pyplot(fig)
+
+
 
 #container = st.container()
 #all = st.checkbox("Select all")
