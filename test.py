@@ -206,7 +206,9 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df), title="Evolution of stock 
                y='F-value',
                x='Time',
                tooltip=['Time', 'F-value'],
-               
+               .properties(
+    width='container'
+)
                ).interactive())
 #save(chart, "chart.pdf")
 
