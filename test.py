@@ -205,8 +205,8 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df), title="Evolution of stock 
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
                .encode(
                y='F-value',
-               x='D-value',
-               tooltip=['Time', 'D-value'],
+               x='Time',
+               tooltip=['Time', 'F-value'],
                
                ).interactive())
 #save(chart, "chart.pdf")
