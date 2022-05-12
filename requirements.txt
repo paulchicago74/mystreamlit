@@ -12,4 +12,4 @@ pypdfplot
 altair_saver
 sklearn
 pyautogui
-altair_saver
+altair-saver
