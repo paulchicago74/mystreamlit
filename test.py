@@ -275,8 +275,10 @@ for i in Tref:
 pdf.output("testings.pdf")
 
 
-#submit = form.form_submit_button('Submit')
-st.form("my_form")
+form = st.form(key='my-form')
+name = form.text_input('Enter your name')
+submit = form.form_submit_button('Submit')
+
 st.write('Press submit to have your name printed below')
 
 if submit:
