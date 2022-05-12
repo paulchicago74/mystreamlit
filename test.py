@@ -275,11 +275,11 @@ for i in Tref:
 pdf.output("testings.pdf")
 
 
-submit2 = form.form_submit_button('Submit')
+submit = form.form_submit_button('Submit', key=2)
 
 st.write('Press submit to have your name printed below')
 
-if submit2:
+if submit:
     save(chart, "chart.pdf")
     chart.save('chart.png')
    
