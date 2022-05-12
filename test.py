@@ -195,10 +195,8 @@ col1, col2 = st.columns(2)
 chart = col1.line_chart(df, use_container_width=True)
 chart2 = col2.line_chart(df2, use_container_width=True)
 df5 = pd.DataFrame({'x': [1, 2, 3], 'y': [10, 30, 70]})
-
+fig1 = sns.lineplot(x='x', y='y', data=df5)
 if st.checkbox("Seaborn Pairplot",value=True):
-	import seaborn as sns
- 	fig1 = sns.lineplot(x='x', y='y', data=df5)
 	st.pyplot(fig1)
 	fig1.write_image("figure.png", engine="kaleido")
                   
