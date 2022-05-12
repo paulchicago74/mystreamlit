@@ -285,7 +285,7 @@ st.write('Press submit to have your name printed below')
 
 if submit:
     #save(chart, "chart.pdf")
-    fig.write_image("figure.png", engine="kaleido")
+    fig.write_image("shot.png", engine="kaleido")
    
 #st.download_button(
 #    "Download Report",
