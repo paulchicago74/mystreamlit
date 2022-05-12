@@ -155,7 +155,7 @@ col1, col2 = st.columns(2)
 d = col1.date_input(
      "Date")
 
-form = st.form(key='my-form')
+form = col2.form(key='my-form')
 name = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 
