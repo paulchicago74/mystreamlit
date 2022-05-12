@@ -151,7 +151,8 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 #st.write (option)
 #if option == 'Home phone': st.write(BMI)
 
-d = st.date_input(
+col1, col2 = st.columns(2)
+d = col1.date_input(
      "Date")
 
 form = st.form(key='my-form')
