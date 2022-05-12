@@ -273,7 +273,11 @@ st.download_button(
     file_name="Output.pdf",
 )
 
-
+st.download_button(
+    "Download Chart",
+    savefig('barchart.png'),
+    #file_name="Output.pdf",
+)
 
 
 
