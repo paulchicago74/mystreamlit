@@ -266,18 +266,18 @@ for i in Tref:
 
 pdf.output("testings.pdf")
 
-st.download_button(
-    "Download Report",
+#st.download_button(
+#    "Download Report",
     #savefig('barchart.png'),
-    data=pdf.output(dest='S').encode('latin-1'),    
+#    data=pdf.output(dest='S').encode('latin-1'),    
+#    file_name="Output.pdf",
+#)
+
+st.download_button(
+    "Download Chart",
+    savefig('barchart.png'),
     file_name="Output.pdf",
 )
-
-#st.download_button(
-#    "Download Chart",
-#    savefig('barchart.png'),
-    #file_name="Output.pdf",
-#)
 
 
 
