@@ -162,7 +162,7 @@ submit = form.form_submit_button('Submit')
 st.write('Press submit to have your name printed below')
 
 if submit:
-    savefig('shot.png')
+    save(chart, "chart.pdf")
     #st.success (BMI)
   
 #chart_data = Pub1
@@ -193,7 +193,7 @@ col1, col2 = st.columns(2)
 chart = col1.line_chart(df, use_container_width=True)
 chart = col2.line_chart(df2, use_container_width=True)
 
-savefig('shot.png')
+#savefig('shot.png')
 
 
                   
