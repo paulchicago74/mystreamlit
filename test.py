@@ -208,7 +208,7 @@ chart = col2.altair_chart(alt.Chart(pd.DataFrame(df))
                
                ).interactive())
 
-#chart.save('chart.html', embed_options={'renderer':'svg'})
+chart.save('chart.html', embed_options={'renderer':'svg'})
 
 data = st.write(Dvalue10)
 
@@ -261,7 +261,7 @@ for i in Tref:
     pdf.write(55, " The time you need for a D-value of ") 
     pdf.ln(5)
 #pdf.write(5, "Zref")
-pdf.set_title("20000 Leagues Under the Seas")
+
 pdf.output("testings.pdf")
 
 st.download_button(
