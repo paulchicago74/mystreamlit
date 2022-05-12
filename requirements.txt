@@ -13,4 +13,4 @@ altair_saver
 sklearn
 pyautogui
 altair-saver
-vega-lite
+
