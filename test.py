@@ -169,10 +169,6 @@ if submit:
   
 #chart_data = Pub1
 #st.bar_chart(chart_data)
-fig = sns.pairplot(chart2, hue="species")
-st.pyplot(fig)
-
-
 
 #container = st.container()
 #all = st.checkbox("Select all")
@@ -203,6 +199,8 @@ fig = px.scatter(px.data.iris(), x="sepal_length", y="sepal_width", color="speci
 fig.write_image("figure.png", engine="kaleido")
 
 
+fig = sns.pairplot(chart2, hue="species")
+st.pyplot(fig)
                   
 
 col1, col2 = st.columns(2)
