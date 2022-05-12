@@ -193,13 +193,12 @@ savefig('shot.png')
                   
 
 col1, col2 = st.columns(2)
-chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
+chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2, use_container_width=True))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
                .encode(
                y='Dvalue',
                x='Time',
                tooltip=['Time', 'Dvalue'],
-               use_container_width=False
                ).interactive())
 chart = col2.altair_chart(alt.Chart(pd.DataFrame(df), title="Evolution of stock prices")
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
