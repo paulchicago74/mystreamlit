@@ -163,6 +163,7 @@ st.write('Press submit to have your name printed below')
 
 if submit:
     save(chart, "chart.pdf")
+    chart.save('chart.png')
     #st.success (BMI)
   
 #chart_data = Pub1
