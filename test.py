@@ -152,7 +152,7 @@ Pub2 = (10 ** ((Temp - Tref)/10))/1 * Time / 3
 
 d = st.date_input(
      "Date",
-     datetime.date())
+     datetime.date)
 
 form = st.form(key='my-form')
 name = form.text_input('Enter your name')
