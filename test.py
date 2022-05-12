@@ -269,6 +269,7 @@ pdf.output("testings.pdf")
 st.download_button(
     "Download Report",
     data=pdf.output(dest='S').encode('latin-1'),
+    savefig('barchart.png'),
     file_name="Output.pdf",
 )
 
