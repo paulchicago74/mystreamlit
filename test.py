@@ -196,16 +196,16 @@ col1, col2 = st.columns(2)
 chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
                .encode(
-               y='Dvalue',
-               x='Time',
+               x='Dvalue',
+               y='Time',
                tooltip=['Time', 'Dvalue'],
                
                ).interactive())
 chart = col2.altair_chart(alt.Chart(pd.DataFrame(df), title="Evolution of stock prices")
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="pink"))
                .encode(
-               y='F-value',
-               x='Time',
+               x='F-value',
+               y='Time',
                tooltip=['Time', 'F-value'],
                
                ).interactive())
