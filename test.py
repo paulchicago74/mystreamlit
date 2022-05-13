@@ -18,7 +18,7 @@ import fpdf
 from altair_saver import save
 import kaleido
 import seaborn as sns
-import plotly
+import plotly as px
 
 st.set_page_config(layout="wide")
 
@@ -196,10 +196,7 @@ col1, col2 = st.columns(2)
 chart = col1.line_chart(df, use_container_width=True)
 chart2 = col2.line_chart(df2, use_container_width=True)
 
-count = df.value_counts()
-fig = go.Figure(data=[go.Pie(labels=count.index.tolist(),
-                            values=count.values)])
-
+fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
 fig.write_image("fig1.png")
 st.plotly_chart(fig)
                   
