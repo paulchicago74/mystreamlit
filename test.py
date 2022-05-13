@@ -18,7 +18,7 @@ import fpdf
 from altair_saver import save
 import kaleido
 import seaborn as sns
-import plotly as px
+import plotly.express as px
 
 st.set_page_config(layout="wide")
 
