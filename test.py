@@ -161,7 +161,7 @@ form = col2.form(key='my-form')
 name = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 
-st.write('Press submit to have your name printed below')
+#st.write('Press submit to have your name printed below')
 
 if submit:
     save(chart, "chart.pdf")
