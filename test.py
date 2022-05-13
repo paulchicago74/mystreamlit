@@ -198,8 +198,10 @@ chart2 = col2.line_chart(df2, use_container_width=True)
 
 fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
 fig.write_image("fig1.png")
-st.plotly_chart(fig)
-                  
+fig.save('chart.png')
+fig.write_image("fig1.png")
+
+
 col1, col2 = st.columns(2)
 chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
                .mark_line(color='#0068c9', opacity=0.5, point=alt.OverlayMarkDef(color="red"))
