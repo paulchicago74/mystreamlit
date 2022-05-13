@@ -195,9 +195,9 @@ col1, col2 = st.columns(2)
 chart = col1.line_chart(df, use_container_width=True)
 chart2 = col2.line_chart(df2, use_container_width=True)
 
-if st.checkbox("Seaborn Pairplot",value=True):
+#if st.checkbox("Seaborn Pairplot",value=True):
 	
-	fig1.write_image("figure.png", engine="kaleido")
+#	fig1.write_image("figure.png", engine="kaleido")
                   
 
 col1, col2 = st.columns(2)
