@@ -195,9 +195,12 @@ col1, col2 = st.columns(2)
 chart = col1.line_chart(df, use_container_width=True)
 chart2 = col2.line_chart(df2, use_container_width=True)
 
-#if st.checkbox("Seaborn Pairplot",value=True):
-	
-#	fig1.write_image("figure.png", engine="kaleido")
+count = df.value_counts()
+fig = go.Figure(data=[go.Pie(labels=count.index.tolist(),
+                            values=count.values)])
+
+fig.write_image("fig1.png")
+st.plotly_chart(fig)
                   
 col1, col2 = st.columns(2)
 chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
