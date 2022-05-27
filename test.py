@@ -289,12 +289,12 @@ if submit:
     #save(chart, "chart.pdf")
     fig.write_image("shot.png", engine="kaleido")
    
-#st.download_button(
-#    "Download Report",
+st.download_button(
+   "Download Report",
     #savefig('barchart.png'),
-#    data=pdf.output(dest='S').encode('latin-1'),    
-#    file_name="Output.pdf",
-#)
+    data=pdf.output(dest='S').encode('latin-1'),    
+    file_name="Output.pdf",
+)
 
 
 
