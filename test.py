@@ -315,6 +315,7 @@ btn = st.download_button(
    data=img,
    file_name=fn,
    mime="image/png"
+   key="b"
 )
    
    
