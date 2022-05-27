@@ -320,12 +320,12 @@ btn = st.download_button(
    
    
    
-#st.download_button(
-#   "Download Report",
-    #savefig('barchart.png'),
-#    data=pdf.output(dest='S').encode('latin-1'),    
-#    file_name="Output.pdf",
-#)
+st.download_button(
+   "Download Report",
+    savefig('scatter.png'),
+    data=pdf.output(dest='S').encode('latin-1'),    
+    file_name="Output.pdf",
+)
 
 
 
