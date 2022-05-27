@@ -310,7 +310,7 @@ fn = 'scatter.png'
 img = io.BytesIO()
 plt.savefig(img, format='png')
  
-btn = st.download_button(
+btn = st.download_button2(
    label="Download image",
    data=img,
    file_name=fn,
