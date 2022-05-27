@@ -310,7 +310,7 @@ fn = 'scatter.png'
 img = io.BytesIO()
 plt.savefig(img, format='png')
  
-btn = st.download_button2(
+btn = st.download_button(
    label="Download image",
    data=img,
    file_name=fn,
@@ -319,12 +319,12 @@ btn = st.download_button2(
    
    
    
-st.download_button(
-   "Download Report",
+#st.download_button(
+#   "Download Report",
     #savefig('barchart.png'),
-    data=pdf.output(dest='S').encode('latin-1'),    
-    file_name="Output.pdf",
-)
+#    data=pdf.output(dest='S').encode('latin-1'),    
+#    file_name="Output.pdf",
+#)
 
 
 
