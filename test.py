@@ -291,8 +291,8 @@ if submit:
     #save(chart, "chart.pdf")
     fig.write_image("shot.png", engine="kaleido")
    
-X = [1, 2, 3, 4, 5, 6, 7, 8]
-Y = [1500, 1550, 1600, 1640, 1680, 1700, 1760, 1800]
+#X = [1, 2, 3, 4, 5, 6, 7, 8]
+#Y = [1500, 1550, 1600, 1640, 1680, 1700, 1760, 1800]
 sns.scatterplot(x=x_1, y=y_1)
 
 # Save to file first or an image file has already existed.
