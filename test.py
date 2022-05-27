@@ -322,7 +322,7 @@ btn = st.download_button(
    
 st.download_button(
    "Download Report",
-    savefig('scatter.png'),
+    #savefig('scatter.png'),
     data=pdf.output(dest='S').encode('latin-1'),    
     file_name="Output.pdf",
 )
