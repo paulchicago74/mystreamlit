@@ -262,7 +262,7 @@ def header(self):
         # Performing a line break:
         self.ln(20)
         
-pdf.image("logo.png", x=5, y=5, w=60, h=30)
+pdf.image("scatter.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
 for i in data2:
