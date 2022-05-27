@@ -262,7 +262,7 @@ def header(self):
         # Performing a line break:
         self.ln(20)
         
-pdf.image("scatter.png", x=5, y=5, w=60, h=30)
+pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
 for i in data2:
@@ -277,7 +277,7 @@ for i in Tref:
     pdf.write(55, " The time you need for a D-value of ") 
     pdf.ln(5)
 #pdf.write(5, "Zref")
-
+pdf.image("scatter.png", x=5, y=5, w=160, h=130)
 pdf.output("testings.pdf")
 
 
