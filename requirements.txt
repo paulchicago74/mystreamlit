@@ -15,4 +15,4 @@ pyautogui
 altair-saver
 kaleido
 seaborn
-io
+
