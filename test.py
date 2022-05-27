@@ -9,7 +9,6 @@ import matplotlib
 from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, savefig
 from fpdf import FPDF
 import pypdfplot.backend
-import matplotlib.pyplot as plte
 import altair_saver
 import base64
 from tempfile import NamedTemporaryFile
@@ -19,6 +18,9 @@ from altair_saver import save
 import kaleido
 import seaborn as sns
 import plotly.express as px
+import io
+import matplotlib.pyplot as plt
+
 
 st.set_page_config(layout="wide")
 
