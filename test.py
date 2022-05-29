@@ -264,7 +264,7 @@ def header(self):
         # Performing a line break:
         self.ln(20)
  
- def footer(self):
+def footer(self):
         self.set_y(-15)
         self.set_font('Arial', 'I', 8)
         txt = 'Page %s of %s' % (self.page_no(), self.alias_nb_pages())
