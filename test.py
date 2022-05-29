@@ -246,6 +246,7 @@ import fpdf
 data2= [Dvalue10, Zref]
 Tref = [area]
 d = [d]
+area = [area]
 
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
@@ -275,6 +276,12 @@ for i in data2:
 for i in d:
     #pdf.image("logo.png", x=5, y=5, w=60, h=30)
     pdf.write(55, "Date = ") 
+    pdf.write(55, str(i))
+    pdf.ln(5)
+    
+for i in area:
+    #pdf.image("logo.png", x=5, y=5, w=60, h=30)
+    pdf.write(55, "Description ") 
     pdf.write(55, str(i))
     pdf.ln(5)
     
