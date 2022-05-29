@@ -265,16 +265,12 @@ def header(self):
         self.ln(20)
         
 def footer(self):
-        # Rendering logo:
-        self.image("logo.png", 10, 8, 33)
-        # Setting font: helvetica bold 15
-        self.set_font("helvetica", "B", 15)
-        # Moving cursor to the right:
-        self.cell(80)
-        # Printing title:
-        self.cell(30, 10, "Title", border=1, align="C")
-        # Performing a line break:
-        self.ln(20)
+        # Go to 1.5 cm from bottom
+        self.set_y(-15)
+        # Select Arial italic 8
+        self.set_font('Arial', 'I', 8)
+        # Print centered page number
+        self.cell(0, 10, 'Page %s' % self.page_no(), 0, 0, 'C')
         
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
