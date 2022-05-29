@@ -272,7 +272,7 @@ def footer(self):
 
 
 pdf.cell(0, 0, 'Title', 0, 0, 'C')      
-pdf.cell(-15, -15, 'Footer', 0, 0, 'C')  
+pdf.cell(100, -0, 'Footer', 0, 0, 'C')  
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
