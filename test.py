@@ -265,11 +265,11 @@ def header(self):
         self.ln(20)
  
  def footer(self):
-                "hook to draw custom page footer (printing page numbers)"
-                self.set_y(-15)
-                self.set_font('Arial', 'I', 8)
-                txt = 'Page %s of %s' % (self.page_no(), self.alias_nb_pages())
-                self.cell(0, 10, txt, 0, 0, 'C')
+        "hook to draw custom page footer (printing page numbers)"
+        self.set_y(-15)
+        self.set_font('Arial', 'I', 8)
+        txt = 'Page %s of %s' % (self.page_no(), self.alias_nb_pages())
+        self.cell(0, 10, txt, 0, 0, 'C')
 
 
 pdf.cell(0, 0, 'Title', 0, 0, 'C')      
