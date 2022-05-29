@@ -264,7 +264,8 @@ def header(self):
         # Performing a line break:
         self.ln(20)
         
-def footer(self):
+class PDF(FPDF):
+    def footer(self):
         # Go to 1.5 cm from bottom
         self.set_y(-15)
         # Select Arial italic 8
