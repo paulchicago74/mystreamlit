@@ -298,13 +298,13 @@ sns.scatterplot(x=x_1, y=y_1)
 # Save to file first or an image file has already existed.
 fn = 'scatter.png'
 plt.savefig(fn)
-with open(fn, "rb") as img:
-    btn = st.download_button(
-        label="Download image",
-        data=img,
-        file_name=fn,
-        mime="image/png"
-    )
+#with open(fn, "rb") as img:
+#    btn = st.download_button(
+#        label="Download image",
+#        data=img,
+#        file_name=fn,
+#        mime="image/png"
+#    )
    
 fn = 'scatter.png'
 img = io.BytesIO()
