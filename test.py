@@ -310,13 +310,13 @@ fn = 'scatter.png'
 img = io.BytesIO()
 plt.savefig(img, format='png')
  
-btn = st.download_button(
-   label="Download image",
-   data=img,
-   file_name=fn,
-   mime="image/png",
-   key="b"
-)
+#btn = st.download_button(
+#   label="Download image",
+#   data=img,
+#   file_name=fn,
+#   mime="image/png",
+#   key="b"
+#)
    
    
    
