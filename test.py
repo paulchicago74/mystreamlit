@@ -272,7 +272,7 @@ def footer(self):
         self.set_font('Arial', 'I', 8)
         # Print centered page number
         self.cell(0, 10, 'Page %s' % self.page_no(), 0, 0, 'C')
-pdf.cell(30, 10, "Title", border=1, align="C")        
+pdf.cell(10, "Title", align="C")        
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
