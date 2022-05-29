@@ -266,6 +266,8 @@ def header(self):
  
 pdf.cell(0, 0, 'Title', 0, 0, 'C')      
 pdf.cell(80, 80, 'Footer', 'C')  
+pdf.cell(250, 80, 'Footer', 'C')
+pdf.cell(300, 80, 'Footer', 'C')  
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
