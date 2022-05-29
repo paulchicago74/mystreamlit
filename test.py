@@ -247,7 +247,7 @@ data2= [Dvalue10, Zref]
 Tref = [area]
 d = [d]
 area = [area]
-str = "Title"
+
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
@@ -265,7 +265,7 @@ def header(self):
         self.ln(20)
         
 
-#pdf.cell(20, 10, 'Title', 1, 1, 'C')      
+pdf.cell(20, 10, 'Title', 1, 1, 'C')      
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
