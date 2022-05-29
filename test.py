@@ -263,11 +263,8 @@ def header(self):
         self.cell(30, 10, "Title", border=1, align="C")
         # Performing a line break:
         self.ln(20)
- 
-pdf.cell(0, 0, 'Title', 0, 0, 'C')      
-pdf.cell(80, 80, 'Footer', 'C')  
-pdf.cell(0, 280, 'Footer', 'C')
-pdf.cell(30, 380, 'Footer', 'C')  
+
+pdf.cell('Footer', x=5, y=50)
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
