@@ -251,7 +251,7 @@ area = [area]
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-
+fpdf.set_title(title: str)
 def header(self):
         # Rendering logo:
         self.image("logo.png", 10, 8, 33)
@@ -272,7 +272,9 @@ def footer(self):
         self.set_font('Arial', 'I', 8)
         # Print centered page number
         self.cell(0, 10, 'Page %s' % self.page_no(), 0, 0, 'C')
-pdf.cell(10, "Title", align="C")        
+       
+
+pdf.cell(5, 10, "Title", align="C")        
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
@@ -304,15 +306,15 @@ for i in Tref:
 pdf.output("testings.pdf")
 
 
-form = st.form(key='my-form2')
-name = form.text_input('Enter your name')
-submit = form.form_submit_button('Submit')
+#form = st.form(key='my-form2')
+#name = form.text_input('Enter your name')
+#submit = form.form_submit_button('Submit')
 
-st.write('Press submit to have your name printed below')
+#st.write('Press submit to have your name printed below')
 
-if submit:
+#if submit:
     #save(chart, "chart.pdf")
-    fig.write_image("shot.png", engine="kaleido")
+#    fig.write_image("shot.png", engine="kaleido")
    
 #X = [1, 2, 3, 4, 5, 6, 7, 8]
 #Y = [1500, 1550, 1600, 1640, 1680, 1700, 1760, 1800]
