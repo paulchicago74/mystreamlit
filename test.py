@@ -264,15 +264,8 @@ def header(self):
         # Performing a line break:
         self.ln(20)
  
-def footer(self):
-        self.set_y(-15)
-        self.set_font('Arial', 'I', 8)
-        txt = 'Page %s of %s' % (self.page_no(), self.alias_nb_pages())
-        self.cell(0, 10, txt, 0, 0, 'C')
-
-
 pdf.cell(0, 0, 'Title', 0, 0, 'C')      
-pdf.cell(100, -0, 'Footer', 0, 0, 'C')  
+pdf.cell(80, 0, 'Footer', 0, 0, 'C')  
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
