@@ -247,11 +247,11 @@ data2= [Dvalue10, Zref]
 Tref = [area]
 d = [d]
 area = [area]
-
+str = "Title"
 pdf = fpdf.FPDF(format='letter')
 pdf.add_page()
 pdf.set_font("Arial", size=12)
-pdf.set_title(title: str)
+fpdf.set_title(title: str)
 def header(self):
         # Rendering logo:
         self.image("logo.png", 10, 8, 33)
