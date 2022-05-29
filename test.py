@@ -263,8 +263,9 @@ def header(self):
         self.cell(30, 10, "Title", border=1, align="C")
         # Performing a line break:
         self.ln(20)
-
-pdf.write(55, 'Footer')
+ 
+pdf.cell(0, 0, 'Title', 0, 0, 'C')      
+  
 pdf.image("logo.png", x=5, y=5, w=60, h=30)
 pdf.ln()
 
@@ -308,8 +309,8 @@ pdf.output("testings.pdf")
    
 #X = [1, 2, 3, 4, 5, 6, 7, 8]
 #Y = [1500, 1550, 1600, 1640, 1680, 1700, 1760, 1800]
-sns.scatterplot(x=x_1, y=y_1)
-
+#sns.scatterplot(x=x_1, y=y_1)
+sns.relplot(x=x_1, y=y_1)
 # Save to file first or an image file has already existed.
 fn = 'scatter.png'
 plt.savefig(fn)
