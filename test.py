@@ -267,7 +267,7 @@ def header(self):
 
 def footer(self):
         # Go to 1.5 cm from bottom
-        self.set_y(-15)
+        self.cell(-15)
         # Select Arial italic 8
         self.set_font('Arial', 'I', 8)
         # Print centered page number
