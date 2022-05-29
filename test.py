@@ -265,7 +265,6 @@ def header(self):
         self.ln(20)
  
  def footer(self):
-        "hook to draw custom page footer (printing page numbers)"
         self.set_y(-15)
         self.set_font('Arial', 'I', 8)
         txt = 'Page %s of %s' % (self.page_no(), self.alias_nb_pages())
