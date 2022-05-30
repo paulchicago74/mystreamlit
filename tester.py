@@ -50,7 +50,9 @@ option = st.selectbox(
      'How would you like to be contacted?',
      ('Paper1', 'Paper2', 'Paper3'))
 
-if option == 'Paper1' : Dvalue = 5 Zref = 10 Tref = 150
+if option == 'Paper1' : Dvalue = 5 
+if option == 'Paper1' : Zref = 10 
+if option == 'Paper1' : Tref = 150
 if option == 'Paper2' : Dvalue = 10
 if option == 'Paper3' : Dvalue = 15
 
