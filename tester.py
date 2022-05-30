@@ -53,8 +53,7 @@ option = st.selectbox(
      ('Own Values', 'Paper1', 'Paper2', 'Paper3')) 
 
 
-if option == 'Own Values' : Zref = Zref
-if option == 'Own Values' : Tref = Tref
+
 if option == 'Paper1' : Dvalue = 5 
 if option == 'Paper1' : Zref = 10 
 if option == 'Paper1' : Tref = 150
