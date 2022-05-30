@@ -52,16 +52,14 @@ Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_valu
 reference = st.sidebar.radio(
     "Using a scientific reference?",
     ('Yes', 'No'))
-if reference == 'Yes': option 
-else:
-    st.write("")
 
-if reference == 'Yes'
+if reference == 'Yes':
 option = st.selectbox(
      'How would you like to be contacted?',
      ('Paper1', 'Paper2', 'Paper3')) 
 
-
+else:
+    st.write("")
 #if option == 'Paper1' : Dvalue = 5 
 #if option == 'Paper1' : Zref = 10 
 #if option == 'Paper1' : Tref = 150
