@@ -52,7 +52,7 @@ Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_valu
 reference = st.sidebar.radio(
     "Using a scientific reference?",
     ('Yes', 'No'))
-if genre == 'Yes': option = st.selectbox(
+if reference == 'Yes': option = st.selectbox(
      'How would you like to be contacted?',
      ('Paper1', 'Paper2', 'Paper3')) 
 if option == 'Paper1' : Dvalue = 5 
