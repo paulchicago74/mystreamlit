@@ -60,6 +60,8 @@ if reference == 'Yes': option = st.selectbox('How would you like to be contacted
     #if option == 'Paper1' : Tref = 150
     #if option == 'Paper2' : Dvalue = 10
     #if option == 'Paper3' : Dvalue = 15
+    else:
+    st.write("")
 else:
     st.write("")
 
