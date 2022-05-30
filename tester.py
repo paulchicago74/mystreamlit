@@ -46,18 +46,6 @@ if uploaded_file is not None:
 Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
 
 #Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
-option = st.selectbox(
-     'How would you like to be contacted?',
-     ('Own Values', 'Paper1', 'Paper2', 'Paper3'))
-
-if option == 'Own Values' : Dvalue = 10 
-if option == 'Own Values' : Zref = Zref 
-if option == 'Own Values' : Tref = 140
-if option == 'Paper1' : Dvalue = 5 
-if option == 'Paper1' : Zref = 10 
-if option == 'Paper1' : Tref = 150
-if option == 'Paper2' : Dvalue = 10
-if option == 'Paper3' : Dvalue = 15
 
 Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
@@ -165,7 +153,18 @@ if genre == 'Yes'and uploaded_file is not None:
     b3 = y_mean-b2*x_mean
 
 #Tref = 120
+option = st.selectbox(
+     'How would you like to be contacted?',
+     ('Own Values', 'Paper1', 'Paper2', 'Paper3'))
 
+if option == 'Own Values' : Dvalue = Dvalue 
+if option == 'Own Values' : Zref = Zref 
+if option == 'Own Values' : Tref = Tref
+if option == 'Paper1' : Dvalue = 5 
+if option == 'Paper1' : Zref = 10 
+if option == 'Paper1' : Tref = 150
+if option == 'Paper2' : Dvalue = 10
+if option == 'Paper3' : Dvalue = 15
 #BMI = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
 #D= BMI / Dvalue
