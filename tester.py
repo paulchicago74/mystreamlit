@@ -65,9 +65,8 @@ else:
     option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
     
     
-if option = 'Paper1' : Dvalue = 5
-else:
-    st.write("")
+    option == 'Paper1' : Dvalue = 5
+
     
 
 #Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
