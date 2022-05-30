@@ -42,13 +42,6 @@ if uploaded_file is not None:
 
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
-
-Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
-
-Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
-
-Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
-
 reference = st.sidebar.radio(
     "Using a scientific reference?",
     ('Yes', 'No'))
@@ -61,6 +54,14 @@ if option == 'Paper1' : Dvalue = 5
     #if option == 'Paper3' : Dvalue = 15
 else:
     st.write("")
+    
+Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
+
+Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
+
+Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
+
+
 
 #Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
