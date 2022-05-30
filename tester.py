@@ -53,7 +53,8 @@ reference = st.sidebar.radio(
     "Using a scientific reference?",
     ('Yes', 'No'), key='my-form')
 
-if reference == 'Yes': option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
+if reference == 'Yes': 
+option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
 #if reference == 'Yes': Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
 if option == 'Paper1' : Dvalue = 5 
     #if option == 'Paper1' : Zref = 10 
