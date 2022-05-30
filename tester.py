@@ -48,8 +48,11 @@ Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_valu
 #Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
 option = st.selectbox(
      'How would you like to be contacted?',
-     ('Paper1', 'Paper2', 'Paper3'))
+     ('Own Values', 'Paper1', 'Paper2', 'Paper3'))
 
+if option == 'Own Values' : Dvalue = Dvalue 
+if option == 'Own Values' : Zref = Zref 
+if option == 'Own Values' : Tref = Tref
 if option == 'Paper1' : Dvalue = 5 
 if option == 'Paper1' : Zref = 10 
 if option == 'Paper1' : Tref = 150
