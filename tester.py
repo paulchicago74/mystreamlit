@@ -53,10 +53,7 @@ reference = st.sidebar.radio(
     "Using a scientific reference?",
     ('Yes', 'No'))
 
-if reference == 'Yes':
-option = st.selectbox(
-     'How would you like to be contacted?',
-     ('Paper1', 'Paper2', 'Paper3')) 
+if reference == 'Yes': option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
 
 else:
     st.write("")
