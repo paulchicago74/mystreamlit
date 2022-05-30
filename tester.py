@@ -54,16 +54,14 @@ reference = st.sidebar.radio(
     ('Yes', 'No'))
 
 if reference == 'Yes': option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
+    if option == 'Paper1' : Dvalue = 5 
+    if option == 'Paper1' : Zref = 10 
+    if option == 'Paper1' : Tref = 150
+    if option == 'Paper2' : Dvalue = 10
+    if option == 'Paper3' : Dvalue = 15
+else:
+    st.write("")
 
-else:
-    st.write("")
-if option == 'Paper1' : Dvalue = 5 
-if option == 'Paper1' : Zref = 10 
-if option == 'Paper1' : Tref = 150
-if option == 'Paper2' : Dvalue = 10
-if option == 'Paper3' : Dvalue = 15
-else:
-    st.write("")
 #Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
 st.sidebar.subheader('Parameters', anchor=None)
