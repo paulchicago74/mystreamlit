@@ -42,16 +42,16 @@ if uploaded_file is not None:
 
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
-reference = st.sidebar.radio(
-    "Using a scientific reference?",
-    ('Yes', 'No'))
-
    
 #Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
 
 Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
 Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
+
+reference = st.sidebar.radio(
+    "Using a scientific reference?",
+    ('Yes', 'No'))
 
 if reference == 'Yes': option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
 if reference == 'Yes': Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_value=1.0)
@@ -71,6 +71,9 @@ Temp = st.sidebar.slider('Enter the temperature', min_value=1.00, max_value=250.
 
 Time = st.sidebar.slider('Enter the Time', value=10.00, min_value=0.1, max_value=200.0, step=0.5)
 
+reference = st.sidebar.radio(
+    "Using a scientific reference?",
+    ('Yes', 'No'))
 genre = st.sidebar.radio(
     "Predict minumum D-value required?",
     ('Yes', 'No'))
