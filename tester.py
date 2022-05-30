@@ -47,7 +47,7 @@ Zref = st.sidebar.number_input('Enter the reference Zvalue', value=5.0, min_valu
 
 Tref = st.sidebar.number_input('Enter the reference Tref', value=150.0, min_value=0.1, step=0.1)
 
-#Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
+Dvalue = st.sidebar.number_input('Enter the reference Dvalue', value=5.0, min_value=0.1, step=0.1)
 
 reference = st.sidebar.radio(
     "Using a scientific reference?",
