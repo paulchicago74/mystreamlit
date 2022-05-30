@@ -65,7 +65,7 @@ else:
     option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3')) 
     
 option = st.selectbox('How would you like to be contacted?', ('Paper1', 'Paper2', 'Paper3'))
-    if option == 'Paper1' : Dvalue = 5
+if option == 'Paper1' : Dvalue = 5
 
     
 
