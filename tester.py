@@ -25,6 +25,7 @@ if uploaded_file is None:
 
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
+    datatype = float
 
 if uploaded_file is not None:
     header_list = ["Time", "Temp"]
