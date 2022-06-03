@@ -19,7 +19,7 @@ import warnings
 # give a title to our app
 import warnings
 
-showWarningOnDirectExecution = false
+
 
 
 warnings.filterwarnings('ignore')
