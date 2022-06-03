@@ -17,7 +17,11 @@ import warnings
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
-
+import warnings
+warnings.filterwarnings('ignore')
+warnings.warn('DelftStack')
+warnings.warn('Do not show this message')
+print("No Warning Shown")
 
 st.set_page_config(layout='wide')
 st.sidebar.title('Predictive Model Calculation')
