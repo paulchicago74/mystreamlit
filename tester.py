@@ -10,12 +10,14 @@ from altair import Chart, X, Y, Axis, SortField, OpacityValue
 from numpy import cumsum
 from st_material_table import st_material_table
 import time
+import warnings
 #import pyautogui
 #import pdfkit
 #from link_button import link_button
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
+warnings.filterwarnings("ignore")
 st.set_page_config(layout='wide')
 st.sidebar.title('Predictive Model Calculation')
 
