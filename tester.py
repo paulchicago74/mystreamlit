@@ -17,6 +17,13 @@ import warnings
 # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time))
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
+
+warnings.filterwarnings('ignore', message='.*show', )
+warnings.warn('Do not do this!')
+warnings.warn('Do not show this message')
+>>> UserWarning: Do not do this!
+        warnings.warn('Do not do this!')
+
 warnings.filterwarnings("ignore")
 st.set_page_config(layout='wide')
 st.sidebar.title('Predictive Model Calculation')
