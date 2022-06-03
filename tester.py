@@ -18,6 +18,10 @@ import warnings
 # (10^((Temp-Tref)/Zref))/1*Time
 # give a title to our app
 import warnings
+
+showWarningOnDirectExecution = false
+
+
 warnings.filterwarnings('ignore')
 warnings.warn('DelftStack')
 warnings.warn('Do not show this message')
