@@ -25,7 +25,7 @@ if uploaded_file is None:
 
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
-    datatype = string
+    datatype = str
 
 
 if uploaded_file is not None:
