@@ -27,7 +27,7 @@ if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
     datatype = float
     
-if datatype is not string:
+if uploaded_file is not string:
     st.write("Error")
 
 if uploaded_file is not None:
