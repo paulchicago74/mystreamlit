@@ -49,8 +49,8 @@ if uploaded_file is not None:
 #else: st.write("")
 #bytes_data = uploaded_file.getvalue()
 # st.write(bytes_data)
-e = TypeError('This is an exception of type RuntimeError')
-st.exception(e)
+#e = TypeError('This is an exception of type RuntimeError')
+#st.exception(e)
 # TAKE WEIGHT INPUT in kgs
 # Tref = st.number_input('Enter the reference temperature', min_value=20)
    
