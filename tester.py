@@ -21,7 +21,7 @@ import warnings
 warnings.filterwarnings('ignore', message='.*show', )
 warnings.warn('Do not do this!')
 warnings.warn('Do not show this message')
->>> UserWarning: Do not do this!
+UserWarning: Do not do this!
         warnings.warn('Do not do this!')
 
 warnings.filterwarnings("ignore")
