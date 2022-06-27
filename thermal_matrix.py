@@ -23,7 +23,10 @@ st.write('Values:', values2)
 J = 5 * (10**((80 - values2)/5.75))
 
 
-if product == 'Juice' : st.write(J)
+if product == 'Juice' : st.metric(label = "Treatment Time", value=J)
 
 if product == 'Acid or acidified' and values < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
+
+st.metric(label="Gas price", value=4, delta=-0.5,
+     delta_color="inverse")
