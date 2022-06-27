@@ -37,4 +37,4 @@ if product == 'Acid or acidified' and values < 4.00 : st.write(J)
 st.metric(label="Gas price", value=4, delta=-0.5,
      delta_color="inverse")
 
-st.success('This is a success message!')
+
