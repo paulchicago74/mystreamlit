@@ -21,7 +21,7 @@ values2 = st.sidebar.slider(
 st.write('Values:', values2)
 
 J = 5 * (10**((80 - values2)/5.75))
-R = 10 * (10**((90 - value2)/9))
+R = 10 * (10**((90 - values2)/9))
 
 
 if product == 'Juice' : st.metric(label = "Treatment Time", value=J)
