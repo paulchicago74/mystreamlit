@@ -14,3 +14,5 @@ values = st.sidebar.slider(
      'Select the pH',
      0.00, 14.00)
 st.write('Values:', values)
+
+if 'Product' == 'Juice' : st.write("Juice")
