@@ -20,6 +20,11 @@ values2 = st.sidebar.slider(
      0, 200)
 st.write('Values:', values2)
 
+values3 = st.sidebar.slider(
+     'Select the time in minutes',
+     0, 240)
+st.write('Values:', values3)
+
 J = 5 * (10**((80 - values2)/5.75))
 R = 10 * (10**((90 - values2)/9))
 
