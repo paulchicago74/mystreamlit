@@ -15,4 +15,9 @@ values = st.sidebar.slider(
      0.00, 14.00)
 st.write('Values:', values)
 
+values2 = st.sidebar.slider(
+     'Select the temperature in celsius',
+     0, 200)
+st.write('Values:', values2)
+
 if product == 'Juice' : st.write("Juice")
