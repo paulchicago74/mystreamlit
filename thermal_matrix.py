@@ -30,7 +30,7 @@ R = 10 * (10**((90 - values2)/9))
 
 
 if product == 'Juice' and J < values3: (st.metric(label = "Treatment Time", value=J))
-if product == 'Juice' and J < values3: st.success('This is a success message!'))
+if product == 'Juice' and J < values3: st.success('This is a success message!')
 #else : st.success('Nope!')
 
 if product == 'Intermediate foods' : st.metric(label = "Treatment Time", value=R)
