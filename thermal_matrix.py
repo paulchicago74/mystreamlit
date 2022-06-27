@@ -11,6 +11,6 @@ st.sidebar.selectbox(
      'Sorage',
      ('Shelf Stable', 'Refrigerated', 'Frozen'))
 values = st.sidebar.slider(
-     'Select a range of values',
+     'Select the pH',
      0.00, 14.00)
 st.write('Values:', values)
