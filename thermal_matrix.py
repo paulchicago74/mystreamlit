@@ -20,6 +20,10 @@ values2 = st.sidebar.slider(
      0, 200)
 st.write('Values:', values2)
 
+J = 5 * (10**((80-value2)/5.75))
+
+
 if product == 'Juice' : st.write("Juice")
 
-if product == 'Acid or acidified' and values < 4.00 : st.write("Acid")
+if product == 'Acid or acidified' and values < 4.00 : st.write(J)
+#G22*(10^((H22-L22)/I22))
