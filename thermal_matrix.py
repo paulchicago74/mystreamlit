@@ -5,4 +5,8 @@ st.sidebar.title('Thermal Matrix Calculation')
 
 st.sidebar.selectbox(
      'Product',
-     ('Acid or acidified', 'Juice', 'Refrigerated Foods'))
+     ('Acid or acidified', 'Juice', 'Intermediate foods'))
+
+st.sidebar.selectbox(
+     'Sorage',
+     ('Shelf Stable', 'Refrigerated', 'Frozen'))
