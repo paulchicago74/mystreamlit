@@ -20,7 +20,7 @@ values2 = st.sidebar.slider(
      0, 200)
 st.write('Values:', values2)
 
-J = 5 * (10**((80-value2)/5.75))
+J = 5 * (10**((80-88)/5.75))
 
 
 if product == 'Juice' : st.write("Juice")
