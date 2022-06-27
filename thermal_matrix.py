@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
 
-st.sidebar.selectbox(
+product = st.sidebar.selectbox(
      'Product',
      ('Acid or acidified', 'Juice', 'Intermediate foods'))
 
@@ -15,4 +15,4 @@ values = st.sidebar.slider(
      0.00, 14.00)
 st.write('Values:', values)
 
-if 'Product' == 'Juice' : st.write("Juice")
+if product == 'Juice' : st.write("Juice")
