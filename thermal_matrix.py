@@ -21,10 +21,11 @@ values2 = st.sidebar.slider(
 st.write('Values:', values2)
 
 J = 5 * (10**((80 - values2)/5.75))
+R = 10 * (10**((90 - value2)/9))
 
 
 if product == 'Juice' : st.metric(label = "Treatment Time", value=J)
-
+if product == 'Intermediate foods' : st.metric(label = "Treatment Time", value=R)
 if product == 'Acid or acidified' and values < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 
