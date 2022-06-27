@@ -21,3 +21,5 @@ values2 = st.sidebar.slider(
 st.write('Values:', values2)
 
 if product == 'Juice' : st.write("Juice")
+
+if product == 'Acid or acidified' and values < 4.00 : st.write("Acid")
