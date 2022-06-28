@@ -26,7 +26,9 @@ values3 = st.sidebar.slider(
 st.write('Values:', values3)
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
-st.sidebar.write('Temp in F is', number)
+celsius = (numer-32)*5/9
+if number is not null: st.sidebar.write('Temp in C is', celsius)
+
 
 J = 5 * (10**((80 - values2)/5.75))
 R = 10 * (10**((90 - values2)/9))
