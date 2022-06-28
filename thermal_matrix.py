@@ -25,6 +25,9 @@ values3 = st.sidebar.slider(
      0, 240)
 st.write('Values:', values3)
 
+number = st.sidebar.number_input('Insert a number')
+st.write('The current number is ', number)
+
 J = 5 * (10**((80 - values2)/5.75))
 R = 10 * (10**((90 - values2)/9))
 
