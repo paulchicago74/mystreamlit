@@ -47,7 +47,11 @@ ph5 = 10 * (10**((93.3 - values2)/8.9))
 ph6 = 20 * (10**((93.3 - values2)/8.9))
 
 if product == 'Acid or acidified' and ph < 3.9 : (st.metric(label = "Treatment Time", value=ph1, delta=values3-ph1))
-if product == 'Acid or acidified' and 3.9 <= ph <= 4.1 : (st.metric(label = "Treatment Time", value=ph2, delta=values3-ph2))
+if product == 'Acid or acidified' and 3.9 <= ph < 4.1 : (st.metric(label = "Treatment Time", value=ph2, delta=values3-ph2))
+if product == 'Acid or acidified' and 4.1 <= ph < 4.2 : (st.metric(label = "Treatment Time", value=ph3, delta=values3-ph3))
+if product == 'Acid or acidified' and 4.2 <= ph < 4.3 : (st.metric(label = "Treatment Time", value=ph4, delta=values3-ph4))
+if product == 'Acid or acidified' and 4.3 <= ph < 4.4 : (st.metric(label = "Treatment Time", value=ph5, delta=values3-ph5))
+if product == 'Acid or acidified' and 4.4 <= ph <= 4.6 : (st.metric(label = "Treatment Time", value=ph6, delta=values3-ph6))
 
      
 if product == 'Juice' : (st.metric(label = "Treatment Time", value=J, delta=values3-J))
