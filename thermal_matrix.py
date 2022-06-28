@@ -21,7 +21,7 @@ ph = st.sidebar.slider(
 st.write('Values:', ph)
 
 values2 = st.sidebar.slider(
-     'Select the temperature in celsius',
+     'Select the temperaeture in celsius',
      0, 200)
 st.write('Values:', values2)
 
@@ -39,9 +39,9 @@ if number > 0: st.sidebar.subheader(celsius)
 
 J = 5 * (10**((80 - values2)/5.75))
 R = 10 * (10**((90 - values2)/9))
-ph1 = 10 * (10**((90 - values2)/4))
+ph1 = 0.1 * (10**((93.3 - values2)/8.9))
 
-if product == 'Acid or acidified' and ph < 3.0 : (st.metric(label = "Treatment Time", value=J, delta=values3-J))
+if product == 'Acid or acidified' and ph < 3.9 : (st.metric(label = "Treatment Time", value=ph1, delta=values3-ph1))
 
 
 if product == 'Juice' : (st.metric(label = "Treatment Time", value=J, delta=values3-J))
