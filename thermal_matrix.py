@@ -18,7 +18,7 @@ if product == 'Acid or acidified' : st.sidebar.selectbox(
 ph = st.sidebar.slider(
      'Select the pH',
      0.00, 14.00)
-st.write('Values:', values)
+st.write('Values:', ph)
 
 values2 = st.sidebar.slider(
      'Select the temperature in celsius',
