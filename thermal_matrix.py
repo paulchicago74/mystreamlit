@@ -9,10 +9,13 @@ product = st.sidebar.selectbox(
 if product == 'Juice' : st.sidebar.selectbox(
      'Storage',
      ('Refrigerated', 'Frozen'))
+if product == 'Acid or acidified' : st.sidebar.selectbox(
+     'Storage',
+     ('Shelf Stable', 'Refrigerated', 'Frozen'))
 #storage = st.sidebar.selectbox(
 #     'Storage',
 #     ('Shelf Stable', 'Refrigerated', 'Frozen'))
-values = st.sidebar.slider(
+ph = st.sidebar.slider(
      'Select the pH',
      0.00, 14.00)
 st.write('Values:', values)
@@ -36,6 +39,9 @@ if number > 0: st.sidebar.subheader(celsius)
 
 J = 5 * (10**((80 - values2)/5.75))
 R = 10 * (10**((90 - values2)/9))
+ph1 = 10 * (10**((90 - values2)/4))
+
+if product == 'Acid or acidified' and ph < 3.0 : (st.metric(label = "Treatment Time", value=J, delta=values3-J))
 
 
 if product == 'Juice' : (st.metric(label = "Treatment Time", value=J, delta=values3-J))
