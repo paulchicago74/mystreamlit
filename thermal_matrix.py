@@ -27,7 +27,7 @@ st.write('Values:', values3)
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
 celsius = (number-32)*5/9
-if number is not null: st.sidebar.write('Temp in C is', celsius)
+if number > 0: st.sidebar.write('Temp in C is', celsius)
 
 
 J = 5 * (10**((80 - values2)/5.75))
