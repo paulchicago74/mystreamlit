@@ -40,9 +40,14 @@ if number > 0: st.sidebar.subheader(celsius)
 J = 5 * (10**((80 - values2)/5.75))
 R = 10 * (10**((90 - values2)/9))
 ph1 = 0.1 * (10**((93.3 - values2)/8.9))
+ph2 = 1 * (10**((93.3 - values2)/8.9))
+ph3 = 2.5 * (10**((93.3 - values2)/8.9))
+ph4 = 5 * (10**((93.3 - values2)/8.9))
+ph5 = 10 * (10**((93.3 - values2)/8.9))
+ph6 = 20 * (10**((93.3 - values2)/8.9))
 
 if product == 'Acid or acidified' and ph < 3.9 : (st.metric(label = "Treatment Time", value=ph1, delta=values3-ph1))
-
+if product == 'Acid or acidified' and ph 3.9-4.1 : (st.metric(label = "Treatment Time", value=ph1, delta=values3-ph1))
 
 if product == 'Juice' : (st.metric(label = "Treatment Time", value=J, delta=values3-J))
 if product == 'Juice' and J < values3: st.success('This is a success message!')
