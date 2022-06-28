@@ -51,7 +51,7 @@ if product == 'Juice' and J > values3: st.error('This is an error message!')
 #    st.error('This is an error message!')
 
 if product == 'Intermediate foods' : st.metric(label = "Treatment Time", value=R)
-if product == 'Acid or acidified' and values < 4.00 : st.write(J)
+if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 
 st.metric(label="Gas price", value=4, delta=-0.5,
