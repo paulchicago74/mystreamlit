@@ -68,10 +68,5 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 
 data=J
 
-st.download_button(
-     label="Download data as CSV",
-     data=J,
-     file_name='large_df.txt',
-     mime='text/txt',
- )
+st.download_button('Download some text', J)
 
