@@ -70,9 +70,12 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 texto = '''Temp = '''
 data= str(J)
 data2 = (texto + data)
+data3 = ('First paragraph \n\n
+    Second paragraph \n\n
+    Last paragraph.')
 
 
 #text_contents = str(J)
-st.download_button('Download some text', data2)
+st.download_button('Download some text', data3)
 #st.download_button('Download some text', 'Temperature' str(J))
 
