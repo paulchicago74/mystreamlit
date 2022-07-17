@@ -69,6 +69,6 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 st.metric(label="Gas price", value=4, delta=-0.5,
      delta_color="inverse")
 
-text_contents = ('This is some text', J)
+text_contents = ('This is some text' J)
 st.download_button('Download some text', text_contents)
 
