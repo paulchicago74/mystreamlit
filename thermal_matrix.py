@@ -66,9 +66,12 @@ if product == 'Intermediate foods' : st.metric(label = "Treatment Time", value=R
 if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 
-st.metric(label="Gas price", value=4, delta=-0.5,
-     delta_color="inverse")
+data=J
 
-text_contents = (J)
-st.download_button('Download some text', text_contents)
+st.download_button(
+     label="Download data as CSV",
+     data=txt,
+     file_name='large_df.txt',
+     mime='text/txt',
+ )
 
