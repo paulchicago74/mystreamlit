@@ -66,7 +66,7 @@ if product == 'Intermediate foods' : st.metric(label = "Treatment Time", value=R
 if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 texto = '''Temp'''
-data= str(J))
+data= str(J)
 data2 = (texto + data)
 
 
