@@ -70,6 +70,6 @@ data= str(J)
 texto = '''Temp'''
 
 #text_contents = str(J)
-st.download_button('Download some text', data, texto)
+st.download_button('Download some text', data texto)
 #st.download_button('Download some text', 'Temperature' str(J))
 
