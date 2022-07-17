@@ -1,4 +1,10 @@
 import streamlit as st
+import sys
+
+
+stdoutOrigin=sys.stdout 
+sys.stdout = open("log.txt", "w")
+
 
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
@@ -67,4 +73,5 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 st.metric(label="Gas price", value=4, delta=-0.5,
      delta_color="inverse")
 
-
+sys.stdout.close()
+sys.stdout=stdoutOrigin
