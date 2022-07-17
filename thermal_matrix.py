@@ -67,9 +67,10 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 texto = '''Temp'''
 data= (texto, str(J))
+data2 = print('texto)
 
 
 #text_contents = str(J)
-st.download_button('Download some text', texto)
+st.download_button('Download some text', data2)
 #st.download_button('Download some text', 'Temperature' str(J))
 
