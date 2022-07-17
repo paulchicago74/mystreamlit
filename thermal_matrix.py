@@ -68,10 +68,7 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 
 st.metric(label="Gas price", value=4, delta=-0.5,
      delta_color="inverse")
-f= print("Hello StackOverflow!")
-#st.download_button(label='Download' , file=f, file_name='sequence.fasta', mime= 'application/octet-stream' )
-with open("output.txt", "a") as f:
-     print("Hello StackOverflow!", file=f)
-     print("I have a question.", file=f)
-     st.download_button(label='Download' , file=f, file_name='files', mime= 'application/octet-stream' )
+
+text_contents = '''This is some text'''
+st.download_button('Download some text', text_contents)
 
