@@ -1,5 +1,5 @@
 import streamlit as st
-import simple_colors
+from simple_colors import *
 
 
 st.set_page_config(layout='wide')
