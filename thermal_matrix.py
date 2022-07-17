@@ -69,7 +69,7 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 texto = '''Temp = '''
 data= str(J)
-data2 = (texto'\n' + data)
+data2 = ('Temp=\n' + data)
 data3 = ("This is P1\n" + "This is P2")
 
 
