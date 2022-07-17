@@ -1,9 +1,5 @@
 import streamlit as st
-import sys
 
-
-stdoutOrigin=sys.stdout 
-sys.stdout = open("log.txt", "w")
 
 
 st.set_page_config(layout='wide')
@@ -73,5 +69,7 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 st.metric(label="Gas price", value=4, delta=-0.5,
      delta_color="inverse")
 
-sys.stdout.close()
-sys.stdout=stdoutOrigin
+with open("output.txt", "a") as f:
+    print("Hello StackOverflow!", file=f)
+    print("I have a question.", file=f)
+
