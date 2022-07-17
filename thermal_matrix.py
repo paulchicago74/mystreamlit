@@ -70,7 +70,7 @@ data=J
 
 st.download_button(
      label="Download data as CSV",
-     data=txt,
+     data=J,
      file_name='large_df.txt',
      mime='text/txt',
  )
