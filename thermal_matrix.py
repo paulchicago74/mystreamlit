@@ -1,5 +1,5 @@
 import streamlit as st
-
+import simple_colors
 
 
 st.set_page_config(layout='wide')
@@ -77,4 +77,8 @@ data2 = ('Temp=\n\n' + data + 'Product= ' + product)
 #text_contents = str(J)
 st.download_button('Download some text', data2)
 #st.download_button('Download some text', 'Temperature' str(J))
+
+print(green('hello'))
+print(green('hello', 'bold'))
+print(green('hello', ['bold', 'underlined']))
 
