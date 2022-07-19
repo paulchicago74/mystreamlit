@@ -92,7 +92,7 @@ st.download_button('Download some text', text)
 print(green('hello'))
 print(green('hello', 'bold'))
 print(green('hello', ['bold', 'underlined']))
-with open("logo.png", "rb") as logo
+open("logo.png", "rb") as logo
 with open("figure2.jpg", "rb") as file:
      btn = st.download_button(
              label="Download image",
