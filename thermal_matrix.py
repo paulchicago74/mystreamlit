@@ -86,7 +86,7 @@ data2 = ('                                                                      
 
 logo = open("logo.png", "rb") 
 #text_contents = str(J)
-st.download_button('Download some text', logo)
+st.download_button('Download some text', logo, file_name="flower.png")
 #st.download_button('Download some text', 'Temperature' str(J))
 
 print(green('hello'))
