@@ -97,7 +97,7 @@ with open("figure2.jpg", "rb") as file:
      btn = st.download_button(
              label="Download image",
              data=(file + data2,
-             file_name="flower1.png",
+             #file_name="flower1.png",
              mime="image/png"
            )
 
