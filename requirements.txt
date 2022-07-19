@@ -17,3 +17,5 @@ seaborn
 simple-colors
 pytesseract
 Pillow
+tesseract-ocr
+tesseract-ocr-por
