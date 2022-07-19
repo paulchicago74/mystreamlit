@@ -3,7 +3,7 @@ from simple_colors import *
 from pytesseract import image_to_string 
 from PIL import Image
 
-#text =  image_to_string(Image.open('shot.png'))
+text =  image_to_string(Image.open('figure2.jpg'))
 image = 'shot.png'
 
 
@@ -86,7 +86,7 @@ data2 = ('                                                                      
 
 
 #text_contents = str(J)
-st.download_button('Download some text', image)
+st.download_button('Download some text', text)
 #st.download_button('Download some text', 'Temperature' str(J))
 
 print(green('hello'))
