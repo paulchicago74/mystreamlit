@@ -96,7 +96,7 @@ print(green('hello', ['bold', 'underlined']))
 with open("figure2.jpg", "rb") as file:
      btn = st.download_button(
              label="Download image",
-             data=file,
+             data=(file + data2,
              file_name="flower.png",
              mime="image/png"
            )
