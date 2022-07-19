@@ -85,7 +85,7 @@ data2 = ('                                                                      
 
 
 #text_contents = str(J)
-st.download_button('Download some text', data2)
+st.download_button('Download some text', text)
 #st.download_button('Download some text', 'Temperature' str(J))
 
 print(green('hello'))
