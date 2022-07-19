@@ -3,7 +3,7 @@ from simple_colors import *
 from pytesseract import image_to_string 
 from PIL import Image
 
-text =  image_to_string(Image.open('figure2.jpg'))
+text =  (Image.open('figure2.jpg'))
 image = 'shot.png'
 
 
