@@ -36,8 +36,7 @@ title = st.text_input('Project')
 title2 = st.write('The current movie title is', title)
 
 d = st.date_input(
-     "When's your birthday",
-     datetime.date(2019, 7, 6))
+     "When's your birthday")
 st.write('Your birthday is:', d)
 
 
