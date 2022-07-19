@@ -16,4 +16,4 @@ kaleido
 seaborn
 simple-colors
 pytesseract
-PIL
+Pillow
