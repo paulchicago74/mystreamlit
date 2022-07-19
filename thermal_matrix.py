@@ -33,7 +33,7 @@ values3 = st.sidebar.slider(
 st.write('Values:', values3)
 
 title = st.text_input('Project')
-st.write('The current movie title is', title)
+title2 = st.write('The current movie title is', title)
 
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
