@@ -35,8 +35,8 @@ st.write('Values:', values3)
 title = st.text_input('Project')
 title2 = st.write('The current movie title is', title)
 
-d = st.date_input(
-     "When's your birthday")
+d = str(st.date_input(
+     "When's your birthday"))
 st.write('Your birthday is:', d)
 
 
