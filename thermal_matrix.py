@@ -96,7 +96,7 @@ logo = open("logo.png", "rb")
 with open("figure2.jpg", "rb") as file:
      btn = st.download_button(
              label="Download image",
-             data=(file + logo)
+             data=(file, logo)
              #file_name="flower1.png",
              #mime="image/png"
            )
