@@ -99,5 +99,5 @@ with open("figure2.jpg", "rb") as file:
              data=(file + data2)
              #file_name="flower1.png",
              #mime="image/png"
-           #)
+           )
 
