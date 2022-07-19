@@ -35,6 +35,11 @@ st.write('Values:', values3)
 title = st.text_input('Project')
 title2 = st.write('The current movie title is', title)
 
+d = st.date_input(
+     "When's your birthday",
+     datetime.date(2019, 7, 6))
+st.write('Your birthday is:', d)
+
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
 celsius = (number-32)*5/9
@@ -72,7 +77,7 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 texto = '''Temp = '''
 data= str(J)
 data1 = product
-data2 = ('Temp=\n\n' + data + 'Product= ' + product + title)
+data2 = ('Temp=\n\n' + data + 'Product= ' + product + d)
 #data3 = ("This is P1\u\n\n" + "This is P2")
 
 
