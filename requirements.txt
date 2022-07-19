@@ -15,3 +15,5 @@ altair-saver
 kaleido
 seaborn
 simple-colors
+pytesseract
+PIL
