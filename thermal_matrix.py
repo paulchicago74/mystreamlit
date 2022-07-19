@@ -6,7 +6,8 @@ from fpdf import FPDF
 
 text =  str(Image.open('figure2.jpg'))
 image = 'shot.png'
-pdf = PDF(orientation='P', unit='mm', format='A4')
+#pdf = PDF(orientation='P', unit='mm', format='A4')
+
 
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
@@ -97,9 +98,9 @@ print(green('hello', ['bold', 'underlined']))
 st.download_button(
              label="Download image",
              data=logo,
-             file_name="flower.doc",
+             file_name="flower.pdf",
              mime="text/doc"
            )
 
-
+pdf.output('test.pdf','F')
 
