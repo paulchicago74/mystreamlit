@@ -1,5 +1,9 @@
 import streamlit as st
 from simple_colors import *
+from pytesseract import image_to_string 
+from PIL import Image
+
+text =  image_to_string(Image.open('sample.jpg'))
 
 
 st.set_page_config(layout='wide')
