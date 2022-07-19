@@ -2,10 +2,11 @@ import streamlit as st
 from simple_colors import *
 from pytesseract import image_to_string 
 from PIL import Image
+from fpdf import FPDF
 
 text =  str(Image.open('figure2.jpg'))
 image = 'shot.png'
-
+pdf = PDF(orientation='P', unit='mm', format='A4')
 
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
