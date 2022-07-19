@@ -93,5 +93,12 @@ print(green('hello'))
 print(green('hello', 'bold'))
 print(green('hello', ['bold', 'underlined']))
 
+st.download_button(
+             label="Download image",
+             data=logo,
+             file_name="flower.png",
+             mime="image/png"
+           )
+
 
 
