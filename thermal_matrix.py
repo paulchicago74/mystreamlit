@@ -84,20 +84,14 @@ data1 = product
 data2 = ('                                                                                     Temp=\n  \n' + data + 'Product= ' + product+ '\n' + '' + d)
 #data3 = ("This is P1\u\n\n" + "This is P2")
 
-
+logo = open("logo.png", "rb") 
 #text_contents = str(J)
-st.download_button('Download some text', text)
+st.download_button('Download some text', logo)
 #st.download_button('Download some text', 'Temperature' str(J))
 
 print(green('hello'))
 print(green('hello', 'bold'))
 print(green('hello', ['bold', 'underlined']))
-logo = open("logo.png", "rb") 
-with open("figure2.jpg", "rb") as file:
-     btn = st.download_button(
-             label="Download image",
-             data=(file, logo)
-             #file_name="flower1.png",
-             #mime="image/png"
-           )
+
+
 
