@@ -96,8 +96,8 @@ print(green('hello', ['bold', 'underlined']))
 st.download_button(
              label="Download image",
              data=logo,
-             file_name="flower.pdf",
-             mime="image/pdf"
+             file_name="flower.doc",
+             mime="text/doc"
            )
 
 
