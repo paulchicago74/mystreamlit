@@ -44,8 +44,6 @@ image = 'shot.png'
 #pdf = PDF(orientation='P', unit='mm', format='A4')
 
 
-st.set_page_config(layout='wide')
-st.sidebar.title('Thermal Matrix Calculation')
 
 product = st.sidebar.selectbox(
      'Product',
