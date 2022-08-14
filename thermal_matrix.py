@@ -4,6 +4,9 @@ from pytesseract import image_to_string
 from PIL import Image
 from fpdf import FPDF
 
+st.set_page_config(layout='wide')
+st.sidebar.title('Thermal Matrix Calculation')
+
 def check_password():
     """Returns `True` if the user had the correct password."""
 
