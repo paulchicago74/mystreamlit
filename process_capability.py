@@ -35,14 +35,14 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 #data = df
 # Generate probability density function 
 #x = np.linspace(min(df), max(df),1000)
-x = np.array(min(df), max(df),1000)
-y = norm.pdf(x, loc=5, scale=1)
+#x = np.array(min(df), max(df),1000)
+#y = norm.pdf(x, loc=5, scale=1)
 
 # Plot histogram for data along with probability density functions and specification limits
 plt.figure(figsize=(15,10))
 plt.hist(data, color="lightgrey", edgecolor="black", density=True)
 sns.kdeplot(data, color="blue", label="Density ST")
-plt.plot(x, y, linestyle="--", color="black", label="Theorethical Density ST")
+#plt.plot(x, y, linestyle="--", color="black", label="Theorethical Density ST")
 plt.axvline(LSL, linestyle="--", color="red", label="LSL")
 plt.axvline(USL, linestyle="--", color="orange", label="USL")
 plt.axvline(target, linestyle="--", color="green", label="Target")
