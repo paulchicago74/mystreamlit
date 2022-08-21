@@ -35,6 +35,8 @@ plt.yticks([])
 plt.legend()
 plt.show()
 
+st.barchart(data)
+
 # Calculate Cp
 Cp = (USL-LSL)/(6*np.std(data))
 st.write (Cp)
