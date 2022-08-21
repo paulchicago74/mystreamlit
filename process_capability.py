@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import norm
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
 LSL = st.sidebar.number_input('Insert a number', key=1)
