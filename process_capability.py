@@ -37,7 +37,7 @@ plt.show()
 
 # Calculate Cp
 Cp = (USL-LSL)/(6*np.std(data))
-
+st.write (Cp)
 # Calculate Cpk
 Cpk = min((USL-data.mean())/(3*data.std()), (data.mean()-LSL)/(3*data.std()))
 
