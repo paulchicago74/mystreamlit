@@ -41,7 +41,7 @@ st.pyplot()
 
 # Calculate Cp
 Cp = (USL-LSL)/(6*np.std(data))
-st.write (Cp)
+
 # Calculate Cpk
 Cpk = min((USL-data.mean())/(3*data.std()), (data.mean()-LSL)/(3*data.std()))
 
@@ -61,6 +61,21 @@ pct_below_LSL = len(data[data < LSL])/len(data)*100
 pct_above_USL = len(data[data > USL])/len(data)*100
 
 # Write .txt file with results
+tab1, tab2, tab3 = st.tabs(["Specifications", "Indices", "Summary Statistics"])
+
+with tab1:
+    st.header("Specification")
+    st.write(f"\nTaget: {target}\n")
+    st.write(f"LSL: {LSL}\n")
+    st.write(f"USL: {USL}\n") 
+
+with tab2:
+    st.header("Indices")
+    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+with tab3:
+    st.header("Summary Statistics")
+    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
 st.write ('PROCESS CAPABILITY ANALYSIS')
     
