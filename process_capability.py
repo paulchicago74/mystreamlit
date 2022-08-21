@@ -37,8 +37,6 @@ plt.show()
 
 st.pyplot()
 
-st.bar_chart(data)
-
 # Calculate Cp
 Cp = (USL-LSL)/(6*np.std(data))
 st.write (Cp)
