@@ -57,20 +57,20 @@ pct_below_LSL = len(data[data < LSL])/len(data)*100
 pct_above_USL = len(data[data > USL])/len(data)*100
 
 # Write .txt file with results
-with open('process_results.txt', "w") as results:
-    results.write("PROCESS CAPABILITY ANALYSIS\n")
+
+st.write("PROCESS CAPABILITY ANALYSIS\n")
     
-    results.write("-----------------------------------\n")
-    results.write(f"Specifications\n")
-    results.write(f"\nTaget: {target}\n")
-    results.write(f"LSL: {LSL}\n")
-    results.write(f"USL: {USL}\n")    
+results.write("-----------------------------------\n")
+results.write(f"Specifications\n")
+results.write(f"\nTaget: {target}\n")
+results.write(f"LSL: {LSL}\n")
+results.write(f"USL: {USL}\n")    
     
-    results.write("-----------------------------------\n")
-    results.write(f"Indices\n")
-    results.write(f"\nCp: {round(Cp,2)}\n")
-    results.write(f"Cpk: {round(Cpk,2)}\n")
-    results.write(f"z: {round(z,2)}\n")
+results.write("-----------------------------------\n")
+results.write(f"Indices\n")
+results.write(f"\nCp: {round(Cp,2)}\n")
+results.write(f"Cpk: {round(Cpk,2)}\n")
+results.write(f"z: {round(z,2)}\n")
     
     results.write("-----------------------------------\n")
     results.write(f"Summary Statistics\n")
