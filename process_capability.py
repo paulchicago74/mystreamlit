@@ -37,7 +37,7 @@ plt.yticks([])
 plt.legend()
 plt.show()
 
-st.pyplot()
+#st.pyplot()
 
 # Calculate Cp
 Cp = (USL-LSL)/(6*np.std(data))
@@ -63,7 +63,6 @@ pct_above_USL = len(data[data > USL])/len(data)*100
 col1, col2 = st.columns(2)
 
 with col1:
-    st.header("A cat")
     st.pyplot()
 
 with col2:
