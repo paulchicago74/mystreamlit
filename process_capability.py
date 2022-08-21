@@ -21,7 +21,7 @@ x = np.linspace(min(data), max(data), 1000)
 y = norm.pdf(x, loc=5, scale=1)
 
 # Plot histogram for data along with probability density functions and specification limits
-st.pyplot.figure(figsize=(15,10))
+plt.figure(figsize=(15,10))
 plt.hist(data, color="lightgrey", edgecolor="black", density=True)
 sns.kdeplot(data, color="blue", label="Density ST")
 plt.plot(x, y, linestyle="--", color="black", label="Theorethical Density ST")
