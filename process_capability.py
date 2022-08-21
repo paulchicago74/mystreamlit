@@ -9,6 +9,21 @@ import seaborn as sns
 from scipy.stats import norm
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
+st.set_page_config(layout='wide')
+st.sidebar.title('Predictive Model Calculation')
+
+uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
+if uploaded_file is None:
+    st.write("")
+
+if uploaded_file is not None:
+    file_details = uploaded_file.getvalue()
+    datatype = str
+
+
+if uploaded_file is not None:
+    header_list = ["data"]
+    df3 = pd.read_csv(uploaded_file, names=header_list)
 
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
