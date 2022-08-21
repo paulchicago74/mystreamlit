@@ -10,8 +10,8 @@ from scipy.stats import norm
 
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
-LSL = 3
-USL = 7
+LSL = st.sidebar.number_input('Insert a number', key=None)
+USL = st.sidebar.number_input('Insert a number', key=None)
 
 # Generate normally distributed data points
 data = np.random.normal(loc=target,scale=1,size=100)
