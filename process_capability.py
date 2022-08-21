@@ -24,6 +24,7 @@ if uploaded_file is not None:
 if uploaded_file is not None:
     header_list = ["data"]
     df = pd.read_csv(uploaded_file)
+    st.write(df)
     
 data = df
 
