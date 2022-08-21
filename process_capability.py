@@ -71,11 +71,21 @@ with tab1:
 
 with tab2:
     st.header("Indices")
-    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+    st.write(f"\nCp: {round(Cp,2)}\n")
+    st.write(f"Cpk: {round(Cpk,2)}\n")
+    st.write(f"z: {round(z,2)}\n")
 
 with tab3:
     st.header("Summary Statistics")
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+    st.write(f"\nNumber of samples: {round(num_samples,2)}\n")
+    st.write(f"Sample mean: {round(sample_mean,2)}\n")
+    st.write(f"Sample std: {round(sample_std,2)}\n")
+    st.write(f"Sample max: {round(sample_max,2)}\n")
+    st.write(f"Sample min: {round(sample_min,2)}\n")
+    st.write(f"Sample median: {round(sample_median,2)}\n")
+    
+    st.write(f"Percentage of data points below LSL: {round(pct_below_LSL,2)}%\n")
+    st.write(f"Percentage of data points above USL: {round(pct_above_USL,2)}%\n")
 
 st.write ('PROCESS CAPABILITY ANALYSIS')
     
