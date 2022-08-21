@@ -10,7 +10,7 @@ from scipy.stats import norm
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(layout='wide')
-st.sidebar.title('Predictive Model Calculation')
+st.sidebar.title('Process Capability Calculation')
 
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
 if uploaded_file is None:
@@ -34,7 +34,7 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 #data = np.random.normal(loc=target,scale=1,size=100)
 
 # Generate probability density function 
-x = np.linspace(min(data), max(data), 1000)
+x = np.linspace(min(data), max(data))
 y = norm.pdf(x, loc=5, scale=1)
 
 # Plot histogram for data along with probability density functions and specification limits
