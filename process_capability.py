@@ -60,8 +60,8 @@ pct_above_USL = len(data[data > USL])/len(data)*100
 
 st.write ('PROCESS CAPABILITY ANALYSIS')
     
-results.write("-----------------------------------\n")
-results.write(f"Specifications\n")
+st.write("-----------------------------------\n")
+st.write(f"Specifications\n")
 results.write(f"\nTaget: {target}\n")
 results.write(f"LSL: {LSL}\n")
 results.write(f"USL: {USL}\n")    
