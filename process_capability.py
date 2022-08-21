@@ -24,6 +24,8 @@ if uploaded_file is not None:
 if uploaded_file is not None:
     header_list = ["data"]
     df = pd.read_csv(uploaded_file)
+    
+df = data
 
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
