@@ -9,7 +9,7 @@ import seaborn as sns
 from scipy.stats import norm
 
 # Set specification limits
-target = 5
+target = st.number_input('Insert a number')
 LSL = 3
 USL = 7
 
