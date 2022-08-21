@@ -18,7 +18,7 @@ if uploaded_file is None:
 
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
-    datatype = numpy.int32
+    datatype = np.int32
 
 
 if uploaded_file is not None:
