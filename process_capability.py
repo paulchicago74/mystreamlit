@@ -60,7 +60,7 @@ sample_median = np.median(data)
 pct_below_LSL = len(data[data < LSL])/len(data)*100
 pct_above_USL = len(data[data > USL])/len(data)*100
 
-col1, col2 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
     st.header("A cat")
