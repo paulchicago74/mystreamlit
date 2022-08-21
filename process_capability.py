@@ -25,7 +25,7 @@ if uploaded_file is not None:
     header_list = ["data"]
     df = pd.read_csv(uploaded_file)
     
-df = data
+data = df
 
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
@@ -42,8 +42,8 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 
 # Plot histogram for data along with probability density functions and specification limits
 plt.figure(figsize=(15,10))
-plt.hist(data, color="lightgrey", edgecolor="black", density=True)
-sns.kdeplot(data, color="blue", label="Density ST")
+plt.hist(df, color="lightgrey", edgecolor="black", density=True)
+sns.kdeplot(df, color="blue", label="Density ST")
 #plt.plot(x, y, linestyle="--", color="black", label="Theorethical Density ST")
 plt.axvline(LSL, linestyle="--", color="red", label="LSL")
 plt.axvline(USL, linestyle="--", color="orange", label="USL")
