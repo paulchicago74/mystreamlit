@@ -32,7 +32,7 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 
 # Generate normally distributed data points
 #data = np.random.normal(loc=target,scale=1,size=100)
-data = df
+#data = df
 # Generate probability density function 
 x = np.linspace(min(df), max(df),1000)
 y = norm.pdf(x, loc=5, scale=1)
