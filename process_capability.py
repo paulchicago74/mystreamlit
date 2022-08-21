@@ -60,32 +60,40 @@ sample_median = np.median(data)
 pct_below_LSL = len(data[data < LSL])/len(data)*100
 pct_above_USL = len(data[data > USL])/len(data)*100
 
-# Write .txt file with results
-tab1, tab2, tab3 = st.tabs(["Specifications", "Indices", "Summary Statistics"])
+col1, col2 = st.columns(3)
 
-with tab1:
-    st.header("Specification")
-    st.write(f"\nTaget: {target}\n")
-    st.write(f"LSL: {LSL}\n")
-    st.write(f"USL: {USL}\n") 
+with col1:
+    st.header("A cat")
+    st.pyplot()
 
-with tab2:
-    st.header("Indices")
-    st.write(f"\nCp: {round(Cp,2)}\n")
-    st.write(f"Cpk: {round(Cpk,2)}\n")
-    st.write(f"z: {round(z,2)}\n")
-
-with tab3:
-    st.header("Summary Statistics")
-    st.write(f"\nNumber of samples: {round(num_samples,2)}\n")
-    st.write(f"Sample mean: {round(sample_mean,2)}\n")
-    st.write(f"Sample std: {round(sample_std,2)}\n")
-    st.write(f"Sample max: {round(sample_max,2)}\n")
-    st.write(f"Sample min: {round(sample_min,2)}\n")
-    st.write(f"Sample median: {round(sample_median,2)}\n")
+with col2:
     
-    st.write(f"Percentage of data points below LSL: {round(pct_below_LSL,2)}%\n")
-    st.write(f"Percentage of data points above USL: {round(pct_above_USL,2)}%\n")
+# Write .txt file with results
+    tab1, tab2, tab3 = st.tabs(["Specifications", "Indices", "Summary Statistics"])
+
+    with tab1:
+        st.header("Specification")
+        st.write(f"\nTaget: {target}\n")
+        st.write(f"LSL: {LSL}\n")
+        st.write(f"USL: {USL}\n") 
+
+    with tab2:
+        st.header("Indices")
+        st.write(f"\nCp: {round(Cp,2)}\n")
+        st.write(f"Cpk: {round(Cpk,2)}\n")
+        st.write(f"z: {round(z,2)}\n")
+
+    with tab3:
+        st.header("Summary Statistics")
+        st.write(f"\nNumber of samples: {round(num_samples,2)}\n")
+        st.write(f"Sample mean: {round(sample_mean,2)}\n")
+        st.write(f"Sample std: {round(sample_std,2)}\n")
+        st.write(f"Sample max: {round(sample_max,2)}\n")
+        st.write(f"Sample min: {round(sample_min,2)}\n")
+        st.write(f"Sample median: {round(sample_median,2)}\n")
+    
+        st.write(f"Percentage of data points below LSL: {round(pct_below_LSL,2)}%\n")
+        st.write(f"Percentage of data points above USL: {round(pct_above_USL,2)}%\n")
 
 st.write ('PROCESS CAPABILITY ANALYSIS')
     
