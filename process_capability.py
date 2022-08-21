@@ -35,7 +35,7 @@ plt.yticks([])
 plt.legend()
 plt.show()
 
-st.pyplot(figure)
+st.pyplot()
 
 st.bar_chart(data)
 
