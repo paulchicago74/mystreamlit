@@ -58,7 +58,7 @@ pct_above_USL = len(data[data > USL])/len(data)*100
 
 # Write .txt file with results
 
-st.write('PROCESS CAPABILITY ANALYSIS')
+st.write ('PROCESS CAPABILITY ANALYSIS')
     
 results.write("-----------------------------------\n")
 results.write(f"Specifications\n")
