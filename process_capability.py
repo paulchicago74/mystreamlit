@@ -35,6 +35,8 @@ plt.yticks([])
 plt.legend()
 plt.show()
 
+st.pyplot(data)
+
 st.bar_chart(data)
 
 # Calculate Cp
