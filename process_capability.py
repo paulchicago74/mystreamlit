@@ -18,7 +18,7 @@ if uploaded_file is None:
 
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
-    datatype = np.float64
+    #datatype = np.float64
 
 
 if uploaded_file is not None:
@@ -32,9 +32,9 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 
 # Generate normally distributed data points
 #data = np.random.normal(loc=target,scale=1,size=100)
-
+data = df
 # Generate probability density function 
-x = np.linspace(min(df), max(df),10)
+x = np.linspace(min(data), max(df),1000)
 y = norm.pdf(x, loc=5, scale=1)
 
 # Plot histogram for data along with probability density functions and specification limits
