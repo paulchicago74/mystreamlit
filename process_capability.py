@@ -23,7 +23,7 @@ if uploaded_file is not None:
 
 if uploaded_file is not None:
     header_list = ["data"]
-    df3 = pd.read_csv(uploaded_file, names=header_list)
+    data = pd.read_csv(uploaded_file, names=header_list)
 
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
@@ -31,7 +31,7 @@ LSL = st.sidebar.number_input('Insert a number', key=1)
 USL = st.sidebar.number_input('Insert a number', key=2)
 
 # Generate normally distributed data points
-data = np.random.normal(loc=target,scale=1,size=100)
+#data = np.random.normal(loc=target,scale=1,size=100)
 
 # Generate probability density function 
 x = np.linspace(min(data), max(data), 1000)
