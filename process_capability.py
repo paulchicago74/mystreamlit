@@ -66,7 +66,7 @@ Cp = (USL-LSL)/(6*np.std(data))
 Cpk = np.minimum((USL-data.mean())/(3*data.std()), (data.mean()-LSL)/(3*data.std()))
 
 # Calculate z-value
-z = min((USL-data.mean())/(data.std()), (data.mean()-LSL)/(data.std()))
+z = np.minimum((USL-data.mean())/(data.std()), (data.mean()-LSL)/(data.std()))
 
 # Get data summary statistics
 num_samples = len(data)
