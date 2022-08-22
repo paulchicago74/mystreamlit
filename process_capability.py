@@ -24,7 +24,7 @@ if uploaded_file is not None:
 if uploaded_file is not None:
     header_list = ["data"]
     df = pd.read_csv(uploaded_file)
-    st.write(df)
+    st.write(data)
     
 
 
@@ -59,7 +59,7 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 #st.pyplot()
 
 # Calculate Cp
-Cp = (USL-LSL)/(6*np.std(df))
+Cp = (USL-LSL)/(6*np.std(data))
 
 # Calculate Cpk
 Cpk = min((USL-data.mean())/(3*data.std()), (data.mean()-LSL)/(3*data.std()))
