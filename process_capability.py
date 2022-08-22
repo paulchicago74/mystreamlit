@@ -98,7 +98,7 @@ with col2:
 
     with tab2:
         st.header("Indices")
-        st.write(f"\nCp: {Cp})
+        st.write(f"\nCp: {Cp}")
         st.write(f"Cpk: {round(Cpk,2)}\n")
         st.write(f"z: {round(z,2)}\n")
 
