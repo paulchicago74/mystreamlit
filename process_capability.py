@@ -71,9 +71,9 @@ z = np.minimum((USL-data.mean())/(data.std()), (data.mean()-LSL)/(data.std()))
 # Get data summary statistics
 num_samples = len(data)
 sample_mean = np.mean(data)
-sample_std = data.std()
-sample_max = data.max()
-sample_min = data.min()
+sample_std = np.std(data)
+sample_max = np.max(data)
+sample_min = np.min(data)
 sample_median = np.median(data)
 
 # Get percentage of data points outside of specification limits
