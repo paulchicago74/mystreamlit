@@ -15,6 +15,7 @@ st.sidebar.title('Process Capability Calculation')
 uploaded_file = st.sidebar.file_uploader("Upload Files",type=['csv'])
 if uploaded_file is None:
     st.write("")
+    data = 0
 
 if uploaded_file is not None:
     file_details = uploaded_file.getvalue()
