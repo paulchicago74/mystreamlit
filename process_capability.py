@@ -17,9 +17,9 @@ if uploaded_file is None:
     st.write("")
     data = 0
 
-if uploaded_file is not None:
-    file_details = uploaded_file.getvalue()
-    datatype = str
+#if uploaded_file is not None:
+#    file_details = uploaded_file.getvalue()
+#    datatype = str
 
 
 if uploaded_file is not None:
