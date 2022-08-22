@@ -26,7 +26,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.write(df)
     
-data = df
+
 
 # Set specification limits
 target = st.sidebar.number_input('Insert a number', key=None)
