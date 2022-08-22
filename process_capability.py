@@ -70,7 +70,7 @@ z = np.minimum((USL-data.mean())/(data.std()), (data.mean()-LSL)/(data.std()))
 
 # Get data summary statistics
 num_samples = len(data)
-sample_mean = data.mean()
+sample_mean = np.mean(data)
 sample_std = data.std()
 sample_max = data.max()
 sample_min = data.min()
