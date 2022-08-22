@@ -72,7 +72,7 @@ z = np.minimum((USL-data.mean())/(data.std()), (data.mean()-LSL)/(data.std()))
 num_samples = len(data)
 sample_mean = np.mean(data)
 sample_std = np.std(data)
-sample_max = np.maximum(data)
+sample_max = np.max(data)
 sample_min = np.min(data)
 sample_median = np.median(data)
 
