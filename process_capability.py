@@ -63,7 +63,7 @@ USL = st.sidebar.number_input('Insert a number', key=2)
 Cp = (USL-LSL)/(6*np.std(data))
 
 # Calculate Cpk
-Cpk = min((USL-data.mean())/(3*data.std()), (data.mean()-LSL)/(3*data.std()))
+Cpk = np.minimum((USL-data.mean())/(3*data.std()), (data.mean()-LSL)/(3*data.std()))
 
 # Calculate z-value
 z = min((USL-data.mean())/(data.std()), (data.mean()-LSL)/(data.std()))
