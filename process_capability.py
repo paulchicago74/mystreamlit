@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import norm
-
+import markdown
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(layout='wide')
 st.sidebar.title('Process Capability Calculation')
