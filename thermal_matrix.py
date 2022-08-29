@@ -3,6 +3,10 @@ from simple_colors import *
 from pytesseract import image_to_string 
 from PIL import Image
 from fpdf import FPDF
+import pdfkit
+from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
+from datetime import date
+from streamlit.components.v1 import iframe
 
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
