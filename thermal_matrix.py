@@ -123,26 +123,21 @@ if check_password():
         data2 = ('                                                                                     Temp=\n  \n' + data + 'Product= ' + product+ '\n' + '' + d)
         #data3 = ("This is P1\u\n\n" + "This is P2")
 
-        logo = open("logo.png", "rb") 
+        #logo = open("logo.png", "rb") 
         #text_contents = str(J)
-        st.download_button('Download some text', logo, file_name="flower.png")
+        #st.download_button('Download some text', logo, file_name="flower.png")
         #st.download_button('Download some text', 'Temperature' str(J))
 
         print(green('hello'))
         print(green('hello', 'bold'))
         print(green('hello', ['bold', 'underlined']))
 
-        st.download_button(
-                     label="Download image",
-                     data=logo,
-                     file_name="flower.pdf",
-                     mime="text/doc"
-                   )
-        st.download_button(
-        "⬇️ Download PDF",
-        data=pdf,
-        file_name="diploma.pdf",
-        mime="application/octet-stream",
-                  )
+       #st.download_button(
+       #              label="Download image",
+       #              data=logo,
+       #              file_name="flower.pdf",
+       #              mime="text/doc"
+       #            )
+
         #pdf.output('test.pdf','F')
 
