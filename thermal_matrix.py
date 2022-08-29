@@ -135,10 +135,10 @@ if check_password():
         
 
         pdf = pdfkit.from_string(template.render(
-        ph=ph,
-        values2=values2,
-        values3=f"{values3}/100",
-        date=date.today().strftime("%B %d, %Y")))
+            ph=ph,
+            values2=values2,
+            values3=f"{values3}/100",
+            date=date.today().strftime("%B %d, %Y")))
                                 
             
         st.download_button('Download PDF', data=pdf, file_name="diploma.pdf", mime="application/octet-stream")
