@@ -46,7 +46,8 @@ if check_password():
         image = 'shot.png'
         #pdf = PDF(orientation='P', unit='mm', format='A4')
 
-
+        env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
+        template = env.get_template("template.html")
 
         product = st.sidebar.selectbox(
              'Product',
