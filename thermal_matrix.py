@@ -7,6 +7,7 @@ import pdfkit
 from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
 from datetime import date
 from streamlit.components.v1 import iframe
+import wkhtmltopdf
 
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
