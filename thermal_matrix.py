@@ -132,7 +132,7 @@ if check_password():
         print(green('hello', 'bold'))
         print(green('hello', ['bold', 'underlined']))
 
-       #st.download_button(
+       st.download_button(
                      'Download PDF',
         data=pdf,
         file_name="diploma.pdf",
