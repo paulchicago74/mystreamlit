@@ -134,9 +134,9 @@ if check_password():
 
        st.download_button(
                      "Download PDF",
-        data=pdf,
-        file_name="diploma.pdf",
-        mime="application/octet-stream",
+                     data=pdf,
+                     file_name="diploma.pdf",
+                     mime="application/octet-stream",
                    )
 
         #pdf.output('test.pdf','F')
