@@ -135,9 +135,9 @@ if check_password():
         
 
         pdf = pdfkit.from_string(template.render(
-        student=student,
-        course=course,
-        grade=f"{grade}/100",
+        ph=ph,
+        values2=values2,
+        values3=f"{values3}/100",
         date=date.today().strftime("%B %d, %Y")))
                                 
             
