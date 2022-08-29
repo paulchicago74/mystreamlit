@@ -133,7 +133,7 @@ if check_password():
         print(green('hello', ['bold', 'underlined']))
 
        #st.download_button(
-                     "⬇️ Download PDF",
+                     'Download PDF',
         data=pdf,
         file_name="diploma.pdf",
         mime="application/octet-stream",
