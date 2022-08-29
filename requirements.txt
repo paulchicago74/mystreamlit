@@ -19,4 +19,4 @@ pytesseract
 Pillow
 markdown
 pdfkit
-WKHtmlToPdf
+
