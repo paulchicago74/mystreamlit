@@ -131,7 +131,17 @@ if check_password():
         print(green('hello'))
         print(green('hello', 'bold'))
         print(green('hello', ['bold', 'underlined']))
-        pdf = pdfkit.from_string(html, False)
+        
+        
+        if submit:
+            html = template.render(
+            #student=student,
+            #course=course,
+            #grade=f"{grade}/100",
+            #date=date.today().strftime("%B %d, %Y"),
+            )
+
+            pdf = pdfkit.from_string(html, False)
         st.download_button('Download PDF', data=pdf, file_name="diploma.pdf", mime="application/octet-stream")
 
         #pdf.output('test.pdf','F')
