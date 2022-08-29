@@ -8,7 +8,6 @@ from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoad
 from datetime import date
 from streamlit.components.v1 import iframe
 from wkhtmltopdf import WKHtmlToPdf
-
 st.set_page_config(layout='wide')
 st.sidebar.title('Thermal Matrix Calculation')
 
@@ -135,14 +134,14 @@ if check_password():
         
         
 
-        pdf = pdfkit.from_string(template.render(
+        pdf = template.render(
             ph=ph,
             values2=values2,
             values3=f"{values3}/100",
-            date=date.today().strftime("%B %d, %Y")))
+            date=date.today().strftime("%B %d, %Y"))
                                 
             
-        st.download_button('Download PDF', data=pdf, file_name="diploma.pdf", mime="application/octet-stream")
+        st.download_button('Download PDF', data=pdf, file_name="diploma.html", mime="application/octet-stream")
 
         #pdf.output('test.pdf','F')
 
