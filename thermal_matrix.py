@@ -132,7 +132,7 @@ if check_password():
         print(green('hello', 'bold'))
         print(green('hello', ['bold', 'underlined']))
         
-        
+        submit = form.form_submit_button("Generate PDF")
         if submit:
             html = template.render(
             #student=student,
