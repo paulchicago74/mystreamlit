@@ -142,7 +142,7 @@ if check_password():
             date=date.today().strftime("%B %d, %Y"))
                                 
             
-        st.download_button('Download PDF', data=pdf, file_name="diploma.html", mime="application/octet-stream")
+        st.download_button('Download PDF', data=pdf, file_name="diploma.pdf", mime="application/octet-stream")
 
         #pdf.output('test.pdf','F')
 
