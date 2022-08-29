@@ -134,15 +134,16 @@ if check_password():
         
         
 
-        pdf = template.render(
+        html = template.render(
             ph=ph,
             values2=values2,
             values3=f"{values3}/100",
             J = J,
             date=date.today().strftime("%B %d, %Y"))
+        pdf2 = pdfkit.from_string(html, False)
                                 
             
-        st.download_button('Download PDF', data=pdf, file_name="diploma.pdf", mime="application/octet-stream")
+        st.download_button('Download PDF', data=pdf2, file_name="diploma.pdf", mime="application/octet-stream")
 
         #pdf.output('test.pdf','F')
 
