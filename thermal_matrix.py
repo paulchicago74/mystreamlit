@@ -138,8 +138,8 @@ if check_password():
         student=student,
         course=course,
         grade=f"{grade}/100",
-        date=date.today().strftime("%B %d, %Y"), False)
-                                )
+        date=date.today().strftime("%B %d, %Y")))
+                                
             
         st.download_button('Download PDF', data=pdf, file_name="diploma.pdf", mime="application/octet-stream")
 
