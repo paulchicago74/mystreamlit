@@ -150,7 +150,21 @@ if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : (st.metric(label = "Trea
 
 if product == 'Acid or acidified' and ph <= 3.2 and values3 >= ph1 : a = st.success('Process is Safe') 
 else : a = st.error('Not Safe!')
+	
 if product == 'Acid or acidified' and ph <= 3.2  : a = ph1
+if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : a = ph2
+if product == 'Acid or acidified' and 3.3 < ph <= 3.4 : a = ph3
+if product == 'Acid or acidified' and 3.4 < ph <= 3.5 : a = ph4
+if product == 'Acid or acidified' and 3.5 < ph <= 3.6 : a = ph5
+if product == 'Acid or acidified' and 3.6 < ph <= 3.7 : a = ph6
+if product == 'Acid or acidified' and 3.7 < ph <= 3.8 : a = ph7
+if product == 'Acid or acidified' and 3.8 < ph <= 3.9 : a = ph8
+if product == 'Acid or acidified' and 3.9 < ph <= 4.1 : a = ph9
+if product == 'Acid or acidified' and 4.1 < ph <= 4.2 : a = ph10
+if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : a = ph11   
+if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : a = ph12
+if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : a = ph13
+
 st.write(a)
 
 	
