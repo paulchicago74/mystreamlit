@@ -135,7 +135,7 @@ Cs2 = 37 * (10**((86 - values2)/7))
 #round(ph1, 2)
 
 if product == 'Acid or acidified' and ph <= 3.2 : (st.metric(label = "Treatment Time", value=round(ph1, 2), delta=round((values3-ph1),2)))
-if values3 => ph1 : st.success('Process is Safe')
+if values3 >= ph1 : st.success('Process is Safe')
 if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : (st.metric(label = "Treatment Time", value=round(ph2, 2), delta=round((values3-ph2),2)))
 if product == 'Acid or acidified' and 3.3 < ph <= 3.4 : (st.metric(label = "Treatment Time", value=round(ph3, 2), delta=round((values3-ph3),2)))
 if product == 'Acid or acidified' and 3.4 < ph <= 3.5 : (st.metric(label = "Treatment Time", value=round(ph4, 2), delta=round((values3-ph4),2)))
