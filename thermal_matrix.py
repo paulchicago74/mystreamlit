@@ -167,7 +167,7 @@ if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : a = ph13
 
 if product == 'Acid or acidified' and values3 >= a : result = st.success('Process is Safe') 
 else : result = st.error('Not Safe!')
-#st.write(a)
+st.write(result)
 
 	
 	
@@ -271,7 +271,7 @@ if hotfill == 'Yes':
 	    #values3=f"{values3}/100",
 	    J = J,
 	    a = a,
-	    result = result,
+	    #result = result,
 	    date=date.today().strftime("%B %d, %Y"))
 	pdf2 = pdfkit.from_string(html, False)
 
