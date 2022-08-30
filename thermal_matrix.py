@@ -165,7 +165,9 @@ if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : a = ph11
 if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : a = ph12
 if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : a = ph13
 
-st.write(a)
+if product == 'Acid or acidified' and values3 >= a : result = st.success('Process is Safe') 
+else : result = st.error('Not Safe!')
+#st.write(a)
 
 	
 	
