@@ -150,6 +150,7 @@ if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : (st.metric(label = "Trea
 
 if product == 'Acid or acidified' and ph <= 3.2 and values3 >= ph1 : a = st.success('Process is Safe') 
 else : a = st.error('Not Safe!')
+	st.write(a)
 	
 	
 if product == 'Juice' : (st.metric(label = "Treatment Time", value=round(J, 2), delta=values3-J))
@@ -251,7 +252,7 @@ if hotfill == 'Yes':
 	    #value = value,
 	    #values3=f"{values3}/100",
 	    J = J,
-	    a = a,
+	    #a = a,
 	    date=date.today().strftime("%B %d, %Y"))
 	pdf2 = pdfkit.from_string(html, False)
 
