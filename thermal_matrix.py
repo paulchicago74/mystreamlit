@@ -148,8 +148,8 @@ if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : (st.metric(label = "Trea
 if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : (st.metric(label = "Treatment Time", value=round(ph12, 2), delta=round((values3-ph12),2)))
 if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : (st.metric(label = "Treatment Time", value=round(ph13, 2), delta=round((values3-ph13),2)))
 
-if product == 'Acid or acidified' and ph <= 3.2 and values3 >= ph1 : a = st.success('Process is Safe') 
-else : a = st.error('Not Safe!')
+#if product == 'Acid or acidified' and ph <= 3.2 and values3 >= ph1 : a = st.success('Process is Safe') 
+#else : a = st.error('Not Safe!')
 	
 if product == 'Acid or acidified' and ph <= 3.2  : a = ph1
 if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : a = ph2
