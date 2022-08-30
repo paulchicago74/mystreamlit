@@ -164,7 +164,7 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 
 
 if hotfill == 'Yes' and product == 'Acid or acidified':	
-	st.header('Values Selected for Hot Fill')
+	st.warning('Values Selected for Hot Fill')
 
 	col1, col2, col3 = st.columns(3)
 
