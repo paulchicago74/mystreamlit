@@ -92,15 +92,15 @@ with col2:
     "Date"))
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.header("pH")
+    st.subheader("pH")
     st.write('Values:', ph)
 
 with col2:
-    st.header("Temperature")
+    st.subheader("Temperature")
     st.write('Temperature:', values2, "C")
 
 with col3:
-    st.header("Time")
+    st.subheader("Time")
     st.write('Values:', values3)
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
