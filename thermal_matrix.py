@@ -70,24 +70,27 @@ if check_password():
         ph = st.sidebar.slider(
              'Select the pH',
              0.00, 14.00)
-        st.write('Values:', ph)
+        #st.write('Values:', ph)
 
         values2 = st.sidebar.slider(
              'Select the temperaeture in celsius',
              0, 200)
-        st.write('Values:', values2)
+        #st.write('Values:', values2)
 
         values3 = st.sidebar.slider(
              'Select the time in minutes',
              0, 240)
-        st.write('Values:', values3)
+        #st.write('Values:', values3)
+        col1, col2 = st.columns(2)
 
-        title = st.text_input('Project')
-        title2 = st.write('The current movie title is', title)
+        with col1:
+            title = st.text_input('Project')
+            title2 = st.write('The current movie title is', title)
 
-        d = str(st.date_input(
-             "When's your birthday"))
-        st.write('Your birthday is:', d)
+        with col2:
+            d = str(st.date_input(
+            "When's your birthday"))
+       
 
 
         number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
