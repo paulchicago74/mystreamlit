@@ -234,12 +234,14 @@ if hotfill == 'Yes' and product == 'Intermediate foods':
 
 if hotfill == 'Yes':
 	IF = 1 * (10**((72 - hftemp)/7.5))
-	if product == 'Acid or acidified' and phhotfill <= 4.1 : (st.metric(label = "Treatment Time", value=round(ph7, 2), delta=round((timehotfill-ph7),2)))
-	if product == 'Acid or acidified' and 4.11 <= phhotfill < 4.61 : (st.metric(label = "Treatment Time", value=round(ph8, 2), delta=round((timehotfill-ph8),2)))
-	if phhotfill <= 4.1 and timehotfill > ph7 : st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
-	if phhotfill <= 4.1 and timehotfill < ph7 : st.error('Process NOT safe')
-	if  4.11 <= phhotfill < 4.61 and timehotfill > ph8 : st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
-	if  4.11 <= phhotfill < 4.61 and timehotfill < ph8 : st.error('Hot Fill Process NOT safe')
+	ph77 = 0.6 * (10**((74.44 - hftemp)/10.833))
+	ph88 = 2.5 * (10**((74.44 - hftemp)/9.5))
+	if product == 'Acid or acidified' and phhotfill <= 4.1 : (st.metric(label = "Treatment Time", value=round(ph77, 2), delta=round((timehotfill-ph77),2)))
+	if product == 'Acid or acidified' and 4.11 <= phhotfill < 4.61 : (st.metric(label = "Treatment Time", value=round(ph88, 2), delta=round((timehotfill-ph88),2)))
+	if phhotfill <= 4.1 and timehotfill > ph77 : st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
+	if phhotfill <= 4.1 and timehotfill < ph77 : st.error('Process NOT safe')
+	if  4.11 <= phhotfill < 4.61 and timehotfill > ph88 : st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
+	if  4.11 <= phhotfill < 4.61 and timehotfill < ph88 : st.error('Hot Fill Process NOT safe')
 	if product == 'Intermediate foods' : (st.metric(label = "Treatment Time", value=round(IF, 2), delta=round((timehotfill-IF),2)))
 
 	#title = st.markdown('*Title *')
