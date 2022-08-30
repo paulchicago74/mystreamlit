@@ -8,8 +8,14 @@ from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoad
 from datetime import date
 from streamlit.components.v1 import iframe
 
-st.set_page_config(layout='wide')
+st.set_page_config(
+   page_title="Thermal Matrix Calculator",
+   page_icon="🧊",
+   layout="wide",
+   initial_sidebar_state="expanded",
+)
 st.sidebar.title('Thermal Matrix Calculation')
+
 
 def check_password():
     """Returns `True` if the user had the correct password."""
