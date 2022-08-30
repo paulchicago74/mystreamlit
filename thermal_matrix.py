@@ -23,6 +23,9 @@ st.sidebar.title('Thermal Matrix Calculation')
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
 
+st.sidebar.title('Thermal Matrix Calculation')
+
+
 product = st.sidebar.selectbox(
      'Product',
      ('Acid or acidified', 'Juice', 'Intermediate foods'))
@@ -35,21 +38,64 @@ if product == 'Acid or acidified' : st.sidebar.selectbox(
 #storage = st.sidebar.selectbox(
 #     'Storage',
 #     ('Shelf Stable', 'Refrigerated', 'Frozen'))
-ph = st.sidebar.slider(
+ph = st.sidebar.number_input(
      'Select the pH',
      0.00, 14.00)
 #st.write('Values:', ph)
 
-values2 = st.sidebar.slider(
+values2 = st.sidebar.number_input(
      'Select the temperaeture in celsius',
-     0, 200)
-#st.write('Values:', values2)
+     60.0, 200.0, key='values2')
+#st.write('Temperature:', values2)
 
-values3 = st.sidebar.slider(
+values3 = st.sidebar.number_input(
      'Select the time in minutes',
-     0, 240)
+     0.0, 240.5)
 #st.write('Values:', values3)
-col1, col2 = st.columns(2)
+
+if product == 'Intermediate foods' : aw = st.sidebar.number_input(
+     'Select the water activity',
+     0.60, 0.99)
+
+hotfill = st.sidebar.radio(
+     "Is the product hot filled?",
+     ('Yes', 'No'))
+
+if hotfill == 'Yes':
+     hftemp = st.sidebar.number_input(
+     'Select the temperature in celsius',
+     60, 200, key=hotfill)
+if hotfill == 'Yes':	 
+	ph7 = 0.6 * (10**((74.44 - hftemp)/10.833))
+	ph8 = 2.5 * (10**((74.44 - hftemp)/9.5))
+
+if hotfill == 'Yes':
+	 timehotfill = st.sidebar.number_input(
+     'Select the Time (min)', 0.00, 240.00, key='hftime')
+if hotfill == 'Yes':
+	 phhotfill = st.sidebar.number_input(
+     'Select the pH',
+     0.00, 4.60, key='hftemp')
+else:
+     st.sidebar.write(" ")
+
+
+
+st.header('Values Selected for Thermal Processing')
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header("pH")
+    st.write('Values:', ph)
+
+with col2:
+    st.header("Temperature")
+    st.write('Temperature:', values2, "C")
+
+with col3:
+    st.header("Time")
+    st.write('Values:', values3)
 
 with col1:
     title = st.text_input('Project')
