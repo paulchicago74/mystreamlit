@@ -169,15 +169,15 @@ if hotfill == 'Yes' and product == 'Acid or acidified':
 	col1, col2, col3 = st.columns(3)
 
 	with col1:
-		st.header("pH")
+		st.subheader("pH")
 		st.write('Values:', round(phhotfill, 2))
 
 	with col2:
-		st.header("Temperature")
+		st.subheader("Temperature")
 		st.write('Temperature:', round(hftemp, 2), "C")
 
 	with col3:
-		st.header("Time")
+		st.subheader("Time")
 		st.write('Values:', round(timehotfill,2))
 
 if hotfill == 'Yes' and product == 'Intermediate foods':	
@@ -186,11 +186,11 @@ if hotfill == 'Yes' and product == 'Intermediate foods':
 	col1, col2 = st.columns(2)
 
 	with col1:
-		st.header("Temperature")
+		st.subheader("Temperature")
 		st.write('Temperature:', round(hftemp, 2), "C")
 
 	with col2:
-		st.header("Time")
+		st.subheader("Time")
 		st.write('Values:', round(timehotfill,2))		
 
 
