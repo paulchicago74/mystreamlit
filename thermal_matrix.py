@@ -229,7 +229,7 @@ if hotfill == 'Yes':
 	    title = title,
 	    d = d,
 	    values3 = values3,
-	    value = value,
+	    #value = value,
 	    #values3=f"{values3}/100",
 	    J = J,
 	    date=date.today().strftime("%B %d, %Y"))
