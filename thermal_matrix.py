@@ -96,7 +96,7 @@ if check_password():
         if number > 0: st.sidebar.subheader(celsius)
         round (celsius, 2)
 
-       J = 8.5 * (10**((60 - values2)/4.9))
+J = 8.5 * (10**((60 - values2)/4.9))
 R = 10 * (10**((90 - values2)/9))
 #IF = 1 * (10**((72 - hftemp)/7.5))
 ph1 = 0.1 * (10**((93.3 - values2)/8.9))
