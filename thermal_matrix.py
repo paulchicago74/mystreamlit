@@ -17,7 +17,7 @@ st.set_page_config(
 st.sidebar.title('Thermal Matrix Calculation')
 
 
-def check_password():
+def check_password():e
     """Returns `True` if the user had the correct password."""
 
     def password_entered():
@@ -110,7 +110,7 @@ Cs2 = 37 * (10**((86 - values2)/7))
 
 	#ph8 = 2.5 * (10**((74.44 - hftemp)/9.5))
 
-	round(ph1, 2)
+round(ph1, 2)
 
 	if product == 'Acid or acidified' and ph < 3.9 : (st.metric(label = "Treatment Time", value=round(ph1, 2), delta=round((values3-ph1),2)))
 	if product == 'Acid or acidified' and 3.9 <= ph < 4.1 : (st.metric(label = "Treatment Time", value=round(ph2, 2), delta=round((values3-ph2),2)))
