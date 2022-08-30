@@ -85,7 +85,7 @@ st.warning('Values Selected for Thermal Processing')
 
 col1, col2 = st.columns(2)
 with col1:
-    title = st.text_input('Project')
+    project = st.text_input('Project')
 
 with col2:
     d = str(st.date_input(
@@ -262,7 +262,7 @@ if hotfill == 'Yes':
 	html = template.render(
 	    ph=ph,
 	    values2=values2,
-	    title = title,
+	    project = project,
 	    d = d,
 	    values3 = values3,
 	    #value = value,
