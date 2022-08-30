@@ -18,7 +18,7 @@ st.sidebar.title('Thermal Matrix Calculation')
 
 
 def check_password():e
-"""Returns `True` if the user had the correct password."""
+	"""Returns `True` if the user had the correct password."""
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
