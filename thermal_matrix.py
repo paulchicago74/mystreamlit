@@ -14,7 +14,7 @@ st.set_page_config(
    layout="wide",
    initial_sidebar_state="expanded",
 )
-st.sidebar.title('Thermal Matrix Calculation')
+#st.sidebar.title('Thermal Matrix Calculation')
 
 
 
@@ -84,6 +84,12 @@ else:
 st.header('Values Selected for Thermal Processing')
 
 col1, col2, col3 = st.columns(3)
+with col1:
+    title = st.text_input('Project')
+
+with col2:
+    d = str(st.date_input(
+    "Date"))
 
 with col1:
     st.header("pH")
@@ -96,13 +102,6 @@ with col2:
 with col3:
     st.header("Time")
     st.write('Values:', values3)
-
-with col1:
-    title = st.text_input('Project')
-
-with col2:
-    d = str(st.date_input(
-    "Date"))
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
 celsius = (number-32)*5/9
