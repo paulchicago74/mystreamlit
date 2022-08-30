@@ -228,7 +228,9 @@ if hotfill == 'Yes':
 	    values2=values2,
 	    title = title,
 	    d = d,
-	    values3=f"{values3}/100",
+	    values3 = values3,
+	    value = value,
+	    #values3=f"{values3}/100",
 	    J = J,
 	    date=date.today().strftime("%B %d, %Y"))
 	pdf2 = pdfkit.from_string(html, False)
