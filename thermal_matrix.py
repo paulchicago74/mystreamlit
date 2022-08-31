@@ -329,7 +329,7 @@ if hotfill == 'Yes':
 	pdf2 = pdfkit.from_string(html, False)
 
 
-	st.download_button('Download PDF', data=pdf2, file_name="diploma.pdf", mime="application/octet-stream")
+	st.download_button('Download PDF', data=pdf2, file_name="Thermal_Assessment.pdf", mime="application/octet-stream")
 
 	#pdf.output('test.pdf','F')
 
