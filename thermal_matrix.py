@@ -244,7 +244,7 @@ if hotfill == 'Yes':
 	if  4.11 <= phhotfill < 4.61 and timehotfill < ph88 : st.error('Hot Fill Process NOT safe')
 	if product == 'Intermediate foods' : (st.metric(label = "Treatment Time", value=round(IF, 2), delta=round((timehotfill-IF),2)))
 
-	if product == 'Acid or acidified' and phhotfill <= 4.1 : result2 = 'Pass'
+	if product == 'Acid or acidified' and phhotfill <= 4.1 : result2 = 'Pass' else : result2 = 'Fail'
 	if product == 'Acid or acidified' and 4.11 <= phhotfill < 4.61 : (st.metric(label = "Treatment Time", value=round(ph88, 2), delta=round((timehotfill-ph88),2)))
 		
 	#title = st.markdown('*Title *')
