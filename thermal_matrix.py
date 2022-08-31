@@ -279,6 +279,7 @@ if hotfill == 'Yes':
 	    result = round((values3-a),2),
 	    hftemp = hftemp,
 	    timehotfill = timehotfill,
+	    result2 = result2
 	    date=date.today().strftime("%B %d, %Y"))
 	    
 	pdf2 = pdfkit.from_string(html, False)
