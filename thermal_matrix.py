@@ -308,7 +308,7 @@ if hotfill == 'Yes':
 	print(green('hello', ['bold', 'underlined']))
 
 
-
+if product == 'Acid or acidified' :
 	html = template.render(
 	    ph=ph,
 	    values2=values2,
