@@ -134,39 +134,69 @@ Cs2 = 37 * (10**((86 - values2)/7))
 
 #round(ph1, 2)
 
-if product == 'Acid or acidified' and ph <= 3.2 : (st.metric(label = "Treatment Time", value=round(ph1, 2), delta=round((values3-ph1),2)))
-if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : (st.metric(label = "Treatment Time", value=round(ph2, 2), delta=round((values3-ph2),2)))
-if product == 'Acid or acidified' and 3.3 < ph <= 3.4 : (st.metric(label = "Treatment Time", value=round(ph3, 2), delta=round((values3-ph3),2)))
-if product == 'Acid or acidified' and 3.4 < ph <= 3.5 : (st.metric(label = "Treatment Time", value=round(ph4, 2), delta=round((values3-ph4),2)))
-if product == 'Acid or acidified' and 3.5 < ph <= 3.6 : (st.metric(label = "Treatment Time", value=round(ph5, 2), delta=round((values3-ph5),2)))
-if product == 'Acid or acidified' and 3.6 < ph <= 3.7 : (st.metric(label = "Treatment Time", value=round(ph6, 2), delta=round((values3-ph6),2)))
-if product == 'Acid or acidified' and 3.7 < ph <= 3.8 : (st.metric(label = "Treatment Time", value=round(ph7, 2), delta=round((values3-ph7),2)))
-if product == 'Acid or acidified' and 3.8 < ph <= 3.9 : (st.metric(label = "Treatment Time", value=round(ph8, 2), delta=round((values3-ph8),2)))
-if product == 'Acid or acidified' and 3.9 < ph <= 4.1 : (st.metric(label = "Treatment Time", value=round(ph9, 2), delta=round((values3-ph9),2)))
-if product == 'Acid or acidified' and 4.1 < ph <= 4.2 : (st.metric(label = "Treatment Time", value=round(ph10, 2), delta=round((values3-ph10),2)))
-if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : (st.metric(label = "Treatment Time", value=round(ph11, 2), delta=round((values3-ph11),2)))    
-if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : (st.metric(label = "Treatment Time", value=round(ph12, 2), delta=round((values3-ph12),2)))
-if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : (st.metric(label = "Treatment Time", value=round(ph13, 2), delta=round((values3-ph13),2)))
+if product == 'Acid or acidified' and ph <= 3.2 : 
+	(st.metric(label = "Treatment Time", value=round(ph1, 2), delta=round((values3-ph1),2)))
+	a = ph1	
+if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : 
+	(st.metric(label = "Treatment Time", value=round(ph2, 2), delta=round((values3-ph2),2)))
+	a = ph2
+if product == 'Acid or acidified' and 3.3 < ph <= 3.4 : 
+	(st.metric(label = "Treatment Time", value=round(ph3, 2), delta=round((values3-ph3),2)))
+	a = ph3
+if product == 'Acid or acidified' and 3.4 < ph <= 3.5 : 
+	(st.metric(label = "Treatment Time", value=round(ph4, 2), delta=round((values3-ph4),2)))
+	a = ph4
+if product == 'Acid or acidified' and 3.5 < ph <= 3.6 : 
+	(st.metric(label = "Treatment Time", value=round(ph5, 2), delta=round((values3-ph5),2)))
+	a = ph5
+if product == 'Acid or acidified' and 3.6 < ph <= 3.7 : 
+	(st.metric(label = "Treatment Time", value=round(ph6, 2), delta=round((values3-ph6),2)))
+	a = ph6
+if product == 'Acid or acidified' and 3.7 < ph <= 3.8 : 
+	(st.metric(label = "Treatment Time", value=round(ph7, 2), delta=round((values3-ph7),2)))
+	a = ph7
+if product == 'Acid or acidified' and 3.8 < ph <= 3.9 : 
+	(st.metric(label = "Treatment Time", value=round(ph8, 2), delta=round((values3-ph8),2)))
+	a = ph8
+if product == 'Acid or acidified' and 3.9 < ph <= 4.1 : 
+	(st.metric(label = "Treatment Time", value=round(ph9, 2), delta=round((values3-ph9),2)))
+	a = ph9
+if product == 'Acid or acidified' and 4.1 < ph <= 4.2 : 
+	(st.metric(label = "Treatment Time", value=round(ph10, 2), delta=round((values3-ph10),2)))
+	a = ph10
+if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : 
+	(st.metric(label = "Treatment Time", value=round(ph11, 2), delta=round((values3-ph11),2)))
+	a = ph11
+if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : 
+	(st.metric(label = "Treatment Time", value=round(ph12, 2), delta=round((values3-ph12),2)))
+	a = ph12
+if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : 
+	(st.metric(label = "Treatment Time", value=round(ph13, 2), delta=round((values3-ph13),2)))
+	a = ph13
 
 #if product == 'Acid or acidified' and ph <= 3.2 and values3 >= ph1 : a = st.success('Process is Safe') 
 #else : a = st.error('Not Safe!')
 	
-if product == 'Acid or acidified' and ph <= 3.2  : a = ph1
-if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : a = ph2
-if product == 'Acid or acidified' and 3.3 < ph <= 3.4 : a = ph3
-if product == 'Acid or acidified' and 3.4 < ph <= 3.5 : a = ph4
-if product == 'Acid or acidified' and 3.5 < ph <= 3.6 : a = ph5
-if product == 'Acid or acidified' and 3.6 < ph <= 3.7 : a = ph6
-if product == 'Acid or acidified' and 3.7 < ph <= 3.8 : a = ph7
-if product == 'Acid or acidified' and 3.8 < ph <= 3.9 : a = ph8
-if product == 'Acid or acidified' and 3.9 < ph <= 4.1 : a = ph9
-if product == 'Acid or acidified' and 4.1 < ph <= 4.2 : a = ph10
-if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : a = ph11   
-if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : a = ph12
-if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : a = ph13
+#if product == 'Acid or acidified' and ph <= 3.2  : a = ph1
+#if product == 'Acid or acidified' and 3.2 < ph <= 3.3 : a = ph2
+#if product == 'Acid or acidified' and 3.3 < ph <= 3.4 : a = ph3
+#if product == 'Acid or acidified' and 3.4 < ph <= 3.5 : a = ph4
+#if product == 'Acid or acidified' and 3.5 < ph <= 3.6 : a = ph5
+#if product == 'Acid or acidified' and 3.6 < ph <= 3.7 : a = ph6
+#if product == 'Acid or acidified' and 3.7 < ph <= 3.8 : a = ph7
+#if product == 'Acid or acidified' and 3.8 < ph <= 3.9 : a = ph8
+#if product == 'Acid or acidified' and 3.9 < ph <= 4.1 : a = ph9
+#if product == 'Acid or acidified' and 4.1 < ph <= 4.2 : a = ph10
+#if product == 'Acid or acidified' and 4.2 < ph <= 4.3 : a = ph11   
+#if product == 'Acid or acidified' and 4.3 < ph <= 4.4 : a = ph12
+#if product == 'Acid or acidified' and 4.4 < ph <= 4.6 : a = ph13
 
-if product == 'Acid or acidified' and values3 >= a : result = st.success('Process is Safe') 
-else : result = st.error('Not Safe!')
+if product == 'Acid or acidified' and values3 >= a : 
+	result = 'Process is Safe!'
+	st.success('Process is Safe') 
+else : 
+	result = 'Process is NOT Safe')
+	st.error('Not Safe!')
 #st.write(result)
 
 	
