@@ -241,9 +241,15 @@ if hotfill == 'Yes':
 	if phhotfill <= 4.1 and timehotfill > ph77 : 
 		result2 = 'pass'
 		st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
-	if phhotfill <= 4.1 and timehotfill < ph77 : st.error('Process NOT safe')
-	if  4.11 <= phhotfill < 4.61 and timehotfill > ph88 : st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
-	if  4.11 <= phhotfill < 4.61 and timehotfill < ph88 : st.error('Hot Fill Process NOT safe')
+	if phhotfill <= 4.1 and timehotfill < ph77 : 
+		st.error('Process NOT safe')
+		result2 = 'fail'
+	if  4.11 <= phhotfill < 4.61 and timehotfill > ph88 : 
+		st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
+		result2 = 'pass'
+	if  4.11 <= phhotfill < 4.61 and timehotfill < ph88 : 
+		st.error('Hot Fill Process NOT safe')
+		result2 = 'fail'
 	if product == 'Intermediate foods' : (st.metric(label = "Treatment Time", value=round(IF, 2), delta=round((timehotfill-IF),2)))
 
 	#if product == 'Acid or acidified' and phhotfill <= 4.1 : result2 = 'Pass' 
