@@ -239,8 +239,8 @@ if hotfill == 'Yes':
 	if product == 'Acid or acidified' and phhotfill <= 4.1 : (st.metric(label = "Treatment Time", value=round(ph77, 2), delta=round((timehotfill-ph77),2)))
 	if product == 'Acid or acidified' and 4.11 <= phhotfill < 4.61 : (st.metric(label = "Treatment Time", value=round(ph88, 2), delta=round((timehotfill-ph88),2)))
 	if phhotfill <= 4.1 and timehotfill > ph77 : 
-	result2 = 'pass'
-	st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
+		result2 = 'pass'
+		st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
 	if phhotfill <= 4.1 and timehotfill < ph77 : st.error('Process NOT safe')
 	if  4.11 <= phhotfill < 4.61 and timehotfill > ph88 : st.success('Process time and temperature will mitigate environmental contamintation (vegetative pathogens and spoilage organisms) ')
 	if  4.11 <= phhotfill < 4.61 and timehotfill < ph88 : st.error('Hot Fill Process NOT safe')
