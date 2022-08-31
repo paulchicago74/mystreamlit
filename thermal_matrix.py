@@ -195,7 +195,7 @@ if product == 'Acid or acidified' and values3 >= a :
 	result = 'Process is Safe!'
 	st.success('Process is Safe') 
 else : 
-	result = 'Process is NOT Safe')
+	result = 'Process is NOT Safe'
 	st.error('Not Safe!')
 #st.write(result)
 
