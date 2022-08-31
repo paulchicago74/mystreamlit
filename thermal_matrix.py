@@ -315,7 +315,7 @@ if hotfill == 'Yes':
 	    #values3=f"{values3}/100",
 	    J = J,
 	    a = round((a),2),
-	    result = round((values3-a),2),
+	    result = result,
 	    hftemp = hftemp,
 	    timehotfill = timehotfill,
 	    result2 = result2,
