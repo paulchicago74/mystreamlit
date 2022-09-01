@@ -195,8 +195,8 @@ if submit:
 
 
 col1, col2 = st.columns(2)
-chart = col1.line_chart(df, x='F-value', y='Time', use_container_width=True)
-chart2 = col2.line_chart(df2, use_container_width=True)
+chart = col1.line_chart(df, y='F-value', x='Time', use_container_width=True)
+chart2 = col2.line_chart(df2, y='Dvalue', x='Time', use_container_width=True)
 
 fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
 fig.write_image("fig1.png")
