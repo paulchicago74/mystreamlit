@@ -81,15 +81,19 @@ else:
 
 
 
-st.warning('Values Selected for Thermal Processing')
-
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 with col1:
-    project = st.text_input('Project')
+    project = st.text_input('Name')
 
 with col2:
+    project = st.text_input('Project')
+
+with col3:
     d = str(st.date_input(
     "Date"))
+
+st.latex('Values Selected for Thermal Processing')
+
 col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("pH")
