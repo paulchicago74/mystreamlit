@@ -100,8 +100,8 @@ with col1:
     #st.latex('Values:', ph)
 
 with col2:
-    st.subheader("Temperature")
-    st.write('Temperature:', values2, "C")
+    #st.subheader("Temperature")
+    st.metric('Temperature:', values2, "C")
 
 with col3:
     st.subheader("Time")
