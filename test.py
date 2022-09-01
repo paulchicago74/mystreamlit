@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib
 from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, savefig
 from fpdf import FPDF
-import pypdfplot.backend
+#import pypdfplot.backend
 import altair_saver
 import base64
 from tempfile import NamedTemporaryFile
