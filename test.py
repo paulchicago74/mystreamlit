@@ -241,61 +241,6 @@ pdf.cell(w=75.0, h=5.0, align="L", txt = "Zref")
 pdf.cell(w=75.0, h=25.0, align="L", txt="The time you need for a D-value of")
 #pdf.cell(w=75.0, h=5.0, align="L", txt="The time you need for a D-value of",Wanted_D ,"is" , millify(b1*Wanted_D + b0, precision=2))
 
-import fpdf
-
-data2= [Dvalue10, Zref]
-Tref = [area]
-d = [d]
-area = [area]
-
-pdf = fpdf.FPDF(format='letter')
-pdf.add_page()
-pdf.set_font("Arial", size=12)
-#fpdf.set_title(title: str)
-def header(self):
-        # Rendering logo:
-        self.image("logo.png", 10, 8, 33)
-        # Setting font: helvetica bold 15
-        self.set_font("helvetica", "B", 15)
-        # Moving cursor to the right:
-        self.cell(80)
-        # Printing title:
-        self.cell(30, 10, "Title", border=1, align="C")
-        # Performing a line break:
-        self.ln(20)
- 
-pdf.cell(0, 0, 'Title', 0, 0, 'C')      
-  
-pdf.image("logo.png", x=5, y=5, w=60, h=30)
-pdf.ln()
-
-for i in data2:
-    #pdf.image("logo.png", x=5, y=5, w=60, h=30)
-    pdf.write(55, "Dvalue", "Zref = ") 
-    pdf.write(55, str(i))
-    pdf.ln(10)
-    
-for i in d:
-    #pdf.image("logo.png", x=5, y=5, w=60, h=30)
-    pdf.write(55, "Date = ") 
-    pdf.write(55, str(i))
-    pdf.ln(5)
-    
-for i in area:
-    #pdf.image("logo.png", x=5, y=5, w=60, h=30)
-    pdf.write(55, "Description ") 
-    pdf.write(55, str(i))
-    pdf.ln(5)
-    
-for i in Tref:
-    pdf.write(55, "The time you need for a D-value of ") 
-    pdf.write(55, str(i))
-    pdf.write(55, " The time you need for a D-value of ") 
-    pdf.ln(5)
-#pdf.write(5, "Zref")
-    pdf.image("scatter.png", x=60, y=50, w=160, h=130)
-pdf.output("testings.pdf")
-
 
 #form = st.form(key='my-form2')
 #name = form.text_input('Enter your name')
