@@ -55,7 +55,7 @@ if LOGGED_IN == True:
 	('Yes', 'No'))
 	if genre == 'Yes': Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
 	else:
-	st.write("")
+		st.write("")
 
 	#Wanted_D = st.sidebar.number_input('Enter the Dvalue', min_value=0.1, step=0.1)
 	Fvalue0 = 0
