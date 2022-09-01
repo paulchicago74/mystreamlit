@@ -26,8 +26,8 @@ __login__obj = __login__(auth_token = "courier_auth_token", company_name = "comp
 LOGGED_IN = __login__obj.build_login_ui()
 
 if LOGGED_IN == True:
- st.set_page_config(layout="wide")
 
+	st.set_page_config(layout="wide")
 
  #from link_button import link_button
  # =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
