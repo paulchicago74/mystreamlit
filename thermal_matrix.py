@@ -330,7 +330,7 @@ if product == 'Acid or acidified' :
 	    hftemp = hftemp,
 	    timehotfill = timehotfill,
 	    result2 = result2,
-	    time2 = time2)
+	    time2 = time2,
 	    date=date.today().strftime("%B %d, %Y"))
 	pdf2 = pdfkit.from_string(html, False)
 	    
