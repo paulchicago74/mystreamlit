@@ -207,7 +207,7 @@ if LOGGED_IN == True:
 
 	st.write('Press submit to have your name printed below')
 	if submit:
-	fig.write_image("fig1.png")
+		fig.write_image("fig1.png")
 
 	col1, col2 = st.columns(2)
 	chart = col1.altair_chart(alt.Chart(pd.DataFrame(df2))
