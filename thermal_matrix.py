@@ -236,7 +236,7 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 
 
 if hotfill == 'Yes' and product == 'Acid or acidified':	
-	st.latex('Values/ Selected/ for/ Hot/ Fill')
+	st.latex('Values\ Selected\ for\ Hot\Fill')
 
 	col1, col2, col3 = st.columns(3)
 
