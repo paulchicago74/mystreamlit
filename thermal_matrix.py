@@ -293,6 +293,8 @@ if hotfill == 'Yes':
 	#if product == 'Acid or acidified' and phhotfill <= 4.1 : result2 = 'Pass' 
 	#else : result2 = 'Fail'
 	if product == 'Acid or acidified' and 4.11 <= phhotfill < 4.61 : (st.metric(label = "Treatment Time", value=round(ph88, 2), delta=round((timehotfill-ph88),2)))
+else : 
+	hftemp = 'none'
 		
 	#title = st.markdown('*Title *')
 	#G22*(10^((H22-L22)/I22))
@@ -325,16 +327,14 @@ if product == 'Acid or acidified' :
 	    a = round((a),2),
 	    result = result,
 	    name = name,
-	    date=date.today().strftime("%B %d, %Y"))
-	pdf2 = pdfkit.from_string(html, False)
-	    
-if hotfill == 'Yes' and product == 'Acid or acidified':	
-	html = template.render(
 	    hftemp = hftemp,
 	    timehotfill = timehotfill,
 	    result2 = result2,
 	    time2 = time2)
+	    date=date.today().strftime("%B %d, %Y"))
 	pdf2 = pdfkit.from_string(html, False)
+	    
+
 
 
 	st.download_button('Download PDF', data=pdf2, file_name="Thermal_Assessment.pdf", mime="application/octet-stream")
