@@ -295,7 +295,9 @@ if hotfill == 'Yes':
 	if product == 'Acid or acidified' and 4.11 <= phhotfill < 4.61 : (st.metric(label = "Treatment Time", value=round(ph88, 2), delta=round((timehotfill-ph88),2)))
 else : 
 	hftemp = 'none'
-		
+	timehotfill = 'none'
+	result2 = 'none'
+	time2 = 'none'	
 	#title = st.markdown('*Title *')
 	#G22*(10^((H22-L22)/I22))
 	texto = '''Temp = '''
