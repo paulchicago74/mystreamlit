@@ -138,7 +138,7 @@ if LOGGED_IN == True:
 
 	if genre == 'Yes': col3.metric('Predicted time for the D-value', millify(b1*Wanted_D + b0, precision=2), delta=None, delta_color="normal")
 	else:
-	st.write("")
+		st.write("")
 
 	#st.success (BMI)
 
