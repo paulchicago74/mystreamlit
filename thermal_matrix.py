@@ -324,8 +324,6 @@ if product == 'Acid or acidified' :
 	    J = J,
 	    a = round((a),2),
 	    result = result,
-	    hftemp = hftemp,
-	    timehotfill = timehotfill,
 	    result2 = result2,
 	    time2 = time2,
             name = name,
