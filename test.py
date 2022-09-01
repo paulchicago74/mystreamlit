@@ -20,6 +20,7 @@ import seaborn as sns
 import plotly.express as px
 import io
 import matplotlib.pyplot as plt
+from streamlit_login_auth_ui.widgets import __login__
 
 
 st.set_page_config(layout="wide")
