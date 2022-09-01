@@ -170,12 +170,12 @@ if LOGGED_IN == True:
 	#st.write('Press submit to have your name printed below')
 
 	if submit:
-	save(chart, "chart.pdf")
-	chart.save('chart.png')
-	#st.success (BMI)
+		save(chart, "chart.pdf")
+		chart.save('chart.png')
+		#st.success (BMI)
 
-	#chart_data = Pub1
-	#st.bar_chart(chart_data)
+		#chart_data = Pub1
+		#st.bar_chart(chart_data)
 
 	#container = st.container()
 	#all = st.checkbox("Select all")
