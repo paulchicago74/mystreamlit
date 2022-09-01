@@ -331,6 +331,10 @@ if product == 'Acid or acidified' :
             name = name,
 	    date=date.today().strftime("%B %d, %Y"))
 	    
+if hotfill == 'Yes' and product == 'Acid or acidified':	
+	html = template.render(
+	    hftemp = hftemp,
+	    timehotfill = timehotfill)
 	pdf2 = pdfkit.from_string(html, False)
 
 
