@@ -92,7 +92,7 @@ with col3:
     d = str(st.date_input(
     "Date"))
 
-st.latex('Values Selected for Thermal Processing')
+st.latex('Values\ Selected\ for\ Thermal\ Processing')
 
 col1, col2, col3 = st.columns(3)
 with col1:
