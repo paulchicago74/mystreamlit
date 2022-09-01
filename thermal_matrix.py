@@ -96,7 +96,7 @@ st.latex('Values\ Selected\ for\ Thermal\ Processing')
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.write("pH", ph)
+    st.metric("pH", ph)
     #st.latex('Values:', ph)
 
 with col2:
