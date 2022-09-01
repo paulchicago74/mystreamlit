@@ -97,7 +97,7 @@ st.latex('Values\ Selected\ for\ Thermal\ Processing')
 col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("pH")
-    st.write('Values:', ph)
+    st.latex('Values:', ph)
 
 with col2:
     st.subheader("Temperature")
