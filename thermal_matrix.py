@@ -100,12 +100,12 @@ with col1:
     #st.latex('Values:', ph)
 
 with col2:
-    #st.subheader("Temperature")
-    st.metric('Temperature:', values2 'C')
+    #st.subheader("Temperature in C")
+    st.metric('Temperature:', values2)
 
 with col3:
-    st.subheader("Time")
-    st.write('Values:', values3)
+    #st.subheader("Time")
+    st.metric('Values:', values3)
 
 number = st.sidebar.number_input('Fahrenheit to Celsius conversion')
 celsius = (number-32)*5/9
