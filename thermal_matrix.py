@@ -236,21 +236,21 @@ if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 
 
 if hotfill == 'Yes' and product == 'Acid or acidified':	
-	st.warning('Values Selected for Hot Fill')
+	st.latex('Values/ Selected/ for/ Hot/ Fill')
 
 	col1, col2, col3 = st.columns(3)
 
 	with col1:
-		st.subheader("pH")
-		st.write('Values:', round(phhotfill, 2))
+		#st.subheader("pH")
+		st.metric('Values:', round(phhotfill, 2))
 
 	with col2:
-		st.subheader("Temperature")
-		st.write('Temperature:', round(hftemp, 2), "C")
+		#st.subheader("Temperature")
+		st.metric('Temperature in C:', round(hftemp, 2))
 
 	with col3:
-		st.subheader("Time")
-		st.write('Values:', round(timehotfill,2))
+		#st.subheader("Time")
+		st.metric('Values:', round(timehotfill,2))
 
 if hotfill == 'Yes' and product == 'Intermediate foods':	
 	st.header('Values Selected for Hot Fill')
