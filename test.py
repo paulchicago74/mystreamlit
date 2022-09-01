@@ -22,18 +22,20 @@ import io
 import matplotlib.pyplot as plt
 from streamlit_login_auth_ui.widgets import __login__
 
+st.set_page_config(layout="wide")
+st.sidebar.title('Predictive Model Calculation')
 __login__obj = __login__(auth_token = "courier_auth_token", company_name = "company_name", width = 200, height = 250, logout_button_name = 'Logout', hide_menu_bool = False, hide_footer_bool = False, lottie_url='https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json')
 LOGGED_IN = __login__obj.build_login_ui()
 
 if LOGGED_IN == True:
 
-	st.set_page_config(layout="wide")
+	#st.set_page_config(layout="wide")
 
 	#from link_button import link_button
 	# =(Time+(10^((Temp-Tref)/Zref)+(10^((Tref-Tref)/Zref)))/2*(Time)) 
 	# (10^((Temp-Tref)/Zref))/1*Time
 	# give a title to our app
-	st.sidebar.title('Predictive Model Calculation')
+	#st.sidebar.title('Predictive Model Calculation')
 
 	# TAKE WEIGHT INPUT in kgs
 	# Tref = st.number_input('Enter the reference temperature', min_value=20)
