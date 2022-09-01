@@ -83,7 +83,7 @@ else:
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    project = st.text_input('Name')
+    name = st.text_input('Name')
 
 with col2:
     project = st.text_input('Project')
@@ -328,6 +328,7 @@ if product == 'Acid or acidified' :
 	    timehotfill = timehotfill,
 	    result2 = result2,
 	    time2 = time2,
+            name = name,
 	    date=date.today().strftime("%B %d, %Y"))
 	    
 	pdf2 = pdfkit.from_string(html, False)
