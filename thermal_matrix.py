@@ -101,7 +101,7 @@ with col1:
 
 with col2:
     #st.subheader("Temperature")
-    st.metric('Temperature:', values2, "C")
+    st.metric('Temperature:', values2 'C')
 
 with col3:
     st.subheader("Time")
