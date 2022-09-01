@@ -230,7 +230,7 @@ if product == 'Intermediate foods' and ph >4.2 and aw>=0.92 and values2>=90: (st
 if product == 'Intermediate foods' and ph >4.2 and aw>=0.92 and values2<90: (st.metric(label = "Treatment Time for Clostridium spp. spores", value=round(values3, 2), delta=round((values3-Cs2),2)))
 
 
-if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
+#if product == 'Acid or acidified' and ph < 4.00 : st.write(J)
 #G22*(10^((H22-L22)/I22))
 
 
