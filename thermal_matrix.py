@@ -20,7 +20,7 @@ st.set_page_config(
 
 #pdf = PDF(orientation='P', unit='mm', format='A4')
 
-env = Environment(loader=FileSystemLoader("https://dependable-squirrel.static.app"), autoescape=select_autoescape())
+env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
 
 st.sidebar.title('Thermal Matrix Calculation')
