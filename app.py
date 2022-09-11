@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import io
+import numpy as np
 
 # Load the data
 @st.experimental_memo
