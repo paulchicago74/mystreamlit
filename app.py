@@ -40,14 +40,15 @@ fig = create_figure(df)
 buffer = io.BytesIO()
 
 # Save the figure as a pdf to the buffer
-fig.write_image(file=buffer, format="pdf")
+#fig.write_image(file=buffer, format="pdf")
+fig.write_image(file=buffer, format="png")
 
 # Download the pdf from the buffer
 st.download_button(
     label="Download PDF",
     data=buffer,
-    file_name="figure.pdf",
-    mime="application/pdf",
+    file_name="figure.png",
+    mime="application/png",
 )
 
 st.plotly_chart(fig)
