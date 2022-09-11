@@ -36,6 +36,12 @@ def create_figure(df):
 df = load_data()
 fig = create_figure(df)
 
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
+
 # Create an in-memory buffer
 buffer = io.BytesIO()
 
