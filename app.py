@@ -50,7 +50,7 @@ buffer = io.BytesIO()
 
 # Save the figure as a pdf to the buffer
 #fig.write_image(file=buffer, format="pdf")
-fig.write_image(file=buffer, format="png")
+fig.write_image(file=image.png, format="png")
 
 # Download the pdf from the buffer
 st.download_button(
