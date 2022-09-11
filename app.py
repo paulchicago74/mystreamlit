@@ -1,153 +1,53 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
-import pickle 
+import plotly.graph_objects as go
 import io
-import base64
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
-import df_helper as helper # custom script 
 
-def highlight(txt):
-    return '<span style="color: #F04E4E">{}</span>'.format(txt)
+# Load the data
+@st.experimental_memo
+def load_data():
+    return pd.DataFrame(
+        {
+            "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
+            "Contestant": ["Alex", "Alex", "Alex", "Jordan", "Jordan", "Jordan"],
+            "Number Eaten": [2, 1, 3, 1, 3, 2],
+        }
+    )
 
-def download_file(df, extension):
-    if extension == 'csv': # csv 
-        csv = df.to_csv(index=False)
-        b64 = base64.b64encode(csv.encode()).decode() 
-    else: # pickle
-        b = io.BytesIO()
-        pickle.dump(df, b)
-        b64 = base64.b64encode(b.getvalue()).decode()
-    
-    href = f'<a href="data:file/csv;base64,{b64}" download="new_file.{extension}">Download {extension}</a>'
-    st.write(href, unsafe_allow_html=True) 
+# Create and cache a Plotly figure
+@st.experimental_memo
+def create_figure(df):
+    fig = go.Figure()
+    for contestant, group in df.groupby("Contestant"):
+        fig.add_trace(
+            go.Bar(
+                x=group["Fruit"],
+                y=group["Number Eaten"],
+                name=contestant,
+                hovertemplate="Contestant=%s<br>Fruit=%%{x}<br>Number Eaten=%%{y}<extra></extra>"
+                % contestant,
+            )
+        )
+    fig.update_layout(legend_title_text="Contestant")
+    fig.update_xaxes(title_text="Fruit")
+    fig.update_yaxes(title_text="Number Eaten")
+    return fig
 
-def explore(df):
-    pr = ProfileReport(df, explorative=True)
-    expander_df = st.expander('Data frame')
-    expander_df.write(df)
-    st_profile_report(pr)
+df = load_data()
+fig = create_figure(df)
 
-def transform(df):
-    # SAMPLE
-    expander_sample = st.expander('Sample size (%)')
-    expander_sample.text('Select a random sample from this dataset')
-    frac = expander_sample.slider('Random sample (%)', 1, 100, 100)
-    if frac < 100:
-        df = df.sample(frac=frac/100)
+# Create an in-memory buffer
+buffer = io.BytesIO()
 
-    # COLUMNS / FIELDS
-    expander_fields = st.expander('Select fields')
-    expander_fields.text('Select and order the fields')
-    cols = expander_fields.multiselect('Columns', df.columns.tolist(), df.columns.tolist())
-    df = df[cols]
-    if len(cols)<1:
-        st.write('You must select at least one column.')
-        return
-    types = {'-':None, 'Boolean': '?', 'Byte': 'b', 'Integer':'i',
-                 'Floating point': 'f', 'Date Time': 'M', 
-                 'Time': 'm', 'Unicode String':'U', 
-                 'Object': 'O'}
-    new_types = {}
-    
-    # CONVERT DATA TYPES
-    expander_types = st.expander('Convert Data Types')
-    
-    for i, col in enumerate(df.columns):
-        txt = f'Convert {col} from {highlight(df[col].dtypes)} to:'
-        expander_types.markdown(txt, unsafe_allow_html=True)
-        new_types[i] = expander_types.selectbox('Type:'
-                                            ,[*types]
-                                            ,index=0
-                                            ,key=i)
+# Save the figure as a pdf to the buffer
+fig.write_image(file=buffer, format="pdf")
 
-    # HANDLE NULLS
-    expander_nulls = st.expander('Missing values')
-    null_dict = {'-':None, 'Drop rows': 0, 'Replace with Note':1, 
-                 'Replace with Average': 2, 'Replace with Median': 3, 'Replace with 0 (Zero)':4}
-    
-    n_dict = {}
-    cols_null = []
-    for i, c in enumerate(df.columns):
-        if df[c].isnull().values.any():
-            cols_null.append(c)
-            txt = f'{c} has {df[c].isnull().sum()} null values'
-            expander_nulls.text(txt)
-            n_dict[i] = expander_nulls.selectbox('What to do with Nulls:'
-                                                ,[*null_dict]
-                                                ,index=0
-                                                ,key=i)
-    
-    # HANDLE DUPLICATES
-    expander_duplicates = st.expander('Duplicate rows')
-    duplicates_count = len(df[df.duplicated(keep=False)])
-    if duplicates_count > 0:
-        expander_duplicates.write(df[df.duplicated(keep=False)].sort_values(df.columns.tolist()))
-        duplicates_dict = {'Keep':None, 'Remove all':False, 'Keep first':'first', 'Keep last':'last'}
-        action = expander_duplicates.selectbox('Handle duplicates:', [*duplicates_dict])
-    else:
-        expander_duplicates.write('No duplicate rows')
-    
-    # ORDER VALUES
-    expander_sort = st.expander('Order values')
-    sort_by = expander_sort.multiselect('Sort by:', df.columns.values)
-    order_dict = {'Ascending':True, 'Descending':False}
-    ascending = []
-    for i, col in enumerate(sort_by):
-        order = expander_sort.radio(f'{col} order:', [*order_dict])
-        ascending.append(order_dict[order])
+# Download the pdf from the buffer
+st.download_button(
+    label="Download PDF",
+    data=buffer,
+    file_name="figure.pdf",
+    mime="application/pdf",
+)
 
-    # DOWNLOAD BUTTONS
-    st.text(" \n") #break line
-    col1, col2, col3 = st.beta_columns([.3, .3, 1])
-    with col1:
-        btn1 = st.button('Show Data')
-    with col2:
-        btn2 = st.button('Get CSV')
-    with col3:
-        btn3 = st.button('Get Pickle')
-
-    if btn1 or btn2 or btn3:
-        st.spinner()
-        with st.spinner(text='In progress'):
-            # Transform
-            df = helper.convert_dtypes(df, types, new_types)
-            df = helper.handle_nulls(df, null_dict, n_dict)
-            if duplicates_count > 0:
-                df = helper.handle_duplicates(df, duplicates_dict, action)
-            if sort_by: 
-                df = df.sort_values(sort_by, ascending=ascending)
-            # Display/ download
-            if btn1:
-                st.write(df)
-            if btn2:
-                download_file(df, "csv")
-            if btn3:
-                download_file(df, "pickle")
-    
-    #return df
-
-def main():
-    st.title('Fast Review')
-    st.write('A general-purpose data exploration app to validate and perform minor corrections in datasets.')
-
-    file = st.file_uploader("Upload file", type=['csv', 'xlsx', 'pickle'])
-
-    if not file:
-        st.write(f"Upload a {highlight('.csv')}, {highlight('.xlsx')} or {highlight('.pickle')} to get started",
-                unsafe_allow_html = True)
-        return
-
-    task = st.sidebar.radio('Task', ['Explore', 'Transform'], 0)
-
-    df = helper.get_df(file)
-
-    if task == 'Explore':
-        explore(df)
-    else:
-        transform(df)
-
-main()
-
-st.markdown("Streamlite is really cool")
+st.plotly_chart(fig)
