@@ -4,6 +4,10 @@ import plotly.graph_objects as go
 import io
 import numpy as np
 
+
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
 # Load the data
 @st.experimental_memo
 def load_data():
