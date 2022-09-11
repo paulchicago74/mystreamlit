@@ -47,4 +47,4 @@ st.download_button(
     mime="application/png",
 )
 
-st.plotly_chart(fig)
+#st.plotly_chart(fig)
