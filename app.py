@@ -21,7 +21,9 @@ def create_figure(df):
     fig = st.line_chart(chart_data)
     return fig
 
-df = load_data()
+df = load_data(pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c']))
 fig = create_figure(df)
 
 chart_data = pd.DataFrame(
