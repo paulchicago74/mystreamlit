@@ -19,6 +19,5 @@ pytesseract
 Pillow
 markdown
 pdfkit
-streamlit-login-auth-ui
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
