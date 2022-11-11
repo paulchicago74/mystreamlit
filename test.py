@@ -12,7 +12,7 @@ from fpdf import FPDF
 import altair_saver
 import base64
 from tempfile import NamedTemporaryFile
-from sklearn.datasets import load_iris
+#from sklearn.datasets import load_iris
 import fpdf
 from altair_saver import save
 import kaleido
