@@ -333,12 +333,12 @@ if st.sidebar.button('Print Report'):
 
 #time.sleep(5)
 #screenshot = pyautogui.screenshot()
-#screenshot.save("screen.png")
+#screenshot.save("grafico.png")
 #with open("screen.png", "rb") as file:
 #        btn = st.download_button(
 #             on_click=screenshot.save,
 #             data=file,
-#             file_name="screen.png",
+#             file_name="grafico.png",
 #             mime="image/png"
 #           )
 
