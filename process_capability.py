@@ -15,6 +15,6 @@ result = model.fit(method='newton')
 
 result.params
 
-st_write.predict(x)
+st.write.predict(x)
 
 result.summary()
