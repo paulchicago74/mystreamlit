@@ -14,3 +14,5 @@ model = sm.Logit(y, x)
 result = model.fit(method='newton')
 
 result.params
+
+result.predict(x)
