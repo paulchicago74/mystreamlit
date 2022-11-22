@@ -17,4 +17,4 @@ result.params
 
 st.write(result.predict(x))
 
-result.summary()
+st.write(result.summary())
