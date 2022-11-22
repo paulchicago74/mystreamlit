@@ -10,7 +10,7 @@ y = np.array([0, 1, 0, 0, 1, 1, 1, 1, 1, 1])
 x = sm.add_constant(x)
 
 #model = sm.Logit(y, x)
-model = sm.Logit(-44.22)
+model = sm.Logit(-44.22, 34)
 
 result = model.fit(method='newton')
 
