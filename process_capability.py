@@ -16,3 +16,5 @@ result = model.fit(method='newton')
 result.params
 
 result.predict(x)
+
+result.summary()
